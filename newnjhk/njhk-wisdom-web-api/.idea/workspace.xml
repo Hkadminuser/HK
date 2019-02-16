@@ -1,0 +1,976 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="76b6d606-90be-466f-a86e-0f494b19fa8d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/common/utils/Reflections.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/common/utils/Reflections.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Address_Servebiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/Address/AddressServebiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Address_Serveperson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/Address/AddressServeperson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Address_Servestation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/Address/AddressServestation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/AdvicePgd.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/advice/AdvicePgd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/AdviceType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/advice/AdviceType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/AgeLimit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/age/AgeLimit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Agent.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/age/Agent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/AkBcustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/akbuser/AkBcustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/AppVersion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/unknown/AppVersion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/AttachInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/unknown/AttachInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/CallipInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/unknown/CallipInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Commonsms.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/unknown/Commonsms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Communitys.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/communitys/Communitys.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/unknown/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Costomer_Privilege.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/customer/CostomerPrivilege.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Costomer_Promotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/customer/CostomerPromotion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Coupon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/giftcert/Coupon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Coupon_Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/giftcert/CouponConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/CusbackCall.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/cusbackcall/CusbackCall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Cusbackcallplan.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/cusbackcall/Cusbackcallplan.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/cusbackcall/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/CustomerAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/customer/CustomerAddress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/CustomerOperation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/customer/CustomerOperation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/CustomerPrivilege.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/customer/CustomerPrivilege.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/CustomerPromotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/customer/CustomerPromotion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/CustomerReturnVisit.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/customer/CustomerReturnVisit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/CustomerSuggestion.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/customer/CustomerSuggestion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/CustomerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/customer/CustomerType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/CustomerVisitInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/CustomerVisitType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/customer/CustomerVisitType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Customer_wx_Servicepgd.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/customer/CustomerWxServicepgd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/DataSyscoodTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/tool/DataSyscoodTable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Dict.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/dict/Dict.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/DictConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/dict/DictConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/EntityCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/customer/EntityCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/EntityServePackage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/serve/EntityServePackage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/EntityServePackage_ServeProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/serve/EntityServePackageServeProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/EntityServepgd.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/serve/EntityServepgd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/FimiticCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/customer/FimiticCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Giftcert.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/giftcert/Giftcert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Giftcert_Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/giftcert/GiftcertGoods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/goods/Goods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/GoodsCategory.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/goods/GoodsCategory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Goodspgd.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/goods/Goodspgd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Governmentstaff.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Rpt_Serveperson_Estimatelevel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/relation/RptServepersonEstimatelevel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Sms.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/sms/Sms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Tbblack.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/unknown/Tbblack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Tbcalllist.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/unknown/Tbcalllist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Tbcalltotal.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/unknown/Tbcalltotal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Tbmisscall.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/from/Wk.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/pojo/Wk.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/server/ServeBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/server/ServeBiz.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/server/ServeGroup.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/server/ServeGroup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/server/ServePerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/server/ServePerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/server/ServeStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/server/ServeStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/server/ServeType.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/server/ServeType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/system/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/entity/system/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/vo/AddressVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/vo/AddressVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/vo/ServePersonVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/src/main/java/njhk/wisdom/datasys/bean/vo/ServePersonVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/customer/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/customer/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Address_Servebiz.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Address_Serveperson.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Address_Servestation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/AdvicePgd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/AdviceType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/AgeLimit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Agent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/AkBcustomer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/AppVersion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/AttachInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/CallipInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Commonsms.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Communitys.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Costomer_Privilege.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Costomer_Promotion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Coupon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Coupon_Config.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/CusbackCall.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Cusbackcallplan.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/CustomerAddress.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/CustomerOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/CustomerPrivilege.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/CustomerPromotion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/CustomerReturnVisit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/CustomerSuggestion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/CustomerType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/CustomerVisitInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/CustomerVisitType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Customer_wx_Servicepgd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/DataSyscoodTable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Dict.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/DictConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/EntityCustomer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/EntityServePackage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/EntityServePackage_ServeProduct.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/EntityServepgd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/FimiticCustomer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Giftcert.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Giftcert_Goods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Goods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/GoodsCategory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Goodspgd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Governmentstaff.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Rpt_Serveperson_Estimatelevel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Sms.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Tbblack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Tbcalllist.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Tbcalltotal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Tbmisscall.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/from/Wk.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/server/ServeBiz.class" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/server/ServeBiz.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/server/ServeGroup.class" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/server/ServeGroup.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/server/ServePerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/server/ServePerson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/server/ServeStation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/server/ServeStation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/system/Address.class" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/entity/system/Address.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/vo/AddressVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/vo/AddressVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/vo/ServePersonVo.class" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-bean/target/classes/njhk/wisdom/datasys/bean/vo/ServePersonVo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-datasys-web-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-datasys-web-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/customer/ApiCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/customer/ApiCustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/customer/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/customer/SyuserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/customer/SyuserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/project/ProjectController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/project/ProjectController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/AddresController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/AddresController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/Coupon_configController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/Coupon_configController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/EntitycustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/EntitycustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/InsuranceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/InsuranceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/PointController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/PointController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/ServePersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/ServePersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/ServeProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/ServeProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/ServeStationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/ServeStationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/ServetypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/ServetypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/ServicePgdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/serve/ServicePgdController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/web/WebCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/web/WebCustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/web/WebServestationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/njhk/wisdom/datasys/web/api/controller/web/WebServestationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/customer/ApiCustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/customer/ApiCustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/customer/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/customer/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/customer/SyuserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/customer/SyuserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/project/ProjectController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/project/ProjectController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/AddresController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/AddresController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/Coupon_configController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/Coupon_configController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/EntitycustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/EntitycustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/InsuranceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/InsuranceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/PointController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/PointController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/ServePersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/ServePersonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/ServeProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/ServeProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/ServeStationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/ServeStationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/ServetypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/ServetypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/ServicePgdController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/serve/ServicePgdController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/web/WebCustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/web/WebCustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/web/WebServestationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/njhk/wisdom/datasys/web/api/controller/web/WebServestationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/base/CrudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/base/CrudService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/html/jquery-1.8.3.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/html/jquery-1.8.3.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/AddressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/Address/AddressService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/AdvicePgdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/advice/AdvicePgdService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/AdviceTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/advice/AdviceTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/AgeLimitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/age/AgeLimitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/AgentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/age/AgentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/AkBcustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/akbuser/AkBcustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/AppVersionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/unknown/AppVersionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/AttachInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/unknown/AttachInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/CallipInfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/unknown/CallipInfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/CodeReferenceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/unknown/CodeReferenceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/CommonsmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/unknown/CommonsmsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/CommunitysService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/communitys/CommunitysService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/ConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/unknown/ConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/CouponService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/giftcert/CouponService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/Coupon_ConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/giftcert/Coupon_ConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/CusbackCallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/cusbackcall/CusbackCallService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/CusbackcallplanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/cusbackcall/CusbackcallplanService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/CustomerAddressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/customer/CustomerAddressService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/CustomerOperationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/customer/CustomerOperationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/CustomerPrivilegeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/customer/CustomerPrivilegeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/CustomerPromotionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/customer/CustomerPromotionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/customer/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/CustomerSuggestionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/customer/CustomerSuggestionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/CustomerTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/customer/CustomerTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/CustomerVisitTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/customer/CustomerVisitTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/DataSyscoodTableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/tool/DataSyscoodTableService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/DictConfigService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/dict/DictConfigService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/DictService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/dict/DictService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/EntityCustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/customer/EntityCustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/EntityServePackageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/serve/EntityServePackageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/EntityServepgdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/serve/EntityServepgdService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/FimiticCustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/customer/FimiticCustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/GiftcertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/giftcert/GiftcertService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/Giftcert_GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/giftcert/Giftcert_GoodsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/GoodsCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/goods/GoodsCategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/GoodsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/goods/GoodsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/GoodspgdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/goods/GoodspgdService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/GovernmentstaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/government/GovernmentstaffService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/InstitutionsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/pension/InstitutionsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/InsuranceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/insurance/InsuranceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/KnowledgeCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/knowledge/KnowledgeCategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/KnowledgeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/knowledge/KnowledgeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/LiveHomeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/pension/LiveHomeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/MedicalExaminationReportService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/medicalexamination/MedicalExaminationReportService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/MedicalExaminationReportsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/medicalexamination/MedicalExaminationReportsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/MedicalExaminationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/medicalexamination/MedicalExaminationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/MobileMenuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/unknown/MobileMenuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/NoticeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/notice/NoticeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/PhoneModelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/phone/PhoneModelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/PointService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/point/PointService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/project/ProjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/RefundService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/refund/RefundService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/Rpt_Serveperson_EstimatelevelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/relation/Rpt_Serveperson_EstimatelevelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/ServeBizService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/serve/ServeBizService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/ServeGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/serve/ServeGroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/ServePersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/serve/ServePersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/ServeProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/serve/ServeProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/ServeStationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/serve/ServeStationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/ServeTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/serve/ServeTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/ServepersonKnowledgeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/serve/ServepersonKnowledgeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/ServepersonSigninfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/serve/ServepersonSigninfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/ServerCityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/serve/ServerCityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/ServescheService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/serve/ServescheService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/ServicePgdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/service/ServicePgdService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/SmsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/sms/SmsService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/SmsShenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/sms/SmsShenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/StayAtHomeChildrenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/children/StayAtHomeChildrenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/SyResourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/resources/SyResourceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/SyResourceTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/resources/SyResourceTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/SyRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/account/SyRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/SyorganizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/communitys/SyorganizationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/SyuserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/account/SyuserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/TbblackService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/unknown/TbblackService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/TbcalllistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/tbcall/TbcalllistService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/TbcalltotalService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/tbcall/TbcalltotalService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/TbmisscallService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/unknown/TbmisscallService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/TrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/unknown/TrainingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/VolunteerManagementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/volunteer/VolunteerManagementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/WebCustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/customer/WebCustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/WebServestationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/servestation/WebServestationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/WxPersonServepgdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/relation/WxPersonServepgdService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/WxReturnvisitVisitinfoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/relation/WxReturnvisitVisitinfoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/WxServepersonCustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/relation/WxServepersonCustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/WxServepersonInsuranceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/relation/WxServepersonInsuranceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/WxServepersonTrainingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/relation/WxServepersonTrainingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/WxServetypeServebizService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/relation/WxServetypeServebizService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/WxServetypeServestationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/relation/WxServetypeServestationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/WxServicepgdOtherservepersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/relation/WxServicepgdOtherservepersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/WxServicepgdServepersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/relation/WxServicepgdServepersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/WxSyorganizationSyresourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/relation/WxSyorganizationSyresourceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/WxSyroleSyresourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/relation/WxSyroleSyresourceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/WxSyuserSyorganizationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/relation/WxSyuserSyorganizationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/WxSyuserSyroleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/impl/relation/WxSyuserSyroleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/AddressDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/Address/AddressDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/AdvicePgdDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/advice/AdvicePgdDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/AdviceTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/advice/AdviceTypeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/AgeLimitDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/age/AgeLimitDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/AgentDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/age/AgentDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/AkBcustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/akbuser/AkBcustomerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/AppVersionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/unknown/AppVersionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/AttachInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/unknown/AttachInfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/CallipInfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/unknown/CallipInfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/CodeReferenceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/unknown/CodeReferenceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/CommonsmsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/unknown/CommonsmsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/CommunitysDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/communitys/CommunitysDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/ConfigDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/unknown/ConfigDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/CouponDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/giftcert/CouponDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/Coupon_configDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/giftcert/Coupon_configDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/CusbackCallDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/cusbackcall/CusbackCallDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/CusbackcallplanDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/cusbackcall/CusbackcallplanDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/customer/CustomerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/CustomerOperationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/customer/CustomerOperationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/CustomerPrivilegeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/customer/CustomerPrivilegeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/CustomerPromotionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/customer/CustomerPromotionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/CustomerSuggestionDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/customer/CustomerSuggestionDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/CustomerTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/customer/CustomerTypeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/CustomerVisitTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/customer/CustomerVisitTypeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/CustomeraddressDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/customer/CustomeraddressDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/DataSyscoodTableDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/tool/DataSyscoodTableDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/DictConfigDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/dict/DictConfigDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/DictDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/dict/DictDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/EntityCustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/customer/EntityCustomerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/EntityServePackageDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/serve/EntityServePackageDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/EntityServepgdDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/serve/EntityServepgdDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/FimiticCustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/customer/FimiticCustomerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/GiftcertDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/giftcert/GiftcertDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/Giftcert_GoodsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/giftcert/Giftcert_GoodsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/GoodsCategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/goods/GoodsCategoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/GoodsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/goods/GoodsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/GoodspgdDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/goods/GoodspgdDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/GovernmentstaffDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/government/GovernmentstaffDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/InstitutionsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/pension/InstitutionsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/InsuranceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/insurance/InsuranceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/KnowledgeCategoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/knowledge/KnowledgeCategoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/KnowledgeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/knowledge/KnowledgeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/LiveHomeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/pension/LiveHomeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/MedicalExaminationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/medicalexamination/MedicalExaminationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/MedicalExaminationReportDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/medicalexamination/MedicalExaminationReportDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/MedicalExaminationReportsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/medicalexamination/MedicalExaminationReportsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/MobileMenuDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/unknown/MobileMenuDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/NoticeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/notice/NoticeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/PhoneModelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/phone/PhoneModelDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/PointDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/point/PointDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/ProjectDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/project/ProjectDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/RefundDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/refund/RefundDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/Rpt_Serveperson_EstimatelevelDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/relation/Rpt_Serveperson_EstimatelevelDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/ServeBizDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/serve/ServeBizDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/ServeGroupDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/serve/ServeGroupDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/ServePersonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/serve/ServePersonDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/ServeProductDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/serve/ServeProductDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/ServeStationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/serve/ServeStationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/ServeTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/serve/ServeTypeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/ServepersonKnowledgeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/serve/ServepersonKnowledgeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/ServepersonSigninfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/serve/ServepersonSigninfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/ServerCityDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/serve/ServerCityDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/ServescheDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/serve/ServescheDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/ServicePgdDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/service/ServicePgdDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/SmsDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/sms/SmsDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/SmsShenDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/sms/SmsShenDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/StayAtHomeChildrenDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/children/StayAtHomeChildrenDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/SyResourceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/resources/SyResourceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/SyResourceTypeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/resources/SyResourceTypeDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/SyRoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/account/SyRoleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/SyorganizationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/communitys/SyorganizationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/SyuserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/account/SyuserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/TbblackDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/unknown/TbblackDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/TbcalllistDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/tbcall/TbcalllistDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/TbcalltotalDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/tbcall/TbcalltotalDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/TbmisscallDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/unknown/TbmisscallDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/TrainingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/unknown/TrainingDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/VolunteerManagementDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/volunteer/VolunteerManagementDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/WebCustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/customer/WebCustomerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/WebServestationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/servestation/WebServestationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/WxPersonServepgdDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/relation/WxPersonServepgdDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/WxReturnvisitVisitinfoDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/relation/WxReturnvisitVisitinfoDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/WxServepersonCustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/relation/WxServepersonCustomerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/WxServepersonInsuranceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/relation/WxServepersonInsuranceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/WxServepersonTrainingDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/relation/WxServepersonTrainingDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/WxServetypeServebizDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/relation/WxServetypeServebizDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/WxServetypeServestationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/relation/WxServetypeServestationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/WxServicepgdOtherservepersonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/relation/WxServicepgdOtherservepersonDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/WxServicepgdServepersonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/relation/WxServicepgdServepersonDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/WxSyorganizationSyresourceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/relation/WxSyorganizationSyresourceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/WxSyroleSyresourceDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/relation/WxSyroleSyresourceDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/WxSyuserSyorganizationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/relation/WxSyuserSyorganizationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/WxSyuserSyroleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/mapper/relation/WxSyuserSyroleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/persistence/dialect/MySQLDialect.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/persistence/dialect/MySQLDialect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/persistence/interceptor/SQLHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/persistence/interceptor/SQLHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/persistence/proxy/PaginationMapperProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/java/njhk/wisdom/datasys/web/service/persistence/proxy/PaginationMapperProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/AddressDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/Address/AddressDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/AdvicePgdDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/advice/AdvicePgdDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/AdviceTypeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/advice/AdviceTypeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/AgeLimitDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/age/AgeLimitDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/AgentDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/age/AgentDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/AkBcustomerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/akbuser/AkBcustomerDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/AppVersionDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/unknown/AppVersionDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/AttachInfoDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/unknown/AttachInfoDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/CallipInfoDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/unknown/CallipInfoDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/CoderEferenceDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/unknown/CoderEferenceDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/CommonsmsDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/unknown/CommonsmsDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/CommunitysDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/communitys/CommunitysDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/ConfigDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/unknown/ConfigDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/Coupon-ConfigDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/giftcert/Coupon-ConfigDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/CouponDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/giftcert/CouponDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/CusbackCallDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/cusbackcall/CusbackCallDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/CusbackcallplanDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/cusbackcall/CusbackcallplanDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/CustomerAddressDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/customer/CustomerAddressDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/CustomerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/customer/CustomerDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/CustomerOperationDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/customer/CustomerOperationDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/CustomerPrivilegeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/customer/CustomerPrivilegeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/CustomerPromotionDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/customer/CustomerPromotionDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/CustomerSuggestionDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/customer/CustomerSuggestionDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/CustomerTypeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/customer/CustomerTypeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/CustomerVisitTypeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/customer/CustomerVisitTypeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/DataSyscoodTableDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/tool/DataSyscoodTableDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/DictConfigDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/dict/DictConfigDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/DictDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/dict/DictDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/EntityCustomerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/customer/EntityCustomerDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/EntityServePackageDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/serve/EntityServePackageDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/EntityServepgdDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/serve/EntityServepgdDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/FimiticCustomerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/customer/FimiticCustomerDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/GiftcertDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/giftcert/GiftcertDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/Giftcert_GoodsDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/giftcert/Giftcert_GoodsDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/GoodspgdDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/goods/GoodspgdDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/GovernmentstaffDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/government/GovernmentstaffDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/InstitutionsDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/pension/InstitutionsDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/InsuranceDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/insurance/InsuranceDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/KnowledgeCategoryDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/knowledge/KnowledgeCategoryDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/KnowledgeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/knowledge/KnowledgeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/LiveHomeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/pension/LiveHomeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/MedicalExaminationDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/medicalexamination/MedicalExaminationDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/MedicalExaminationReportDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/medicalexamination/MedicalExaminationReportDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/NoticeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/notice/NoticeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/PhoneModelDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/phone/PhoneModelDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/PointDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/point/PointDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/ProjectDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/project/ProjectDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/RefundDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/refund/RefundDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/Rpt_Serveperson_EstimatelevelDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/relation/Rpt_Serveperson_EstimatelevelDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/ServeBizDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/serve/ServeBizDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/ServeGroupDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/serve/ServeGroupDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/ServePersonDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/serve/ServePersonDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/ServeProductDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/serve/ServeProductDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/ServeStationDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/serve/ServeStationDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/ServeTypeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/serve/ServeTypeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/ServepersonKnowledgeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/serve/ServepersonKnowledgeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/ServepersonSigninfoDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/serve/ServepersonSigninfoDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/ServerCityDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/serve/ServerCityDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/ServescheDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/serve/ServescheDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/ServicePgdDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/service/ServicePgdDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/SmsDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/sms/SmsDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/SmsShenDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/sms/SmsShenDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/StayAtHomeChildrenDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/children/StayAtHomeChildrenDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/SyResourceDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/resources/SyResourceDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/SyResourceTypeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/resources/SyResourceTypeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/SyRoleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/account/SyRoleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/SyorganizationDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/communitys/SyorganizationDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/SyuserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/account/SyuserDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/TbblackDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/unknown/TbblackDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/TbcalllistDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/tbcall/TbcalllistDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/TbcalltotalDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/tbcall/TbcalltotalDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/TbmisscallDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/unknown/TbmisscallDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/TrainingDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/unknown/TrainingDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/VolunteerManageMentDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/volunteer/VolunteerManageMentDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/WebCustomerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/customer/WebCustomerDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/WebServestationDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/servestation/WebServestationDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/WxPersonServepgdDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/relation/WxPersonServepgdDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/WxReturnvisitVisitinfoDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/relation/WxReturnvisitVisitinfoDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/WxServepersonCustomerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/relation/WxServepersonCustomerDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/WxServepersonInsuranceDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/relation/WxServepersonInsuranceDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/WxServepersonTrainingDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/relation/WxServepersonTrainingDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/WxServetypeServebizDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/relation/WxServetypeServebizDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/WxServetypeServestationDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/relation/WxServetypeServestationDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/WxServicepgdOtherservepersonDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/relation/WxServicepgdOtherservepersonDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/WxServicepgdServepersonDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/relation/WxServicepgdServepersonDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/WxSyorganizationSyresourceDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/relation/WxSyorganizationSyresourceDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/WxSyroleSyresourceDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/relation/WxSyroleSyresourceDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/WxSyuserSyorganizationDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/relation/WxSyuserSyorganizationDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/WxSyuserSyroleDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/src/main/resources/persistence/relation/WxSyuserSyroleDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/base/CrudService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/base/CrudService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/AddressService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/AdvicePgdService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/AdviceTypeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/AgeLimitService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/AgentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/AkBcustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/AppVersionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/AttachInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/CallipInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/CodeReferenceService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/CommonsmsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/CommunitysService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/ConfigService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/CouponService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/Coupon_ConfigService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/CusbackCallService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/CusbackcallplanService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/CustomerAddressService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/CustomerOperationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/CustomerPrivilegeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/CustomerPromotionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/CustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/CustomerSuggestionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/CustomerTypeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/CustomerVisitTypeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/DataSyscoodTableService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/DictConfigService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/DictService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/EntityCustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/EntityServePackageService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/EntityServepgdService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/FimiticCustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/GiftcertService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/Giftcert_GoodsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/GoodsCategoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/GoodsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/GoodspgdService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/GovernmentstaffService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/InstitutionsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/InsuranceService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/KnowledgeCategoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/KnowledgeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/LiveHomeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/MedicalExaminationReportService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/MedicalExaminationReportsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/MedicalExaminationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/MobileMenuService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/NoticeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/PhoneModelService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/PointService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/ProjectService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/RefundService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/Rpt_Serveperson_EstimatelevelService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/ServeBizService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/ServeGroupService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/ServePersonService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/ServeProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/ServeStationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/ServeTypeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/ServepersonKnowledgeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/ServepersonSigninfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/ServerCityService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/ServescheService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/ServicePgdService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/SmsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/SmsShenService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/StayAtHomeChildrenService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/SyResourceService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/SyResourceTypeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/SyRoleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/SyorganizationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/SyuserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/TbblackService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/TbcalllistService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/TbcalltotalService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/TbmisscallService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/TrainingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/VolunteerManagementService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/WebCustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/WebServestationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/WxPersonServepgdService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/WxReturnvisitVisitinfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/WxServepersonCustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/WxServepersonInsuranceService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/WxServepersonTrainingService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/WxServetypeServebizService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/WxServetypeServestationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/WxServicepgdOtherservepersonService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/WxServicepgdServepersonService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/WxSyorganizationSyresourceService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/WxSyroleSyresourceService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/WxSyuserSyorganizationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/impl/WxSyuserSyroleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/AddressDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/AdvicePgdDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/AdviceTypeDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/AgeLimitDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/AgentDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/AkBcustomerDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/AppVersionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/AttachInfoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/CallipInfoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/CodeReferenceDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/CommonsmsDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/CommunitysDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/ConfigDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/Coupon_configDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/CusbackCallDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/CusbackcallplanDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/CustomerDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/CustomerOperationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/CustomerPrivilegeDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/CustomerPromotionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/CustomerSuggestionDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/CustomerTypeDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/CustomerVisitTypeDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/CustomeraddressDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/DataSyscoodTableDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/DictConfigDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/DictDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/EntityCustomerDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/EntityServePackageDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/EntityServepgdDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/FimiticCustomerDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/GiftcertDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/Giftcert_GoodsDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/GoodsCategoryDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/GoodsDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/GoodspgdDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/GovernmentstaffDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/InstitutionsDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/InsuranceDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/KnowledgeCategoryDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/KnowledgeDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/LiveHomeDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/MedicalExaminationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/MedicalExaminationReportDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/MedicalExaminationReportsDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/MobileMenuDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/NoticeDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/PhoneModelDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/PointDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/ProjectDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/RefundDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/Rpt_Serveperson_EstimatelevelDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/ServeBizDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/ServeGroupDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/ServePersonDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/ServeProductDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/ServeStationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/ServeTypeDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/ServepersonKnowledgeDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/ServepersonSigninfoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/ServerCityDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/ServescheDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/ServicePgdDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/SmsDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/SmsShenDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/StayAtHomeChildrenDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/SyResourceDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/SyResourceTypeDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/SyRoleDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/SyorganizationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/SyuserDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/TbblackDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/TbcalllistDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/TbcalltotalDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/TbmisscallDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/TrainingDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/VolunteerManagementDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/WebCustomerDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/WebServestationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/WxPersonServepgdDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/WxReturnvisitVisitinfoDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/WxServepersonCustomerDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/WxServepersonInsuranceDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/WxServepersonTrainingDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/WxServetypeServebizDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/WxServetypeServestationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/WxServicepgdOtherservepersonDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/WxServicepgdServepersonDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/WxSyorganizationSyresourceDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/WxSyroleSyresourceDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/WxSyuserSyorganizationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/mapper/WxSyuserSyroleDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/persistence/interceptor/SQLHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/persistence/interceptor/SQLHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/persistence/proxy/PaginationMapperProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/persistence/proxy/PaginationMapperProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/njhk/wisdom/datasys/web/service/service/CouponDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/AddressDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/AdvicePgdDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/AdviceTypeDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/AgeLimitDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/AgentDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/AkBcustomerDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/AppVersionDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/AttachInfoDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/CallipInfoDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/CoderEferenceDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/CommonsmsDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/CommunitysDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/ConfigDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/Coupon-ConfigDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/CouponDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/CusbackCallDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/CusbackcallplanDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/CustomerAddressDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/CustomerDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/CustomerOperationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/CustomerPrivilegeDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/CustomerPromotionDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/CustomerSuggestionDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/CustomerTypeDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/CustomerVisitTypeDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/DataSyscoodTableDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/DictConfigDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/DictDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/EntityCustomerDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/EntityServePackageDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/EntityServepgdDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/FimiticCustomerDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/GiftcertDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/Giftcert_GoodsDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/GoodspgdDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/GovernmentstaffDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/InstitutionsDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/InsuranceDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/KnowledgeCategoryDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/KnowledgeDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/LiveHomeDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/MedicalExaminationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/MedicalExaminationReportDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/NoticeDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/PhoneModelDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/PointDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/ProjectDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/RefundDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/Rpt_Serveperson_EstimatelevelDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/ServeBizDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/ServeGroupDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/ServePersonDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/ServeProductDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/ServeStationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/ServeTypeDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/ServepersonKnowledgeDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/ServepersonSigninfoDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/ServerCityDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/ServescheDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/ServicePgdDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/SmsDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/SmsShenDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/StayAtHomeChildrenDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/SyResourceDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/SyResourceTypeDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/SyRoleDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/SyorganizationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/SyuserDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/TbblackDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/TbcalllistDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/TbcalltotalDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/TbmisscallDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/TrainingDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/VolunteerManageMentDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/WebCustomerDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/WebServestationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/WxPersonServepgdDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/WxReturnvisitVisitinfoDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/WxServepersonCustomerDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/WxServepersonInsuranceDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/WxServepersonTrainingDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/WxServetypeServebizDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/WxServetypeServestationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/WxServicepgdOtherservepersonDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/WxServicepgdServepersonDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/WxSyorganizationSyresourceDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/WxSyroleSyresourceDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/WxSyuserSyorganizationDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../njhk-wisdom-datasys-web-service/target/classes/persistence/WxSyuserSyroleDao.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../pom.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/../better-wisdom-water-bean/target/" />
+    <ignored path="$PROJECT_DIR$/../better-wisdom-water-web-service/target/" />
+    <ignored path="$PROJECT_DIR$/../better-wisdom-water-ops/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../better-wisdom-water-bean/src/main/java/better/wisdom/water/bean/entity/device/Device.java" />
+        <option value="$PROJECT_DIR$/../better-wisdom-water-bean/src/main/java/better/wisdom/water/bean/common/utils/DateUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/better/wisdom/water/web/api/controller/device/DeviceMaintainController.java" />
+        <option value="$PROJECT_DIR$/../better-wisdom-water-web-service/src/main/resources/persistence/DeviceDao.xml" />
+        <option value="$PROJECT_DIR$/../../../../../新建文本文档 (3).txt" />
+        <option value="$PROJECT_DIR$/../better-wisdom-water-bean/src/main/java/better/wisdom/water/bean/vo/DeviceVo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/better/wisdom/water/web/api/LawWebApiStarter.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="better-wisdom-water-bean" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="better-wisdom-water-web-api" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="79" />
+    <option name="width" value="1280" />
+    <option name="height" value="728" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="BaseController&#9;PSI&#9;JAVA://better.wisdom.water.web.api.config.BaseController&#10;DeviceD&#9;FILE&#9;file://C:/Users/hejim/Desktop/巨翔/智慧水务/CODE/better-wisdom-water/better-wisdom-water-web-service/src/main/resources/persistence/DeviceDao.xml&#10;Device&#9;PSI&#9;JAVA://better.wisdom.water.bean.entity.device.Device" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540957340536" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../better-wisdom-water-ops/pom.xml" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="restartRequiresConfirmation" value="false" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.WebApiStarter">
+    <configuration name="Launch" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="better-wisdom-water-ops" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="better.wisdom.water.ops.Launch" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LawWebApiStarter" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="better-wisdom-water-web-api" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="better.wisdom.water.web.api.LawWebApiStarter" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebApiStarter" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="better-wisdom-water-web-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="better.wisdom.water.web.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="better.wisdom.water.web.api.WebApiStarter" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.LawWebApiStarter" />
+      <item itemvalue="Spring Boot.Launch" />
+      <item itemvalue="Spring Boot.WebApiStarter" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.WebApiStarter" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\hejim\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76b6d606-90be-466f-a86e-0f494b19fa8d" name="Default Changelist" comment="" />
+      <created>1540871541840</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1540871541840</updated>
+      <workItem from="1540871543475" duration="13490000" />
+      <workItem from="1546826205351" duration="18000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="13508000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <layout>
+      <window_info id="Image Layers" order="0" />
+      <window_info id="UI Designer" order="1" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="Web" order="4" side_tool="true" />
+      <window_info id="Designer" order="5" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.29498714" />
+      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="2" weight="0.3289689" />
+      <window_info anchor="bottom" id="Java Enterprise" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="5" />
+      <window_info anchor="bottom" id="Spring" order="6" />
+      <window_info anchor="bottom" id="Message" order="7" />
+      <window_info anchor="bottom" id="Find" order="8" />
+      <window_info anchor="bottom" id="Run" order="9" weight="0.59574467" />
+      <window_info anchor="bottom" id="Debug" order="10" weight="0.14729951" />
+      <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="13" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" order="0" />
+      <window_info active="true" anchor="right" id="Maven Projects" order="1" visible="true" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="2" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Bean Validation" order="5" />
+      <window_info anchor="right" id="Palette" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../better-wisdom-water-bean/src/main/java/better/wisdom/water/bean/common/utils/DateUtil.java</url>
+          <line>119</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../better-wisdom-water-web-service/src/main/java/better/wisdom/water/web/service/impl/DeviceMaintainService.java</url>
+          <line>34</line>
+          <properties />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/better/wisdom/water/web/api/controller/device/DeviceMaintainController.java</url>
+          <line>119</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../better-wisdom-water-web-service/src/main/java/better/wisdom/water/web/service/impl/DeviceMaintainService.java</url>
+          <line>37</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/better/wisdom/better-wisdom-water-bean/1.0.0-SNAPSHOT/better-wisdom-water-bean-1.0.0-SNAPSHOT.jar!/better/wisdom/water/bean/common/utils/DateUtil.class" />
+    <entry file="file://$PROJECT_DIR$/../better-wisdom-water-bean/src/main/java/better/wisdom/water/bean/common/utils/DateUtil.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java" />
+    <entry file="file://$PROJECT_DIR$/../better-wisdom-water-bean/src/main/java/better/wisdom/water/bean/common/utils/DateUtils.java" />
+    <entry file="file://$PROJECT_DIR$/../better-wisdom-water-bean/src/main/java/better/wisdom/water/bean/entity/device/Device.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/better/wisdom/water/web/api/controller/device/DeviceMaintainController.java" />
+    <entry file="file://$PROJECT_DIR$/../better-wisdom-water-web-service/src/main/resources/persistence/DeviceDao.xml" />
+    <entry file="file://$PROJECT_DIR$/../better-wisdom-water-web-service/src/main/java/better/wisdom/water/web/service/impl/DeviceMaintainService.java" />
+    <entry file="file://$PROJECT_DIR$/../../../../../新建文本文档 (3).txt" />
+    <entry file="file://$PROJECT_DIR$/../better-wisdom-water-ops/src/main/java/better/wisdom/water/ops/Launch.java" />
+    <entry file="file://$PROJECT_DIR$/../better-wisdom-water-bean/src/main/java/better/wisdom/water/bean/vo/DeviceVo.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/better/wisdom/water/web/api/Swagger2.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/better/wisdom/water/web/api/config/BaseController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/better/wisdom/water/web/api/WebApiStarter.java" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.resources.SyResourceDao">
+
+
+    <sql id="projectColumns">
+        a.ID AS "id",
+        a.CREATEDATETIME AS "createDateTime",
+        a.DESCRIPTION AS "description",
+        a.ICONCLS AS "iconcls",
+        a.NAME AS "name",
+        a.SEQ AS "seq",
+        a.UPDATEDATETIME AS "updateDateTime",
+        a.URL AS "url" ,
+        a.SYRESOURCE_ID AS "syResource_id",
+        a.SYRESOURCETYPE_ID AS "syResourceType_id",
+        r.ID  AS "roles.id",
+        r.`name` as "roles.name"
+
+    </sql>
+
+    <sql id="projectJoins">
+        LEFT JOIN wx_syrole_syresource mr ON a.`ID` = mr.`SYRESOURCE_ID`
+        LEFT JOIN wx_syrole r ON mr.`SYROLE_ID` = r.`ID`
+    </sql>
+
+    <!--  <select id="get" resultType="njhk.wisdom.web.bean.entity.server.VolunteerManagement">
+          SELECT
+          <include refid="projectColumns"/>
+          FROM wx_volunteermanagement a
+          <include refid="projectJoins"/>
+          <where>
+              1=1 AND a.del_flag = #{DEL_FLAG_NORMAL}
+              <if test="projectCode!=null and projectCode!=''">
+                  AND a.project_code = #{projectCode}
+              </if>
+              <if test="id!=null and id!=''">
+                  AND a.id = #{id}
+              </if>
+          </where>
+      </select>-->
+
+    <select id="getResource" resultType="njhk.wisdom.web.bean.entity.resources.SyResource">
+          SELECT
+            <include refid="projectColumns"/>
+           FROM wx_syresource a
+             <include refid="projectJoins"/>
+            <where>
+                a.`SYRESOURCETYPE_ID` = TRUE
+            </where>
+                    ORDER BY
+                    a.`id` DESC
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.resources.SyResource">
+        SELECT
+        <include refid="projectColumns"/>
+        FROM wx_syresource a
+        <include refid="projectJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_syresource(
+            CREATEDATETIME,
+            DESCRIPTION,
+            ICONCLS,
+            NAME,
+            SEQ,
+            UPDATEDATETIME,
+            URL,
+            SYRESOURCE_ID,
+            SYRESOURCETYPE_ID
+        ) VALUES (
+                     #{createDateTime},
+                     #{description},
+                     #{iconcls},
+                     #{name},
+                     #{seq},
+                     #{updateDateTime},
+                     #{url},
+                     #{syResource_id},
+                     #{syResourceType_id)
+                 )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_syresource SET
+                             CREATEDATETIME= #{createDateTime},
+                             DESCRIPTION= #{description},
+                             ICONCLS= #{iconcls},
+                             NAME= #{name},
+                             SEQ= #{seq},
+                             UPDATEDATETIME= #{updateDateTime},
+                             URL=#{url},
+                             SYRESOURCE_ID=#{syResource_id},
+                             SYRESOURCETYPE_ID=#{syResourceType_id)
+
+        WHERE ID = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_syresource SET
+            del_flag = #{DEL_FLAG_DELETE}
+        WHERE ID = #{id}
+    </update>
+
+</mapper>

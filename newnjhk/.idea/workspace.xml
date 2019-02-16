@@ -1,0 +1,1093 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="60321e79-ac93-47e0-bc3d-656e80d403e5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/ServeProduct/WebServeProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_njhk_wisdom_njhk_wisdom_web_api_1_0_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_njhk_wisdom_njhk_wisdom_web_bean_1_0_0_SNAPSHOT.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/njhk-wisdom-web-api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/njhk-wisdom-web-api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/config/AuthenticationAccessDeniedHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/config/CustomMetadataSource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/config/UrlAccessDecisionManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/config/WebMvcConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/config/WebSecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/address/WebAddressController.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/address/WebAddressController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/customer/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/customer/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/customer/webcustomer/WebCustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/customer/webcustomer/WebCustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/EntitycustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/EntitycustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/serveGroup/ServeGroupController.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/serveGroup/ServeGroupController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/servePerson/WebServepersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/servePerson/WebServepersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/serveStation/WebServestationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/serveStation/WebServestationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/serveType/WebServeTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/serveType/WebServeTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/service/ServicePgdController.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/service/ServicePgdController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/volunteer/VolunteerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/volunteer/VolunteerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/WebApiStarter.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/WebApiStarter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/config/AuthenticationAccessDeniedHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/config/BaseController$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/config/BaseController$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/config/BaseController$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/config/BaseController$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/config/BaseController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/config/BaseController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/config/CustomMetadataSource.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/config/UrlAccessDecisionManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/config/WebMvcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/config/WebMvcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/config/WebSecurityConfig$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/config/WebSecurityConfig$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/config/WebSecurityConfig$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/config/WebSecurityConfig$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/config/WebSecurityConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/address/WebAddressController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/address/WebAddressController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/advice/AdviceTypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/advice/AdviceTypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/advice/AdvicepgdController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/advice/AdvicepgdController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/app/ExcelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/app/ExcelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/customer/ApiCustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/customer/ApiCustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/customer/CustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/customer/CustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/customer/SyuserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/customer/SyuserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/customer/webcustomer/WebCustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/customer/webcustomer/WebCustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/AddresController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/AddresController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/CouponConfigController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/CouponConfigController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/EntitycustomerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/EntitycustomerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/InsuranceController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/InsuranceController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/PointController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/PointController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/ServePersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/ServePersonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/ServeProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/ServeProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/ServeStationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/ServeStationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/ServetypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/ServetypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/serveGroup/ServeGroupController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/serveGroup/ServeGroupController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/servePerson/WebServepersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/servePerson/WebServepersonController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/serveStation/WebServestationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/serveStation/WebServestationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/serveType/WebServeTypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/serve/serveType/WebServeTypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/service/ServicePgdController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/service/ServicePgdController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/syuser/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/syuser/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/volunteer/VolunteerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/controller/volunteer/VolunteerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/utils/MD5Util.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/utils/MD5Util.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/utils/SocketUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/utils/SocketUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/utils/WebUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-api/target/classes/njhk/wisdom/web/api/utils/WebUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/customer/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/customer/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/pojo/customer/EntityCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/pojo/customer/EntityCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServePerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServePerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServeProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServeProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServeType.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServeType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServicePgd.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServicePgd.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/VolunteerManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/VolunteerManagement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/vo/WebCustomer.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/vo/WebCustomer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/classes/njhk/wisdom/web/bean/entity/customer/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/classes/njhk/wisdom/web/bean/entity/customer/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/classes/njhk/wisdom/web/bean/entity/pojo/customer/EntityCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/classes/njhk/wisdom/web/bean/entity/pojo/customer/EntityCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/classes/njhk/wisdom/web/bean/entity/server/ServePerson.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/classes/njhk/wisdom/web/bean/entity/server/ServePerson.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/classes/njhk/wisdom/web/bean/entity/server/ServeProduct.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/classes/njhk/wisdom/web/bean/entity/server/ServeProduct.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/classes/njhk/wisdom/web/bean/entity/server/ServicePgd.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/classes/njhk/wisdom/web/bean/entity/server/ServicePgd.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/classes/njhk/wisdom/web/bean/entity/server/VolunteerManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/classes/njhk/wisdom/web/bean/entity/server/VolunteerManagement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/classes/njhk/wisdom/web/bean/vo/WebCustomer.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/classes/njhk/wisdom/web/bean/vo/WebCustomer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/njhk-wisdom-web-bean-1.0.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-bean/target/njhk-wisdom-web-bean-1.0.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/Address/AddressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/Address/AddressService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/customer/WebCustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/customer/WebCustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/serve/ServePersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/serve/ServePersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/servestation/WebServestationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/servestation/WebServestationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/service/ServicePgdService.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/service/ServicePgdService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/Address/AddressDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/Address/AddressDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/customer/WebCustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/customer/WebCustomerDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/serve/ServePersonDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/serve/ServePersonDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/servestation/WebServestationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/servestation/WebServestationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/service/ServicePgdDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/service/ServicePgdDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/Address/AddressDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/Address/AddressDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/customer/EntityCustomerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/customer/EntityCustomerDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/customer/WebCustomerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/customer/WebCustomerDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServeGroupDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServeGroupDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServePersonDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServePersonDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServeProductDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServeProductDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServeTypeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServeTypeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/servestation/WebServestationDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/servestation/WebServestationDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/service/ServicePgdDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/service/ServicePgdDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/syuser/SyuserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/syuser/SyuserDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/volunteer/VolunteerManageMentDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/volunteer/VolunteerManageMentDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/LawServiceStarter.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/LawServiceStarter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/base/CrudDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/base/CrudDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/base/CrudService.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/base/CrudService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/Address/AddressService.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/Address/AddressService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/account/SyuserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/account/SyuserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/customer/WebCustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/customer/WebCustomerService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/sang/HrService.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/sang/HrService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/sang/MenuService.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/sang/MenuService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/serve/ServePersonService.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/serve/ServePersonService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/serve/ServeTypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/serve/ServeTypeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/servestation/WebServestationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/servestation/WebServestationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/service/ServicePgdService.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/impl/service/ServicePgdService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/Address/AddressDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/Address/AddressDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/account/SyuserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/account/SyuserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/customer/WebCustomerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/customer/WebCustomerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/sang/HrMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/sang/HrMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/sang/MenuDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/sang/MenuDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/serve/ServePersonDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/serve/ServePersonDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/serve/ServeTypeDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/serve/ServeTypeDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/servestation/WebServestationDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/servestation/WebServestationDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/service/ServicePgdDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/mapper/service/ServicePgdDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/Page.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/Page.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/dialect/Dialect.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/dialect/Dialect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/dialect/MySQLDialect.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/dialect/MySQLDialect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/interceptor/BaseInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/interceptor/BaseInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/interceptor/PaginationInterceptor$BoundSqlSqlSource.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/interceptor/PaginationInterceptor$BoundSqlSqlSource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/interceptor/PaginationInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/interceptor/PaginationInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/interceptor/PreparePaginationInterceptor.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/interceptor/PreparePaginationInterceptor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/interceptor/SQLHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/interceptor/SQLHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/proxy/PageConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/proxy/PageConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/proxy/PaginationMapperMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/proxy/PaginationMapperMethod.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/proxy/PaginationMapperProxy.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/proxy/PaginationMapperProxy.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/proxy/PaginationMapperRegistry.class" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/njhk/wisdom/web/service/persistence/proxy/PaginationMapperRegistry.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/Address/AddressDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/Address/AddressDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/customer/EntityCustomerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/customer/EntityCustomerDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/customer/WebCustomerDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/customer/WebCustomerDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/serve/ServeGroupDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/serve/ServeGroupDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/serve/ServePersonDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/serve/ServePersonDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/serve/ServeProductDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/serve/ServeProductDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/serve/ServeTypeDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/serve/ServeTypeDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/servestation/WebServestationDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/servestation/WebServestationDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/service/ServicePgdDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/service/ServicePgdDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/syuser/SyuserDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/syuser/SyuserDao.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/volunteer/VolunteerManageMentDao.xml" beforeDir="false" afterPath="$PROJECT_DIR$/njhk-wisdom-web-service/target/classes/persistence/volunteer/VolunteerManageMentDao.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/njhk-wisdom-web-service/target/" />
+    <ignored path="$PROJECT_DIR$/njhk-wisdom-web-api/target/" />
+    <ignored path="$PROJECT_DIR$/njhk-wisdom-web-bean/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="njhk-wisdom-datasys" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServePerson.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1260">
+              <caret line="38" column="37" lean-forward="true" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/servePerson/WebServepersonController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-2322">
+              <caret line="142" column="9" selection-start-line="142" selection-start-column="9" selection-end-line="142" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>servstation</find>
+      <find>state</find>
+      <find>withdraw</find>
+      <find>customerName</find>
+      <find>states</find>
+      <find>and states !=''</find>
+      <find>and appStates !=''</find>
+      <find>System.out</find>
+      <find>dele</find>
+      <find>pg</find>
+      <find>mainName</find>
+      <find>sex</find>
+      <find>familyPhone</find>
+      <find>serviceStationName</find>
+      <find>服务站</find>
+      <find>号</find>
+      <find>nonUse</find>
+      <find>add</find>
+      <find>addre</find>
+      <find>position</find>
+      <find>statSheQuId</find>
+      <find>log</find>
+      <find>服务</find>
+      <find>bir</find>
+      <find>idCard</find>
+      <find>idcard</find>
+      <find>name</find>
+      <find>姓名</find>
+      <find>serveType</find>
+      <find>sys</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>entityCustomer</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/pom.xml" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-api/pom.xml" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/customer/WebCustomerService.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/customer/WebCustomerDao.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/customer/CustomerController.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/vo/WebCustomer.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/volunteer/VolunteerController.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/EntitycustomerController.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/customer/WebCustomerDao.xml" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/customer/EntityCustomerDao.xml" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/customer/webcustomer/WebCustomerController.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/pojo/customer/EntityCustomer.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/VolunteerManagement.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/customer/Customer.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServeType.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/ServeProduct/ServeProductController.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/serveType/WebServeTypeController.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServeTypeDao.xml" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServeProduct.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServeProductDao.xml" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/ServeProduct/WebServeProductController.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/servestation/WebServestationService.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/servestation/WebServestationDao.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServicePgd.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/serve/ServePersonDao.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/service/ServicePgdService.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/service/ServicePgdDao.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/servestation/WebServestationDao.xml" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/service/ServicePgdController.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/service/ServicePgdDao.xml" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServeGroup.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/serveGroup/ServeGroupController.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServeGroupDao.xml" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/volunteer/VolunteerManageMentDao.xml" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/vo/AddressAo.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/Address/AddressService.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/Address/AddressDao.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/Address/AddressDao.xml" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/address/WebAddressController.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/address/Address.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/serveStation/WebServestationController.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServePerson.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/base/CrudService.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/serve/ServePersonService.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/syuser/SyuserDao.xml" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServePersonDao.xml" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/servePerson/WebServepersonController.java" />
+        <option value="$PROJECT_DIR$/njhk-wisdom-web-api/src/main/resources/application.yml" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\maven\repository" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549068531080" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.3912543" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\工程\禾康\test\njhk\newnjhk\njhk-wisdom-web-api\src\main\java\njhk\wisdom\web\api\config" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+    <option name="contentProportion" value="0.012442698" />
+  </component>
+  <component name="RunManager" selected="Spring Boot.WebApiStarter">
+    <configuration name="SocketUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="njhk.wisdom.datasys.web.api.utils.SocketUtils" />
+      <module name="njhk-wisdom-web-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="njhk.wisdom.datasys.web.api.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="auto.base.ops.common.utils.Test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="auto.base.ops.common.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebApiStarter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="njhk.wisdom.web.api.WebApiStarter" />
+      <module name="njhk-wisdom-web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="njhk.wisdom.web.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WebApiStarter" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="njhk-wisdom-web-api" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="njhk.wisdom.web.api.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="njhk.wisdom.web.api.WebApiStarter" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.WebApiStarter" />
+        <item itemvalue="Application.WebApiStarter" />
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.SocketUtils" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60321e79-ac93-47e0-bc3d-656e80d403e5" name="Default Changelist" comment="" />
+      <created>1544094145373</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1544094145373</updated>
+      <workItem from="1544094149310" duration="9087000" />
+      <workItem from="1544143068279" duration="14507000" />
+      <workItem from="1544402335205" duration="3172000" />
+      <workItem from="1544410064574" duration="7589000" />
+      <workItem from="1544426476456" duration="28000" />
+      <workItem from="1544426542558" duration="1697000" />
+      <workItem from="1544428528786" duration="20931000" />
+      <workItem from="1544488354822" duration="5510000" />
+      <workItem from="1544510488766" duration="13077000" />
+      <workItem from="1544575350875" duration="31180000" />
+      <workItem from="1544616483328" duration="4884000" />
+      <workItem from="1544621632415" duration="1091000" />
+      <workItem from="1544662012030" duration="27134000" />
+      <workItem from="1544748185043" duration="23835000" />
+      <workItem from="1544834174861" duration="21646000" />
+      <workItem from="1545007285285" duration="7970000" />
+      <workItem from="1545093084377" duration="79165000" />
+      <workItem from="1545351972633" duration="53190000" />
+      <workItem from="1545698026122" duration="29349000" />
+      <workItem from="1545783823448" duration="1542000" />
+      <workItem from="1545813623710" duration="241000" />
+      <workItem from="1545822138875" duration="1134000" />
+      <workItem from="1546429089280" duration="941000" />
+      <workItem from="1546475372431" duration="25618000" />
+      <workItem from="1546561863382" duration="26963000" />
+      <workItem from="1546657474939" duration="12191000" />
+      <workItem from="1546677385777" duration="7684000" />
+      <workItem from="1546826755635" duration="718000" />
+      <workItem from="1546829541466" duration="25098000" />
+      <workItem from="1546908580356" duration="50001000" />
+      <workItem from="1547028062881" duration="13000" />
+      <workItem from="1547088316126" duration="3391000" />
+      <workItem from="1547277252410" duration="1451000" />
+      <workItem from="1547435158997" duration="4094000" />
+      <workItem from="1547512359760" duration="4721000" />
+      <workItem from="1547691848036" duration="2964000" />
+      <workItem from="1547695822118" duration="3206000" />
+      <workItem from="1547708283635" duration="7169000" />
+      <workItem from="1547771934980" duration="2182000" />
+      <workItem from="1547858617990" duration="24850000" />
+      <workItem from="1548033404640" duration="1211000" />
+      <workItem from="1548047667873" duration="13413000" />
+      <workItem from="1548062022606" duration="1075000" />
+      <workItem from="1548063131490" duration="647000" />
+      <workItem from="1548063946507" duration="1634000" />
+      <workItem from="1548128136110" duration="207000" />
+      <workItem from="1548128683254" duration="73000" />
+      <workItem from="1548128788612" duration="38000" />
+      <workItem from="1548132130485" duration="98000" />
+      <workItem from="1548132367275" duration="905000" />
+      <workItem from="1548133756788" duration="163000" />
+      <workItem from="1548135027951" duration="829000" />
+      <workItem from="1548137887895" duration="175000" />
+      <workItem from="1548138150826" duration="23000" />
+      <workItem from="1548138177966" duration="5000" />
+      <workItem from="1548138387557" duration="5220000" />
+      <workItem from="1548206844026" duration="103000" />
+      <workItem from="1548207151716" duration="1543000" />
+      <workItem from="1548246983229" duration="395000" />
+      <workItem from="1548247514662" duration="461000" />
+      <workItem from="1548248023319" duration="87000" />
+      <workItem from="1548248143279" duration="164000" />
+      <workItem from="1548248344715" duration="4635000" />
+      <workItem from="1548336457362" duration="1385000" />
+      <workItem from="1548376504324" duration="22968000" />
+      <workItem from="1548463641744" duration="152922000" />
+      <workItem from="1550277131768" duration="1805000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="194215000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49932706" visible="true" weight="0.3014139" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.50067294" side_tool="true" weight="0.2596401" />
+      <window_info id="Web" order="7" side_tool="true" weight="0.32969153" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32974428" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6458869" weight="0.25033647" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4993573" weight="0.43741587" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.2153432" />
+      <window_info anchor="bottom" id="TODO" order="8" weight="0.32974428" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.7039031" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.22880216" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32974428" />
+      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.3541131" side_tool="true" weight="0.2732167" />
+      <window_info anchor="bottom" id="Problems" order="15" weight="0.32974428" />
+      <window_info active="true" anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.29475102" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.16838047" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32969153" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" side_tool="true" weight="0.32969153" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49932706" visible="true" weight="0.26028278" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.50067294" side_tool="true" weight="0.2596401" />
+      <window_info id="Web" order="7" side_tool="true" weight="0.32969153" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32974428" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6458869" weight="0.25033647" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4993573" weight="0.43741587" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Docker" order="6" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Spring" order="7" weight="0.2153432" />
+      <window_info anchor="bottom" id="TODO" order="8" weight="0.32974428" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.7039031" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.22880216" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32974428" />
+      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.3541131" side_tool="true" weight="0.2732167" />
+      <window_info anchor="bottom" id="Problems" order="15" weight="0.32974428" />
+      <window_info anchor="bottom" id="Run Dashboard" order="16" visible="true" weight="0.092866756" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.16838047" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.32969153" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="Bean Validation" order="9" side_tool="true" weight="0.32969153" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServeProductDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="14" column="36" lean-forward="true" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/pojo/customer/EntityCustomer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1729">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServeProduct.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="31" column="37" lean-forward="true" selection-start-line="31" selection-start-column="37" selection-end-line="31" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/serve/ServeStationDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServeStationDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4953">
+          <caret line="2" column="60" lean-forward="true" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/common/persistence/Page.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1536">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServeStation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/servestation/WebServestationService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="32" column="117" lean-forward="true" selection-start-line="32" selection-start-column="117" selection-end-line="32" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/serve/ServePersonDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/servestation/WebServestationDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="23" column="20" lean-forward="true" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/service/ServicePgdService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/service/ServicePgdDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="42" column="8" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServicePgd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/service/ServicePgdController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="362" column="13" lean-forward="true" selection-start-line="362" selection-start-column="13" selection-end-line="362" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServeTypeDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1833">
+          <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServeGroup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="22" column="19" lean-forward="true" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/common/persistence/DataEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="46" lean-forward="true" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/serveGroup/ServeGroupController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="137" column="45" selection-start-line="137" selection-start-column="29" selection-end-line="137" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServeGroupDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="118" column="12" selection-start-line="118" selection-start-column="12" selection-end-line="118" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/ServetypeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="56" column="38" lean-forward="true" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/vo/AddressVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-311">
+          <caret line="19" column="37" lean-forward="true" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/vo/AddressAo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/volunteer/VolunteerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7">
+          <caret line="132" column="44" selection-start-line="132" selection-start-column="29" selection-end-line="132" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/Address/AddressService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="17" column="46" lean-forward="true" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/address/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="24" column="48" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/Address/AddressDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-166">
+          <caret line="109" column="31" selection-start-line="109" selection-start-column="31" selection-end-line="109" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/Address/AddressDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/address/WebAddressController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="709">
+          <caret line="51" column="65" lean-forward="true" selection-start-line="51" selection-end-line="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/ServePersonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="110" lean-forward="true" selection-start-line="110" selection-end-line="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/mapper/customer/WebCustomerDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/customer/webcustomer/WebCustomerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="49" column="18" selection-start-line="49" selection-start-column="18" selection-end-line="49" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/customer/WebCustomerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="59" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/volunteer/VolunteerManageMentDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="105" column="40" lean-forward="true" selection-start-line="105" selection-start-column="40" selection-end-line="105" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/serveStation/WebServestationController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="230" column="53" lean-forward="true" selection-start-line="230" selection-start-column="53" selection-end-line="230" selection-end-column="53" />
+          <folding>
+            <element signature="e#2404#2418#0" expanded="true" />
+            <element signature="e#7650#7664#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/VolunteerManagement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/common/persistence/BaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="109" column="19" selection-start-line="109" selection-start-column="19" selection-end-line="109" selection-end-column="19" />
+          <folding>
+            <element signature="e#2146#2147#0" expanded="true" />
+            <element signature="e#2212#2213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/base/CrudService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="109" selection-start-line="109" selection-end-line="109" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/java/njhk/wisdom/web/service/impl/serve/ServePersonService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding>
+            <element signature="e#1537#1538#0" expanded="true" />
+            <element signature="e#1600#1601#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServeType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="20" column="35" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/servestation/WebServestationDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5954">
+          <caret line="208" column="16" lean-forward="true" selection-start-line="208" selection-start-column="16" selection-end-line="208" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/service/ServicePgdDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="659" column="12" lean-forward="true" selection-start-line="659" selection-start-column="12" selection-end-line="659" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.9.RELEASE/spring-web-5.0.9.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="121" selection-start-line="121" selection-end-line="121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/serve/ServePersonDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8670">
+          <caret line="289" column="67" selection-start-line="289" selection-start-column="67" selection-end-line="289" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/customer/WebCustomerDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="253" column="40" lean-forward="true" selection-start-line="253" selection-start-column="40" selection-end-line="253" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/customer/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="41" column="35" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/resources/Syuser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="591">
+          <caret line="34" column="27" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-api/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-service/src/main/resources/persistence/syuser/SyuserDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-bean/src/main/java/njhk/wisdom/web/bean/entity/server/ServePerson.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1260">
+          <caret line="38" column="37" lean-forward="true" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/njhk-wisdom-web-api/src/main/java/njhk/wisdom/web/api/controller/serve/servePerson/WebServepersonController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2322">
+          <caret line="142" column="9" selection-start-line="142" selection-start-column="9" selection-end-line="142" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>unnamed</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3912543" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3912543" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3912543" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8.0_121</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3912543" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring|njhk-wisdom-web-api</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3912543" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.google.zxing:javase:3.1.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.3912543" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

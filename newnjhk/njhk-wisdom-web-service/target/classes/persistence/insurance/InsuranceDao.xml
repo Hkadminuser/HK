@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.insurance.InsuranceDao">
+
+    <sql id="projectColumns">
+        a.id AS "id",
+        a.actualOccupancy AS "actualOccupancy",
+        a.bedNumber AS "bedNumber",
+        a.buildingArea AS "buildingArea",
+        a.constructionYears AS "constructionYears",
+        a.headPhone AS "headPhone",
+        a.housingProperty AS "housingProperty",
+        a.institutionAddress AS "institutionAddress",
+        a.institutionHead AS "institutionHead",
+        a.institutionName AS "institutionName",
+        a.institutionPhoto AS "institutionPhoto",
+        a.institutionType AS "institutionType",
+        a.landProperty AS "landProperty",
+        a.managers AS "managers",
+        a.nature AS "nature",
+        a.nursings AS "nursings",
+        a.ownership AS "ownership",
+        a.remarks AS "remarks"
+
+    </sql>
+
+    <sql id="projectJoins">
+    </sql>
+
+    <!--  <select id="get" resultType="njhk.wisdom.web.bean.entity.server.VolunteerManagement">
+          SELECT
+          <include refid="projectColumns"/>
+          FROM wx_volunteermanagement a
+          <include refid="projectJoins"/>
+          <where>
+              1=1 AND a.del_flag = #{DEL_FLAG_NORMAL}
+              <if test="projectCode!=null and projectCode!=''">
+                  AND a.project_code = #{projectCode}
+              </if>
+              <if test="id!=null and id!=''">
+                  AND a.id = #{id}
+              </if>
+          </where>
+      </select>-->
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.customer.Institutions">
+        SELECT
+        <include refid="projectColumns"/>
+        FROM wx_institutions a
+        <include refid="projectJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_institutions(
+            actualOccupancy,
+            bedNumber,
+            buildingArea,
+            constructionYears,
+            headPhone,
+            housingProperty,
+            institutionAddress,
+            institutionHead,
+            institutionName,
+            institutionPhoto,
+            institutionType,
+            landProperty,
+            managers,
+            nature,
+            nursings,
+            ownership,
+            remarks
+
+        ) VALUES (
+                     #{actualOccupancy},
+                     #{bedNumber},
+                     #{buildingArea},
+                     #{constructionYears},
+                     #{headPhone},
+                     #{housingProperty},
+                     #{institutionAddress},
+                     #{institutionHead},
+                     #{institutionName},
+                     #{institutionPhoto},
+                     #{institutionType},
+                     #{landProperty},
+                     #{managers},
+                     #{nature},
+                     #{nursings},
+                     #{ownership},
+                     #{remarks}
+
+                 )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_institutions SET
+                                   actualOccupancy=#{actualOccupancy},
+                                   bedNumber=#{bedNumber},
+                                   buildingArea=#{buildingArea},
+                                   constructionYears=#{constructionYears},
+                                   headPhone=#{headPhone},
+                                   housingProperty=#{housingProperty},
+                                   institutionAddress=#{institutionAddress},
+                                   institutionHead=#{institutionHead},
+                                   institutionName=#{institutionName},
+                                   institutionPhoto=#{institutionPhoto},
+                                   institutionType=#{institutionType},
+                                   landProperty=#{landProperty},
+                                   managers=#{managers},
+                                   nature=#{nature},
+                                   nursings=#{nursings},
+                                   ownership=#{ownership},
+                                   remarks=#{remarks}
+
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_institutions SET
+            del_flag = #{DEL_FLAG_DELETE}
+        WHERE id = #{id}
+    </update>
+
+</mapper>

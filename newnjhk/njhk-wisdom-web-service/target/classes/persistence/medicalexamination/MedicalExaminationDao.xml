@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.medicalexamination.MedicalExaminationDao">
+
+    <sql id="projectColumns">
+        a.id AS "id",
+        a.ABI  AS "ABI",
+        a.AGE_MATCHED  AS "AGE_MATCHED",
+        a.BIL  AS "BIL",
+        a.BLD  AS "BLD",
+        a.BQI  AS "BQI",
+        a.BUA  AS "BUA",
+        a.CMBV  AS "CMBV",
+        a.CO  AS "CO",
+        a.CR  AS "CR",
+        a.EOA  AS "EOA",
+        a.FEF25  AS "FEF25",
+        a.FEF2575  AS "FEF2575",
+        a.FEF75  AS "FEF75",
+        a.FEV1  AS "FEV1",
+        a.FVC  AS "FVC",
+        a.GLU AS "GLU",
+        a.HOV AS "HOV",
+        a.KET AS "KET",
+        a.LEU AS "LEU",
+        a.MAL AS "MAL",
+        a.MAP AS "MAP",
+        a.NIT AS "NIT",
+        a.OI AS "OI",
+        a.PAB AS "PAB",
+        a.PAWP AS "PAWP",
+        a.PEF AS "PEF",
+        a.PH AS "PH",
+        a.PP AS "PP",
+        a.PRO AS "PRO",
+        a.RRF AS "RRF",
+        a.SG  AS "SG",
+        a.SOS AS "SOS",
+        a.SV AS "SV",
+        a.TPR AS "TPR",
+        a.TSCORE AS "TSCORE",
+        a.UCA AS "UCA",
+        a.URO AS "URO",
+        a.VC AS "VC",
+        a.YOUNG_ADULT AS "YOUNG_ADULT",
+        a.ZSCORE AS "ZSCORE",
+        a.afib AS "afib",
+        a.alcohol AS "alcohol",
+        a.calcLdl AS "calcLdl",
+        a.errinfo AS "errinfo",
+        a.feihuoResult AS "feihuoResult",
+        a.guResult AS "guResult",
+        a.hb AS "hb",
+        a.hct AS "hct",
+        a.hdlChol AS "hdlChol
+        a.heartFunction1 AS "heartFunction1",
+        a.heartFunction2 AS "heartFunction2",
+        a.jiuResult AS "jiuResult",
+        a.liaoyeResult AS "liaoyeResult",
+        a.lung AS "lung",
+        a.n AS "n",
+        a.tcHdl AS "tcHdl",
+        a.trig AS "trig",
+        a.vascularCondition1 AS "vascularCondition1",
+        a.vascularCondition2 AS "vascularCondition2",
+        a.xhdanbaiResult AS "xhdanbaiResult",
+        a.xuezhiResult AS "xuezhiResult",
+        a.zhenduanResult AS "zhenduanResult"
+
+    </sql>
+
+    <sql id="projectJoins">
+    </sql>
+
+    <!--  <select id="get" resultType="njhk.wisdom.web.bean.entity.server.VolunteerManagement">
+          SELECT
+          <include refid="projectColumns"/>
+          FROM wx_volunteermanagement a
+          <include refid="projectJoins"/>
+          <where>
+              1=1 AND a.del_flag = #{DEL_FLAG_NORMAL}
+              <if test="projectCode!=null and projectCode!=''">
+                  AND a.project_code = #{projectCode}
+              </if>
+              <if test="id!=null and id!=''">
+                  AND a.id = #{id}
+              </if>
+          </where>
+      </select>-->
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.customer.MedicalExamination">
+        SELECT
+        <include refid="projectColumns"/>
+        FROM wx_medicalexamination a
+        <include refid="projectJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_medicalexamination(
+                ABI,
+                AGE_MATCHED,
+                BIL,
+                BLD,
+                BQI,
+                BUA,
+                CMBV,
+                CO,
+                CR,
+                EOA,
+                FEF25,
+                FEF2575,
+                FEF75,
+                FEV1,
+                FVC,
+                GLU,
+                HOV,
+                KET,
+                LEU,
+                MAL,
+                MAP,
+                NIT,
+                OI,
+                PAB,
+                PAWP,
+                PEF,
+                PH,
+                PP,
+                PRO,
+                RRF,
+                SG,
+                SOS,
+                SV,
+                TPR,
+                TSCORE,
+                UCA,
+                URO,
+                VC,
+                YOUNG_ADULT,
+                ZSCORE,
+                afib,
+                alcohol,
+                calcLdl,
+                errinfo,
+                feihuoResult,
+                guResult,
+                hb,
+                hct,
+                hdlChol,
+                heartFunction1,
+                heartFunction2,
+                jiuResult,
+                liaoyeResult,
+                lung,
+                n,
+                tcHdl,
+                trig,
+                vascularCondition1,
+                vascularCondition2,
+                xhdanbaiResult,
+                xuezhiResult,
+                zhenduanResult
+
+
+
+        ) VALUES (
+                             #{ABI},
+                             #{AGE_MATCHED},
+                             #{BIL},
+                             #{BLD},
+                             #{BQI},
+                             #{BUA},
+                             #{CMBV},
+                             #{CO},
+                             #{CR},
+                             #{EOA},
+                             #{FEF25},
+                             #{FEF2575},
+                             #{FEF75},
+                             #{FEV1},
+                             #{FVC},
+                             #{GLU},
+                             #{HOV},
+                             #{KET},
+                             #{LEU},
+                             #{MAL},
+                             #{MAP},
+                             #{NIT},
+                             #{OI},
+                             #{PAB},
+                             #{PAWP},
+                             #{PEF},
+                             #{PH},
+                             #{PP},
+                             #{PRO},
+                             #{RRF},
+                             #{SG},
+                             #{SOS},
+                             #{SV},
+                             #{TPR},
+                             #{TSCORE},
+                             #{UCA},
+                             #{URO},
+                             #{VC},
+                             #{YOUNG_ADULT},
+                             #{ZSCORE},
+                             #{afib},
+                             #{alcohol},
+                             #{calcLdl},
+                             #{errinfo},
+                             #{feihuoResult},
+                             #{guResult},
+                             #{hb},
+                             #{hct},
+                             #{hdlChol},
+                             #{heartFunction1},
+                             #{heartFunction2},
+                             #{jiuResult},
+                             #{liaoyeResult},
+                             #{lung},
+                             #{n},
+                             #{tcHdl},
+                             #{trig},
+                             #{vascularCondition1},
+                             #{vascularCondition2},
+                             #{xhdanbaiResult},
+                             #{xuezhiResult},
+                             #{zhenduanResult}
+
+                 )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_medicalexamination SET
+                                         ABI=#{ABI},
+                                         AGE_MATCHED=#{AGE_MATCHED},
+                                         BIL=#{BIL},
+                                         BLD=#{BLD},
+                                         BQI=#{BQI},
+                                         BUA=#{BUA},
+                                         CMBV=#{CMBV},
+                                         CO=#{CO},
+                                         CR=#{CR},
+                                         EOA=#{EOA},
+                                         FEF25=#{FEF25},
+                                         FEF2575=#{FEF2575},
+                                         FEF75=#{FEF75},
+                                         FEV1=#{FEV1},
+                                         FVC=#{FVC},
+                                         GLU=#{GLU},
+                                         HOV=#{HOV},
+                                         KET=#{KET},
+                                         LEU=#{LEU},
+                                         MAL=#{MAL},
+                                         MAP=#{MAP},
+                                         NIT=#{NIT},
+                                         OI=#{OI},
+                                         PAB=#{PAB},
+                                         PAWP=#{PAWP},
+                                         PEF=#{PEF},
+                                         PH=#{PH},
+                                         PP=#{PP},
+                                         PRO=#{PRO},
+                                         RRF=#{RRF},
+                                         SG=#{SG},
+                                         SOS=#{SOS},
+                                         SV=#{SV},
+                                         TPR=#{TPR},
+                                         TSCORE=#{TSCORE},
+                                         UCA=#{UCA},
+                                         URO=#{URO},
+                                         VC=#{VC},
+                                         YOUNG_ADULT=#{YOUNG_ADULT},
+                                         ZSCORE=#{ZSCORE},
+                                         afib=#{afib},
+                                         alcohol=#{alcohol},
+                                         calcLdl=#{calcLdl},
+                                         errinfo=#{errinfo},
+                                         feihuoResult=#{feihuoResult},
+                                         guResult=#{guResult},
+                                         hb=#{hb},
+                                         hct=#{hct},
+                                         hdlChol=#{hdlChol},
+                                         heartFunction1=#{heartFunction1},
+                                         heartFunction2=#{heartFunction2},
+                                         jiuResult=#{jiuResult},
+                                         liaoyeResult=#{liaoyeResult},
+                                         lung=#{lung},
+                                         n=#{n},
+                                         tcHdl=#{tcHdl},
+                                         trig=#{trig},
+                                         vascularCondition1=#{vascularCondition1},
+                                         vascularCondition2=#{vascularCondition2},
+                                         xhdanbaiResult=#{xhdanbaiResult},
+                                         xuezhiResult=#{xuezhiResult},
+                                         zhenduanResult=#{zhenduanResult}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_medicalexamination SET
+            del_flag = #{DEL_FLAG_DELETE}
+        WHERE id = #{id}
+    </update>
+
+</mapper>
+

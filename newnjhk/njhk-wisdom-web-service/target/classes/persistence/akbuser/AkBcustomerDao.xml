@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.akbuser.AkBcustomerDao">
+
+    <sql id="akBcustomerColumns">
+        a.ID AS "iD",
+        a.addressNow AS "addressNow",
+        a.akbxh AS "akbxh",
+        a.akbyhlx AS "akbyhlx",
+        a.fflx AS "fflx",
+        a.installMan AS "installMan",
+        a.installPosition AS "installPosition",
+        a.installTime AS "installTime",
+        a.jtcy_name1 AS "jtcy_name1",
+        a.jtcy_name2 AS "jtcy_name2",
+        a.jtcy_name3 AS "jtcy_name3",
+        a.jtcy_phone1 AS "jtcy_phone1",
+        a.jtcy_phone2 AS "jtcy_phone2",
+        a.jtcy_phone3 AS "jtcy_phone3",
+        a.jtcy_relation1 AS "jtcy_relation1",
+        a.jtcy_relation2 AS "jtcy_relation2",
+        a.jtcy_relation3 AS "jtcy_relation3",
+        a.jtlx AS "jtlx",
+        a.status AS "status",
+        a.terminalPhone AS "terminalPhone",
+        a.yhbh AS "yhbh",
+        a.yhlx AS "yhlx",
+        a.customer AS "customer"
+    </sql>
+    <sql id="akBcustomerJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.akbuser.AkBcustomer">
+        SELECT
+        <include refid="akBcustomerColumns"/>
+        FROM wx_akbcustomer a
+        <include refid="akBcustomerJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.akbuser.AkBcustomer">
+        SELECT
+        <include refid="akBcustomerColumns"/>
+        FROM wx_akbcustomer a
+        <include refid="akBcustomerJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.akbuser.AkBcustomer">
+        SELECT
+        <include refid="akBcustomerColumns"/>
+        FROM wx_akbcustomer a
+        <include refid="akBcustomerJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_akbcustomer(
+                ID,
+                addressNow,
+                akbxh,
+                akbyhlx,
+                fflx,
+                installMan,
+                installPosition,
+                installTime,
+                jtcy_name1,
+                jtcy_name2,
+                jtcy_name3,
+                jtcy_phone1,
+                jtcy_phone2,
+                jtcy_phone3,
+                jtcy_relation1,
+                jtcy_relation2,
+                jtcy_relation3,
+                jtlx,
+                status,
+                terminalPhone,
+                yhbh,
+                yhlx,
+                customer
+
+        ) VALUES (
+                                 #{iD},
+                                 #{addressNow},
+                                 #{akbxh},
+                                 #{akbyhlx},
+                                 #{fflx},
+                                 #{installMan},
+                                 #{installPosition},
+                                 #{installTime},
+                                 #{jtcy_name1},
+                                 #{jtcy_name2},
+                                 #{jtcy_name3},
+                                 #{jtcy_phone1},
+                                 #{jtcy_phone2},
+                                 #{jtcy_phone3},
+                                 #{jtcy_relation1},
+                                 #{jtcy_relation2},
+                                 #{jtcy_relation3},
+                                 #{jtlx},
+                                 #{status},
+                                 #{terminalPhone},
+                                 #{yhbh},
+                                 #{yhlx},
+                                 #{customer}
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_akbcustomer SET
+                                addressNow={addressNow},
+                                akbxh={akbxh},
+                                akbyhlx={akbyhlx},
+                                fflx={fflx},
+                                installMan={installMan},
+                                installPosition={installPosition},
+                                installTime={installTime},
+                                jtcy_name1={jtcy_name1},
+                                jtcy_name2={jtcy_name2},
+                                jtcy_name3={jtcy_name3},
+                                jtcy_phone1={jtcy_phone1},
+                                jtcy_phone2={jtcy_phone2},
+                                jtcy_phone3={jtcy_phone3},
+                                jtcy_relation1={jtcy_relation1},
+                                jtcy_relation2={jtcy_relation2},
+                                jtcy_relation3={jtcy_relation3},
+                                jtlx={jtlx},
+                                status={status},
+                                terminalPhone={terminalPhone},
+                                yhbh={yhbh},
+                                yhlx={yhlx},
+                                customer={customer}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_akbcustomer SET
+            del = #{del}
+        WHERE ID = #{iD}
+    </update>
+
+
+</mapper>

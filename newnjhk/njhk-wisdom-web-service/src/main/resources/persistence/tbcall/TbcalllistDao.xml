@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.tbcall.TbcalllistDao">
+
+    <sql id="tbcalllistColumns">
+        a.id AS "id",
+        a.ansId AS "ansId",
+        a.ansTime AS "ansTime",
+        a.callInOut AS "callInOut",
+        a.callTime AS "callTime",
+        a.chnNo AS "chnNo",
+        a.chnType AS "chnType",
+        a.ExtNum AS "ExtNum",
+        a.recdFile AS "recdFile",
+        a.recfileRemark AS "recfileRemark",
+        a.relTime AS "relTime",
+        a.SeatNo AS "SeatNo",
+        a.serialNo AS "serialNo",
+        a.WorkerNo AS "WorkerNo"
+    </sql>
+    <sql id="tbcalllistJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.Tbcalllist">
+        SELECT
+        <include refid="tbcalllistColumns"/>
+        FROM wx_tbcalllist a
+        <include refid="tbcalllistJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.Tbcalllist">
+        SELECT
+        <include refid="tbcalllistColumns"/>
+        FROM wx_tbcalllist a
+        <include refid="tbcalllistJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.Tbcalllist">
+        SELECT
+        <include refid="tbcalllistColumns"/>
+        FROM wx_tbcalllist a
+        <include refid="tbcalllistJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_tbcalllist(
+                id,
+                ansId,
+                ansTime,
+                callInOut,
+                callTime,
+                chnNo,
+                chnType,
+                ExtNum,
+                recdFile,
+                recfileRemark,
+                relTime,
+                SeatNo,
+                serialNo,
+                WorkerNo
+        ) VALUES (
+                                 #{id},
+                                 #{ansId},
+                                 #{ansTime},
+                                 #{callInOut},
+                                 #{callTime},
+                                 #{chnNo},
+                                 #{chnType},
+                                 #{ExtNum},
+                                 #{recdFile},
+                                 #{recfileRemark},
+                                 #{relTime},
+                                 #{SeatNo},
+                                 #{serialNo},
+                                 #{WorkerNo}
+
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_tbcalllist SET
+
+                                ansId=#{ansId},
+                                ansTime=#{ansTime},
+                                callInOut=#{callInOut},
+                                callTime=#{callTime},
+                                chnNo=#{chnNo},
+                                chnType=#{chnType},
+                                ExtNum=#{ExtNum},
+                                recdFile=#{recdFile},
+                                recfileRemark=#{recfileRemark},
+                                relTime=#{relTime},
+                                SeatNo=#{SeatNo},
+                                serialNo=#{serialNo},
+                                WorkerNo=#{WorkerNo}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_tbcalllist SET
+            del = #{del}
+        WHERE id = #{id}
+    </update>
+
+
+
+</mapper>

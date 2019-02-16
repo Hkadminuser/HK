@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.relation.WxPersonServepgdDao">
+
+    <sql id="WxPersonServepgdColumns">
+        a.entityServePgd_id AS "entityServePgd_id",
+        a.servePerson_id AS "servePerson_id"
+    </sql>
+
+    <sql id="WxPersonServepgdJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.relevance.WxPersonServepgd">
+        SELECT
+        <include refid="WxPersonServepgdColumns"/>
+        FROM wxPersonServepgd a
+        <include refid="WxPersonServepgdJoins"/>
+        <where>
+            1=1
+        </where>
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.relevance.WxPersonServepgd">
+        SELECT
+        <include refid="WxPersonServepgdColumns"/>
+        FROM wxPersonServepgd a
+        <include refid="WxPersonServepgdJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+        </choose>
+    </select>
+
+
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wxPersonServepgd(
+            entityServePgd_id,
+            servePerson_id
+        ) VALUES (
+                     #{entityServePgd_id},
+                     #{servePerson_id}
+                 )
+    </insert>
+
+    <update id="update">
+        UPDATE wxPersonServepgd SET
+                                           entityServePgd_id=#{entityServePgd_id},
+                                           servePerson_id=#{servePerson_id}
+        WHERE ID = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wxServetypeServestation SET
+            del_flag = #{DEL_FLAG_DELETE}
+        WHERE entityServePgd_id=#{entityServePgd_id}
+    </update>
+
+</mapper>

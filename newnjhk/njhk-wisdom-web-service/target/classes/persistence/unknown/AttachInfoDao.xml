@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.unknown.AttachInfoDao">
+
+    <sql id="attachInfoColumns">
+        a.ID AS "id",
+        a.name AS "name",
+        a.phone AS "phone",
+        a.customer AS "customer"
+    </sql>
+    <sql id="attachInfoJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.AttachInfo">
+        SELECT
+        <include refid="attachInfoColumns"/>
+        FROM wx_attachinfo a
+        <include refid="attachInfoJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.AttachInfo">
+        SELECT
+        <include refid="attachInfoColumns"/>
+        FROM wx_attachinfo a
+        <include refid="attachInfoJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.AttachInfo">
+        SELECT
+        <include refid="attachInfoColumns"/>
+        FROM wx_attachinfo a
+        <include refid="attachInfoJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_attachinfo(
+                ID,
+                name,
+                phone,
+                customer
+
+        ) VALUES (
+                                 #{iD},
+                                 #{name},
+                                 #{phone},
+                                 #{customer}
+
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_attachinfo SET
+                                name=#{name},
+                                phone=#{phone},
+                                customer=#{customer}
+        WHERE ID = #{iD}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_attachinfo SET
+            del = #{del}
+        WHERE ID = #{iD}
+    </update>
+
+</mapper>

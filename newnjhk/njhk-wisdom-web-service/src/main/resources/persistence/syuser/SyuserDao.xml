@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.account.SyuserDao">
+    <resultMap id="BaseResultMap" type="njhk.wisdom.web.bean.entity.resources.Syuser">
+        <id column="ID" property="id"/>
+        <result column="CREATEDATETIME" property="createdatetime"/>
+        <result column="UPDATEDATETIME" property="updatedatetime"/>
+        <result column="LOGINNAME" property="loginname"/>
+        <result column="PWD" property="password"/>
+        <result column="NAME" property="name"/>
+        <result column="SEX" property="sex"/>
+        <result column="AGE" property="age"/>
+        <result column="photo" property="photo"/>
+        <result column="status" property="status"/>
+        <result column="logintime" property="logintime"/>
+        <result column="states" property="states"/>
+        <result column="usertype" property="usertype"/>
+    </resultMap>
+    <resultMap id="lazyLoadRoles" type="njhk.wisdom.web.bean.entity.resources.Syuser" extends="BaseResultMap">
+        <collection property="roles" ofType="njhk.wisdom.web.bean.entity.resources.SyRole" select="njhk.wisdom.web.service.mapper.account.SyuserDao.getRolesByHrId"
+                    column="ID"></collection>
+    </resultMap>
+
+    <sql id="projectColumns">
+        a.ID AS "id",
+        a.AGE AS "age",
+        a.CREATEDATETIME AS "createdatetime",
+        a.LOGINNAME AS "loginname",
+        a.NAME AS "name",
+        a.PWD AS "password",
+        a.SEX AS "sex",
+        a.UPDATEDATETIME AS "updatedatetime",
+        a.usertype AS "usertype",
+        a.photo AS "photo",
+        a.DOG AS "dog",
+        a.logintime AS "logintime",
+        a.states AS "states",
+        a.status AS "status",
+        a.sysEndCood AS "sysEndCood"
+
+    </sql>
+
+    <sql id="projectJoins">
+    </sql>
+
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.resources.Syuser">
+        SELECT
+        <include refid="projectColumns"/>
+        FROM wx_syuser a
+        <include refid="projectJoins"/>
+        <where>
+             2=2
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+
+
+
+    <insert id="SyuserReg" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_syuser(
+                AGE,
+                CREATEDATETIME,
+                LOGINNAME,
+                NAME,
+                PWD,
+                SEX,
+                UPDATEDATETIME,
+                usertype,
+                photo,
+                DOG,
+                logintime,
+                states,
+                status,
+                sysEndCood
+
+        ) VALUES (
+        #{age},
+        #{createdatetime},
+        #{loginname},
+        #{name},
+        #{pwd},
+        #{sex},
+        #{updatedatetime},
+        #{usertype},
+        #{photo},
+        #{dog},
+        #{logintime},
+        #{states},
+        #{status},
+        #{sysEndCood}
+                  
+        )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_syuser SET
+                             <if test="age !=null">
+                             AGE=#{age},
+                             </if>
+                             <if test="createdatetime !=null">
+                             CREATEDATETIME=#{createdatetime},
+                             </if>
+                             <if test="loginname !=null and loginname !=''">
+                             LOGINNAME=#{loginname},
+                             </if>
+                             <if test="name !=null and name !=''">
+                             NAME=#{name},
+                             </if>
+                             <if test="password !=null and password !=''">
+                             PWD=#{password},
+                             </if>
+                             <if test="sex !=null and sex !=''">
+                             SEX=#{sex},
+                             </if>
+                             <if test="updatedatetime !=null">
+                             UPDATEDATETIME=#{updatedatetime},
+                             </if>
+                             <if test="usertype !=null and usertype !=''">
+                             usertype=#{usertype},
+                             </if>
+                             <if test="photo !=null and photo !=''">
+                             photo=#{photo},
+                             </if>
+                             <if test="dog !=null and dog !=''">
+                             DOG=#{dog},
+                             </if>
+                             <if test="logintime !=null and logintime !=''">
+                             logintime=#{logintime},
+                             </if>
+                             <if test="states !=null and states !=''">
+                             states=#{states},
+                             </if>
+                             <if test="status !=null and status !=''">
+                             status=#{status},
+                             </if>
+                             <if test="sysEndCood !=null and sysEndCood !=''">
+                             sysEndCood=#{sysEndCood},
+                             </if>
+                             <if test="id !=null and id !=''">
+                                 ID=#{id}
+                             </if>
+
+        WHERE ID = #{id}
+    </update>
+
+    <delete id="delete">
+        DELETE from  wx_syuser
+        WHERE ID = #{id}
+    </delete>
+
+    <select id="login" resultType="njhk.wisdom.web.bean.entity.resources.Syuser">
+        SELECT
+        <include refid="projectColumns"/>
+        FROM wx_syuser a
+        <include refid="projectJoins"/>
+        <where>
+            a.LOGINNAME=#{loginname} AND a.PWD=#{pwd}
+        </where>
+    </select>
+
+    <select id="loadUserByUsername" resultMap="lazyLoadRoles">
+        select * from wx_syuser WHERE LOGINNAME=#{loginname};
+    </select>
+
+    <select id="getRolesByHrId" resultType="njhk.wisdom.web.bean.entity.resources.SyRole">
+        SELECT r.* FROM wx_syuser_syrole h,wx_syrole r where h.SYROLE_ID=r.ID AND h.SYROLE_ID=#{id}
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+            INSERT  INTO wx_syuser (
+                ID,
+                CREATEDATETIME,
+                UPDATEDATETIME,
+                LOGINNAME,
+                PWD,
+                NAME,
+                SEX,
+                AGE,
+                photo,
+                status,
+                logintime,
+                states,
+                sysEndCood,
+                usertype
+            )  VALUES (
+                                      #{id},
+                                      #{createdatetime},
+                                      #{updatedatetime},
+                                      #{loginname},
+                                      #{password},
+                                      #{name},
+                                      #{sex},
+                                      #{age},
+                                      #{photo},
+                                      #{status},
+                                      #{logintime},
+                                      #{states},
+                                      #{sysEndCood},
+                                      #{usertype}
+                                  )
+
+    </insert>
+
+</mapper>

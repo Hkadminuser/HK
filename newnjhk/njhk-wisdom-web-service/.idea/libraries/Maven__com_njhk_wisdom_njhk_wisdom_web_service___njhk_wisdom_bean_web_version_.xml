@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.njhk.wisdom:njhk-wisdom-web-service:${njhk-wisdom-bean-web-version}">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/njhk/wisdom/njhk-wisdom-web-service/${njhk-wisdom-bean-web-version}/njhk-wisdom-web-service-${njhk-wisdom-bean-web-version}.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/njhk/wisdom/njhk-wisdom-web-service/${njhk-wisdom-bean-web-version}/njhk-wisdom-web-service-${njhk-wisdom-bean-web-version}-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/njhk/wisdom/njhk-wisdom-web-service/${njhk-wisdom-bean-web-version}/njhk-wisdom-web-service-${njhk-wisdom-bean-web-version}-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

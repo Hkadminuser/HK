@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.dict.DictDao">
+
+    <sql id="dictColumns">
+        a.id AS "id",
+        a.cloumnName AS "cloumnName",
+        a.des AS "des",
+        a.state AS "state",
+        a.tableName AS "tableName",
+        a.value AS "value"
+    </sql>
+    <sql id="dictJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.dict.Dict">
+        SELECT
+        <include refid="dictColumns"/>
+        FROM wx_dict a
+        <include refid="dictJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.dict.Dict">
+        SELECT
+        <include refid="dictColumns"/>
+        FROM wx_dict a
+        <include refid="dictJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.dict.Dict">
+        SELECT
+        <include refid="dictColumns"/>
+        FROM wx_dict a
+        <include refid="dictJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_dict(
+                id
+                cloumnName
+                des
+                state
+                tableName
+                value
+
+        ) VALUES (
+                                 #{id},
+                                 #{cloumnName},
+                                 #{des},
+                                 #{state},
+                                 #{tableName},
+                                 #{value}
+
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_dict SET
+
+                                cloumnName=#{cloumnName},
+                                des=#{des},
+                                state=#{state},
+                                tableName=#{tableName},
+                                value=#{value}
+
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_dict SET
+            del = #{del}
+        WHERE id = #{id}
+    </update>
+
+
+</mapper>

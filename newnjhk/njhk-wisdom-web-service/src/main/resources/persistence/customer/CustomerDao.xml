@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.customer.CustomerDao">
+
+    <sql id="customerColumns">
+        a.id AS "id",
+        a.address AS "address",
+        a.addressLat AS "addressLat",
+        a.addressLng AS "addressLng",
+        a.birthday AS "birthday",
+        a.community AS "community",
+        a.familyphone AS "familyphone",
+        a.idNumber AS "idNumber",
+        a.idNumberaddress AS "idNumberaddress",
+        a.moreinfo AS "moreinfo",
+        a.name AS "name",
+        a.phone AS "phone",
+        a.photo AS "photo",
+        a.photob AS "photob",
+        a.sex AS "sex",
+        a.states AS "states",
+        a.type AS "type",
+        a.uid AS "uid",
+        a.communityid AS "communityid",
+        a.points AS "points",
+        a.coupon AS "coupon",
+        a.memberType AS "memberType",
+        a.lastSignTime AS "lastSignTime",
+        a.pwd AS "pwd",
+        a.isDead AS "isDead",
+        a.fromApp AS "fromApp",
+        a.timeToCouponCount AS "timeToCouponCount",
+        a.isRegisteredAtShb AS "isRegisteredAtShb",
+        a.updatePortal AS "updatePortal",
+        a.statesChgRsn AS "statesChgRsn",
+        a.mobilemenuid AS "mobilemenuid",
+        a.phonemodelid AS "phonemodelid",
+        a.addperson AS "addperson",
+        a.entrytime AS "entrytime",
+        a.qianyueperson AS "qianyueperson",
+        a.qianyuetime AS "qianyuetime",
+        a.customertypeid AS "customertypeid",
+        a.zhuxiaoperson AS "zhuxiaoperson",
+        a.zhuxiaotime AS "zhuxiaotime",
+        a.visitLevel AS "visitLevel",
+        a.currentAddress AS "currentAddress",
+        a.disease AS "disease",
+        a.diseaseOther AS "diseaseOther",
+        a.lifeAreas AS "lifeAreas",
+        a.marriageStatus AS "marriageStatus",
+        a.specialCommunity AS "specialCommunity",
+        a.status AS "status",
+        a.canjiindex AS "canjiindex",
+        a.canjitype AS "canjitype",
+        a.canliannumber AS "canliannumber",
+        a.guomin AS "guomin",
+        a.juzhuCommunity AS "juzhuCommunity",
+        a.oldremark AS "oldremark",
+        a.tingCommunity AS "tingCommunity",
+        a.yaowu AS "yaowu",
+        a.imei AS "imei",
+        a.volunteerida AS "volunteerida",
+        a.volunteeridb AS "volunteeridb",
+        a.volunteeridc AS "volunteeridc",
+        a.age AS "age",
+        a.isDeaddate AS "isDeaddate",
+        a.isFreedate AS "isFreedate",
+        a.addpersonid AS "addpersonid",
+        a.pics AS "pics",
+        a.applyimg AS "applyimg",
+        a.hkbimgb AS "hkbimgb",
+        a.hkbimgz AS "hkbimgz",
+        a.idcardimgf AS "idcardimgf",
+        a.idcardimgz AS "idcardimgz",
+        a.allergicType AS "allergicType",
+        a.allergy AS "allergy",
+        a.bloodType AS "bloodType",
+        a.certificateNumber AS "certificateNumber",
+        a.certificateType AS "certificateType",
+        a.economicSource AS "economicSource",
+        a.minzhengIndex AS "minzhengIndex",
+        a.nation AS "nation",
+        a.otherAllergicType AS "otherAllergicType",
+        a.otherCertificateType AS "otherCertificateType",
+        a.otherEconomicSource AS "otherEconomicSource",
+        a.otherJuzhuCommunity AS "otherJuzhuCommunity",
+        a.otherMinzhengIndex AS "otherMinzhengIndex",
+        a.otherPersonalHobby AS "otherPersonalHobby",
+        a.personalHobby AS "personalHobby",
+        a.postTitle AS "postTitle",
+        a.zhuting AS "zhuting",
+        a.sysEndCood AS "sysEndCood"
+
+    </sql>
+    <sql id="customerJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.customer.Customer">
+        SELECT
+        <include refid="customerColumns"/>
+        FROM wx_customer a
+        <include refid="customerJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.customer.Customer">
+        SELECT
+        <include refid="customerColumns"/>
+        FROM wx_customer a
+        <include refid="customerJoins"/>
+        <where>
+             1=1
+            <if test="phone != null ">
+               AND a.phone  like  CONCAT('%', #{phone}, '%')
+            </if>
+            <if test="name != null ">
+               AND a.name  like  CONCAT('%', #{name}, '%')
+            </if>
+            <if test="type != null ">
+               AND a.type=#{type}
+            </if>
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.customer.Customer">
+        SELECT
+        <include refid="customerColumns"/>
+        FROM wx_customer a
+        <include refid="customerJoins"/>
+        <where>
+           1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_customer(
+                id,
+                address,
+                addressLat,
+                addressLng,
+                birthday,
+                community,
+                familyphone,
+                idNumber,
+                idNumberaddress,
+                moreinfo,
+                name,
+                phone,
+                photo,
+                photob,
+                sex,
+                states,
+                type,
+                uid,
+                communityid,
+                points,
+                coupon,
+                memberType,
+                lastSignTime,
+                pwd,
+                freeCount,
+                isFree,
+                isDead,
+                fromApp,
+                timeToCouponCount,
+                isRegisteredAtShb,
+                updatePortal,
+                statesChgRsn,
+                customertypeid,
+                mobilemenuid,
+                phonemodelid,
+                addperson,
+                entrytime,
+                qianyueperson,
+                qianyuetime,
+                zhuxiaoperson,
+                zhuxiaotime,
+                visitLevel,
+                currentAddress,
+                disease,
+                diseaseOther,
+                lifeAreas,
+                marriageStatus,
+                specialCommunity,
+                status,
+                canjiindex,
+                canjitype,
+                canliannumber,
+                guomin,
+                juzhuCommunity,
+                oldremark,
+                tingCommunity,
+                yaowu,
+                imei,
+                volunteerida,
+                volunteeridb,
+                volunteeridc,
+                statesjujue,
+                age,
+                isDeaddate,
+                isFreedate,
+                addpersonid,
+                pics,
+                applyimg,
+                hkbimgb,
+                hkbimgz,
+                idcardimgf,
+                idcardimgz,
+                allergicType,
+                allergy,
+                bloodType,
+                certificateNumber,
+                certificateType,
+                economicSource,
+                minzhengIndex,
+                nation,
+                otherAllergicType,
+                otherCertificateType,
+                otherEconomicSource,
+                otherJuzhuCommunity,
+                otherMinzhengIndex,
+                otherPersonalHobby,
+                personalHobby,
+                postTitle,
+                zhuting,
+                sysEndCood
+
+        ) VALUES (
+                     #{id},
+                     #{address},
+                     #{addressLat},
+                     #{addressLng},
+                     #{birthday},
+                     #{community},
+                     #{familyphone},
+                     #{idNumber},
+                     #{idNumberaddress},
+                     #{moreinfo},
+                     #{name},
+                     #{phone},
+                     #{photo},
+                     #{photob},
+                     #{sex},
+                     #{states},
+                     #{type},
+                     #{uid},
+                     #{communityid},
+                     #{points},
+                     #{coupon},
+                     #{memberType},
+                     #{lastSignTime},
+                     #{pwd},
+                     #{freeCount},
+                     #{isFree},
+                     #{isDead},
+                     #{fromApp},
+                     #{timeToCouponCount},
+                     #{isRegisteredAtShb},
+                     #{updatePortal},
+                     #{statesChgRsn},
+                     #{customertypeid},
+                     #{mobilemenuid},
+                     #{phonemodelid},
+                     #{addperson},
+                     #{entrytime},
+                     #{qianyueperson},
+                     #{qianyuetime},
+                     #{zhuxiaoperson},
+                     #{zhuxiaotime},
+                     #{visitLevel},
+                     #{currentAddress},
+                     #{disease},
+                     #{diseaseOther},
+                     #{lifeAreas},
+                     #{marriageStatus},
+                     #{specialCommunity},
+                     #{status},
+                     #{canjiindex},
+                     #{canjitype},
+                     #{canliannumber},
+                     #{guomin},
+                     #{juzhuCommunity},
+                     #{oldremark},
+                     #{tingCommunity},
+                     #{yaowu},
+                     #{imei},
+                     #{volunteerida},
+                     #{volunteeridb},
+                     #{volunteeridc},
+                     #{statesjujue},
+                     #{age},
+                     #{isDeaddate},
+                     #{isFreedate},
+                     #{addpersonid},
+                     #{pics},
+                     #{applyimg},
+                     #{hkbimgb},
+                     #{hkbimgz},
+                     #{idcardimgf},
+                     #{idcardimgz},
+                     #{allergicType},
+                     #{allergy},
+                     #{bloodType},
+                     #{certificateNumber},
+                     #{certificateType},
+                     #{economicSource},
+                     #{minzhengIndex},
+                     #{nation},
+                     #{otherAllergicType},
+                     #{otherCertificateType},
+                     #{otherEconomicSource},
+                     #{otherJuzhuCommunity},
+                     #{otherMinzhengIndex},
+                     #{otherPersonalHobby},
+                     #{personalHobby},
+                     #{postTitle},
+                     #{zhuting},
+                     #{sysEndCood}
+                         )
+    </insert>
+    <update id="update">
+        UPDATE wx_customer SET
+                               addressf=#{addressf},
+                               addressLat=#{addressLat},
+                               addressLng=#{addressLng},
+                               birthday=#{birthday},
+                               community=#{community},
+                               familyphone=#{familyphone},
+                               idNumber=#{idNumber},
+                               idNumberaddress=#{idNumberaddress},
+                               moreinfo=#{moreinfo},
+                               name=#{name},
+                               phone=#{phone},
+                               photo=#{photo},
+                               photob=#{photob},
+                               sex=#{sex},
+                               states=#{states},
+                               type=#{type},
+                               uid=#{uid},
+                               communityid=#{communityid},
+                               points=#{points},
+                               coupon=#{coupon},
+                               memberType=#{memberType},
+                               lastSignTime=#{lastSignTime},
+                               pwd=#{pwd},
+                               freeCount=#{freeCount},
+                               isFree=#{isFree},
+                               isDead=#{isDead},
+                               fromApp=#{fromApp},
+                               timeToCouponCount=#{timeToCouponCount},
+                               isRegisteredAtShb=#{isRegisteredAtShb},
+                               updatePortal=#{updatePortal},
+                               statesChgRsn=#{statesChgRsn},
+                               customertypeid=#{customertypeid},
+                               mobilemenuid=#{mobilemenuid},
+                               phonemodelid=#{phonemodelid},
+                               addperson=#{addperson},
+                               entrytime=#{entrytime},
+                               qianyueperson=#{qianyueperson},
+                               qianyuetime=#{qianyuetime},
+                               zhuxiaoperson=#{zhuxiaoperson},
+                               zhuxiaotime=#{zhuxiaotime},
+                               visitLevel=#{visitLevel},
+                               currentAddress=#{currentAddress},
+                               disease=#{disease},
+                               diseaseOther=#{diseaseOther},
+                               lifeAreas=#{lifeAreas},
+                               marriageStatus=#{marriageStatus},
+                               specialCommunity=#{specialCommunity},
+                               status=#{status},
+                               canjiindex=#{canjiindex},
+                               canjitype=#{canjitype},
+                               canliannumber=#{canliannumber},
+                               guomin=#{guomin},
+                               juzhuCommunity=#{juzhuCommunity},
+                               oldremark=#{oldremark},
+                               tingCommunity=#{tingCommunity},
+                               yaowu=#{yaowu},
+                               imei=#{imei},
+                               volunteerida=#{volunteerida},
+                               volunteeridb=#{volunteeridb},
+                               volunteeridc=#{volunteeridc},
+                               statesjujue=#{statesjujue},
+                               age=#{age},
+                               isDeaddate=#{isDeaddate},
+                               isFreedate=#{isFreedate},
+                               addpersonid=#{addpersonid},
+                               pics=#{pics},
+                               applyimg=#{applyimg},
+                               hkbimgb=#{hkbimgb},
+                               hkbimgz=#{hkbimgz},
+                               idcardimgf=#{idcardimgf},
+                               idcardimgz=#{idcardimgz},
+                               allergicType=#{allergicType},
+                               allergy=#{allergy},
+                               bloodType=#{bloodType},
+                               certificateNumber=#{certificateNumber},
+                               certificateType=#{certificateType},
+                               economicSource=#{economicSource},
+                               minzhengIndex=#{minzhengIndex},
+                               nation=#{nation},
+                               otherAllergicType=#{otherAllergicType},
+                               otherCertificateType=#{otherCertificateType},
+                               otherEconomicSource=#{otherEconomicSource},
+                               otherJuzhuCommunity=#{otherJuzhuCommunity},
+                               otherMinzhengIndex=#{otherMinzhengIndex},
+                               otherPersonalHobby=#{otherPersonalHobby},
+                               personalHobby=#{personalHobby},
+                               postTitle=#{postTitle},
+                               zhuting=#{zhuting},
+                               sysEndCood=#{sysEndCood}
+
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_customer SET
+            del = #{del}
+        WHERE id = #{id}
+    </update>
+
+
+</mapper>

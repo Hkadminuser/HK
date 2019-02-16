@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.customer.ExcelDao">
+
+
+    <select id="findList">
+      update  excel set phone=369 where in
+        <if test="ad!=null">
+            <foreach collection="ad" index="1" item="ad" open="(" separator="," close=")">
+                ${ad}
+            </foreach>
+        </if>
+    </select>
+
+
+
+</mapper>

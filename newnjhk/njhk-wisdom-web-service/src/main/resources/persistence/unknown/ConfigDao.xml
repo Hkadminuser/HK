@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.unknown.ConfigDao">
+
+    <sql id="configColumns">
+        a.ID AS "id",
+        a.changeByTime AS "changeByTime",
+        a.changeFromPoint AS "changeFromPoint",
+        a.pointsToCoupon AS "pointsToCoupon",
+        a.regCoupon AS "regCoupon",
+        a.timeToCoupon AS "timeToCoupon"
+    </sql>
+    <sql id="configJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.Config">
+        SELECT
+        <include refid="configColumns"/>
+        FROM wx_config a
+        <include refid="configJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.Config">
+        SELECT
+        <include refid="configColumns"/>
+        FROM wx_config a
+        <include refid="configJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.Config">
+        SELECT
+        <include refid="configColumns"/>
+        FROM wx_config a
+        <include refid="configJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_config(
+                ID,
+                changeByTime,
+                changeFromPoint,
+                pointsToCoupon,
+                regCoupon,
+                timeToCoupon
+
+        ) VALUES (
+                                 #{ID},
+                                 #{changeByTime},
+                                 #{changeFromPoint},
+                                 #{pointsToCoupon},
+                                 #{regCoupon},
+                                 #{timeToCoupon}
+
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_config SET
+                                changeByTime={changeByTime},
+                                changeFromPoint={changeFromPoint},
+                                pointsToCoupon={pointsToCoupon},
+                                regCoupon={regCoupon},
+                                timeToCoupon={timeToCoupon}
+        WHERE ID = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_config SET
+            del = #{del}
+        WHERE ID = #{id}
+    </update>
+
+
+</mapper>

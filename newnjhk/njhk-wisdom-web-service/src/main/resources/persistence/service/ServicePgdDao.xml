@@ -1,0 +1,1350 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.service.ServicePgdDao">
+
+    <sql id="servicePgdColumns">
+        a.id AS "id",
+        a.area AS "area",
+        a.askCloseName AS "askCloseName",
+        a.askCloseSeatNo AS "askCloseSeatNo",
+        a.askCloseTime AS "askCloseTime",
+        a.callSeatName AS "callSeatName",
+        a.callSeatNo AS "callSeatNo",
+        a.callTime AS "callTime",
+        a.closePerson AS "closePerson",
+        a.closeReason AS "closeReason",
+        a.closeSeatName AS "closeSeatName",
+        a.closeSeatNo AS "closeSeatNo",
+        a.closeTime AS "closeTime",
+        a.createSeatName AS "createSeatName",
+        a.createSeatNo AS "createSeatNo",
+        a.createTime  AS "createTime",
+        a.des  AS "des",
+        a.desCare AS "desCare",
+        a.desFee AS "desFee",
+        a.desMaterial AS "desMaterial",
+        a.desServe AS "desServe",
+        a.distributeSeatName AS "distributeSeatName",
+        a.distributeSeatNo AS "distributeSeatNo",
+        a.distributeTime AS "distributeTime",
+        a.doneSeatName AS "doneSeatName",
+        a.doneSeatNo AS "doneSeatNo",
+        a.doneTime AS "doneTime",
+        a.ensure AS "ensure",
+        a.failure AS "failure",
+        a.fixPrice AS "fixPrice",
+        a.fpCompany AS "fpCompany",
+        a.fpType AS "fpType",
+        a.hfinfo AS "hfinfo",
+        a.materialPrice AS "materialPrice",
+        a.num AS"num",
+        a.ORDERNUM AS"orderNum",
+        a.result AS "result",
+        a.serrequire AS "serrequire",
+        a.sertime AS "sertime",
+        a.serveFee AS "serveFee",
+        a.servePrice AS "servePrice",
+        a.star AS "star",
+        a.states AS "states",
+        a.totalPrice AS "totalPrice",
+        a.type AS "type",
+        a.unitPrice AS "unitPrice",
+        a.customer AS "customer",
+        a.servbusiness AS "servbusiness",
+        a.serveProduct AS "serveProduct",
+        a.servstation AS "serveStation",
+        a.appStates AS "appStates",
+        a.timeGet AS "timeGet",
+        a.timeStart AS "timeStart",
+        a.timeEnd AS "timeEnd",
+        a.period AS "period",
+        a.estimate AS "estimate",
+        a.estimateLevel AS "estimateLevel",
+        a.picFinished AS "picFinished",
+        a.picRunning AS "picRunning",
+        a.picStart AS "picStart",
+        a.serviceType AS "serviceType",
+        a.estimateRecord AS "estimateRecord",
+        a.visited AS "visited",
+        a.isFree AS "isFree",
+        a.paid AS "paid",
+        a.refund AS "refund",
+        a.amountPayable AS "amountPayable",
+        a.chargeId AS "chargeId",
+        a.amountAlipay AS "amountAlipay",
+        a.amountWx AS "amountWx",
+        a.amountUpmp AS "amountUpmp",
+        a.cash AS "cash",
+        a.fromApp AS "fromApp",
+        a.amountCoupon AS "amountCoupon",
+        a.amountBestPay AS "amountBestPay",
+        a.pressureLow AS "pressureLow",
+        a.pressureHigh AS "pressureHigh",
+        a.sugarEmpty AS "sugarEmpty",
+        a.sugarPlasma AS "sugarPlasma",
+        a.data_from AS "datafrom",
+        a.jiamengestimate AS "jiamengEstimate",
+        a.shitime AS "shiTime",
+        a.number AS "number",
+        a.pgdtype AS "pgdtype",
+        a.sysEndCood AS "sysEndCood",
+        sy.`NAME` AS "servePersonName",
+        person.mobilePhone AS "servePersonPhone",
+        cus.name AS "customerName",
+        pro.productname AS "serveproductName",
+        tation.STATNAME AS "servestationName",
+        cus.community AS "community",
+        cus.phone AS "customerphone",
+        cus.address AS "address",
+        person.serveType AS "position",
+        cus.type AS "customerType",
+        cus.familyPhone AS "familyPhone",
+        serty.typeName AS "serviceTypeName"
+
+    </sql>
+
+    <sql id="servicePgdJoins">
+        LEFT JOIN wx_servicepgd_serveperson wss ON a.id = wss.servicepgd_id
+        LEFT JOIN wx_serveperson person ON person.ID = wss.serveperson_id
+        LEFT JOIN wx_syuser sy ON sy.id = person.id
+        LEFT JOIN wx_servicepgd_otherserveperson wsos ON a.id = wsos.servicepgd_id
+        LEFT JOIN wx_serveperson persons ON person.ID = wsos.serveperson_id
+        LEFT JOIN wx_syuser sys ON sys.id = persons.id
+        LEFT JOIN wx_customer cus ON cus.id =a.customer
+        LEFT JOIN wx_serveproduct pro ON pro.id=a.serveProduct
+        LEFT JOIN wx_servestation tation ON tation.id=a.servstation
+        LEFT JOIN wx_address address ON address.id=cus.communityid
+        LEFT JOIN wx_servetype serty ON a.serviceType=serty.id
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.server.ServicePgd">
+        SELECT
+        <include refid="servicePgdColumns"/>
+        FROM wx_servicepgd a
+        <include refid="servicePgdJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.server.ServicePgd">
+        SELECT
+        <include refid="servicePgdColumns"/>
+        FROM wx_servicepgd a
+        <include refid="servicePgdJoins"/>
+        <where>
+             a.delFlag=#{DEL_FLAG_NORMAL}
+             <if test="states !=null">
+                AND a.states=#{states}
+             </if>
+
+            <if test="orderNum != null and orderNum !=''">
+              AND a.ORDERNUM = #{orderNum}
+            </if>
+
+            <if test="customerType !=null and customerType !=''">
+                AND cus.customerType=#{customerType}
+            </if>
+            <if test="estimateLevel !=null and estimateLevel !=''">
+                AND a.estimateLevel=#{estimateLevel}
+            </if>
+            <if test="serveproductName !=null and serveproductName !=''">
+                AND pro.productname=#{serveprdouctName}
+            </if>
+            <if test="servestationName !=null and servestationName !=''">
+                AND tation.STATNAME=#{servestationName}
+            </if>
+            <if test="servePersonName !=null and servePersonName !=''">
+                AND sy.NAME=#{servePersonName}
+            </if>
+            <if test="position !=null and position !=''">
+                AND person.position=#{position}
+            </if>
+            <if test="customerName !=null and customerName !=''">
+                AND cus.name=#{customerName}
+            </if>
+            <if test="customerphone !=null and customerphone !=''">
+                AND cus.phone=#{customerphone}
+            </if>
+            <if test="communityid !=null and communityid !=''">
+                AND address.id=#{communityid}
+            </if>
+            <if test="daYusertime !=null and daYusertime !=''">
+                AND a.sertime &gt;=#{daYusertime}
+            </if>
+            <if test="xiaoYusertime !=null and xiaoYusertime !=''">
+                AND a.sertime &lt;=#{xiaoYusertime}
+            </if>
+
+             <if test="pgdtype =='null'">
+                 AND  a.pgdtype is null
+             </if>
+            <if test="pgdtype !='null' and pgdtype !=''">
+                AND  a.pgdtype=#{pgdtype}
+            </if>
+
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.ORDERNUM DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.server.ServicePgd">
+        SELECT
+        <include refid="servicePgdColumns"/>
+        FROM wx_servicepgd a
+        <include refid="servicePgdJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findServicepgdByServepersonID" resultType="njhk.wisdom.web.bean.entity.server.ServicePgd">
+        SELECT
+        <include refid="servicePgdColumns"/>
+        FROM wx_servicepgd a <include refid="servicePgdJoins"/>
+        WHERE a.id in (SELECT SERVICEPGD_ID FROM  wx_servicepgd_serveperson WHERE SERVEPERSON_ID=#{servePerson_id})
+    </select>
+
+    <update id="update">
+        update wx_servicepgd a set
+
+                                   <if test="area !=null and area !=''">
+                                       a.area=#{area},
+                                   </if>
+                                   <if test="askCloseName !=null and askCloseName !=''">
+                                       a.askCloseName=#{askCloseName},
+                                   </if>
+                                   <if test="askCloseSeatNo !=null and askCloseSeatNo !=''">
+                                       a.askCloseSeatNo=#{askCloseSeatNo},
+                                   </if>
+                                   <if test="askCloseTime !=null and askCloseTime !=''">
+                                       a.askCloseTime=#{askCloseTime},
+                                   </if>
+                                   <if test="callSeatName !=null and callSeatName !=''">
+                                       a.callSeatName=#{callSeatName},
+                                   </if>
+                                   <if test="callSeatNo !=null and callSeatNo !=''">
+                                       a.callSeatNo=#{callSeatNo},
+                                   </if>
+                                   <if test="callTime !=null and callTime !=''">
+                                       a.callTime=#{callTime},
+                                   </if>
+                                   <if test="closePerson !=null and closePerson !=''">
+                                       a.closePerson=#{closePerson},
+                                   </if>
+                                   <if test="closeReason !=null and closeReason !=''">
+                                       a.closeReason=#{closeReason},
+                                   </if>
+                                   <if test="closeSeatName !=null and closeSeatName !=''">
+                                       a.closeSeatName=#{closeSeatName},
+                                   </if>
+                                   <if test="closeSeatNo !=null and closeSeatNo !=''">
+                                       a.closeSeatNo=#{closeSeatNo},
+                                   </if>
+                                   <if test="closeTime !=null and closeTime !=''">
+                                       a.closeTime=#{closeTime},
+                                   </if>
+                                   <if test="createSeatName !=null and createSeatName !=''">
+                                       a.createSeatName=#{createSeatName},
+                                   </if>
+                                   <if test="createSeatNo !=null and createSeatNo !=''">
+                                       a.createSeatNo=#{createSeatNo},
+                                   </if>
+                                   <if test="createTime !=null and createTime !=''">
+                                       a.createTime=#{createTime},
+                                   </if>
+                                   <if test="des !=null and des !=''">
+                                       a.des=#{des},
+                                   </if>
+                                   <if test="desCare !=null and desCare !=''">
+                                       a.desCare=#{desCare},
+                                   </if>
+                                   <if test="desFee !=null and desFee !=''">
+                                       a.desFee=#{desFee},
+                                   </if>
+                                   <if test="desMaterial !=null and desMaterial !=''">
+                                       a.desMaterial=#{desMaterial},
+                                   </if>
+                                   <if test="desServe !=null and desServe !=''">
+                                       a.desServe=#{desServe},
+                                   </if>
+                                   <if test="distributeSeatName !=null and distributeSeatName !=''">
+                                       a.distributeSeatName=#{distributeSeatName},
+                                   </if>
+                                   <if test="distributeSeatNo !=null and distributeSeatNo !=''">
+                                       a.distributeSeatNo=#{distributeSeatNo},
+                                   </if>
+                                   <if test="distributeTime !=null and distributeTime !=''">
+                                       a.distributeTime=#{distributeTime},
+                                   </if>
+                                   <if test="doneSeatName !=null and doneSeatName !=''">
+                                       a.doneSeatName=#{doneSeatName},
+                                   </if>
+                                   <if test="doneSeatNo !=null and doneSeatNo !=''">
+                                       a.doneSeatNo=#{doneSeatNo},
+                                   </if>
+                                   <if test="doneTime !=null and doneTime !=''">
+                                       a.doneTime=#{doneTime},
+                                   </if>
+                                   <if test="ensure !=null and ensure !=''">
+                                       a.ensure=#{ensure},
+                                   </if>
+                                   <if test="failure !=null and failure !=''">
+                                       a.failure=#{failure},
+                                   </if>
+                                   <if test="fixPrice !=null and fixPrice !=''">
+                                       a.fixPrice=#{fixPrice},
+                                   </if>
+                                   <if test="fpCompany !=null and fpCompany !=''">
+                                       a.fpCompany=#{fpCompany},
+                                   </if>
+                                   <if test="fpType !=null and fpType !=''">
+                                       a.fpType=#{fpType},
+                                   </if>
+                                   <if test="hfinfo !=null and hfinfo !=''">
+                                       a.hfinfo=#{hfinfo},
+                                   </if>
+                                   <if test="materialPrice !=null and materialPrice !=''">
+                                       a.materialPrice=#{materialPrice},
+                                   </if>
+                                   <if test="num !=null and num !=''">
+                                       a.num=#{num},
+                                   </if>
+                                   <if test="orderNum !=null and orderNum !=''">
+                                       a.ORDERNUM=#{orderNum},
+                                   </if>
+                                   <if test="result !=null and result !=''">
+                                      a.result=#{result},
+                                   </if>
+                                   <if test="serrequire !=null and serrequire !=''">
+                                       a.serrequire=#{serrequire},
+                                   </if>
+                                   <if test="sertime !=null and sertime !=''">
+                                       a.sertime=#{sertime},
+                                   </if>
+                                   <if test="serveFee !=null and serveFee !=''">
+                                       a.serveFee=#{serveFee},
+                                   </if>
+                                   <if test="servePrice !=null and servePrice !=''">
+                                       a.servePrice=#{servePrice},
+                                   </if>
+                                   <if test="star !=null and star !=''">
+                                       a.star=#{star},
+                                   </if>
+                                   <if test="states !=null ">
+                                       a.states=#{states},
+                                   </if>
+                                   <if test="totalPrice !=null and totalPrice !=''">
+                                       a.totalPrice=#{totalPrice},
+                                   </if>
+                                   <if test="type !=null and type !=''">
+                                       a.type=#{type},
+                                   </if>
+                                   <if test="unitPrice !=null and unitPrice !=''">
+                                       a.unitPrice=#{unitPrice},
+                                   </if>
+                                   <if test="customer !=null and customer !=''">
+                                       a.customer=#{customer},
+                                   </if>
+                                   <if test="servbusiness !=null and servbusiness !=''">
+                                       a.servbusiness=#{servbusiness},
+                                   </if>
+                                   <if test="serveProduct !=null and serveProduct !=''">
+                                       a.serveProduct=#{serveProduct},
+                                   </if>
+                                   <if test="serveStation !=null and serveStation !=''">
+                                       a.servstation=#{serveStation},
+                                   </if>
+                                   <if test="appStates !=null">
+                                       a.appStates=#{appStates},
+                                   </if>
+                                   <if test="timeGet !=null and timeGet !=''">
+                                       a.timeGet=#{timeGet},
+                                   </if>
+                                   <if test="timeStart !=null and timeStart !=''">
+                                       a.timeStart=#{timeStart},
+                                   </if>
+                                   <if test="timeEnd !=null and timeEnd !=''">
+                                       a.timeEnd=#{timeEnd},
+                                   </if>
+                                   <if test="period !=null and period !=''">
+                                       a.period=#{period},
+                                   </if>
+                                   <if test="estimate !=null and estimate !=''">
+                                       a.estimate=#{estimate},
+                                   </if>
+                                   <if test="estimateLevel !=null and estimateLevel !=''">
+                                       a.estimateLevel=#{estimateLevel},
+                                   </if>
+                                   <if test="picFinished !=null and picFinished !=''">
+                                       a.picFinished=#{picFinished},
+                                   </if>
+                                   <if test="picRunning !=null and picRunning !=''">
+                                       a.picRunning=#{picRunning},
+                                   </if>
+                                   <if test="picStart !=null and picStart !=''">
+                                       a.picStart=#{picStart},
+                                   </if>
+                                   <if test="serviceType !=null and serviceType !=''">
+                                       a.serviceType=#{serviceType},
+                                   </if>
+                                   <if test="estimateRecord !=null and estimateRecord !=''">
+                                       a.estimateRecord=#{estimateRecord},
+                                   </if>
+                                   <if test="visited !=null and visited !=''">
+                                       a.visited=#{visited},
+                                   </if>
+                                   <if test="isFree !=null and isFree !=''">
+                                       a.isFree=#{isFree},
+                                   </if>
+                                   <if test="paid !=null and paid !=''">
+                                       a.paid=#{paid},
+                                   </if>
+                                   <if test="refund !=null and refund !=''">
+                                       a.refund=#{refund},
+                                   </if>
+                                   <if test="amountPayable !=null and amountPayable !=''">
+                                       a.amountPayable=#{amountPayable},
+                                   </if>
+                                   <if test="chargeId !=null and chargeId !=''">
+                                       a.chargeId=#{chargeId},
+                                   </if>
+                                   <if test="amountAlipay !=null and amountAlipay !=''">
+                                       a.amountAlipay=#{amountAlipay},
+                                   </if>
+                                   <if test="amountWx !=null and amountWx !=''">
+                                        a.amountWx=#{amountWx},
+                                   </if>
+                                   <if test="amountUpmp !=null and amountUpmp !=''">
+                                       a.amountUpmp=#{amountUpmp},
+                                   </if>
+                                   <if test="cash !=null and cash !=''">
+                                       a.cash=#{cash},
+                                   </if>
+                                   <if test="fromApp !=null and fromApp !=''">
+                                       a.fromApp=#{fromApp},
+                                   </if>
+                                  <if test="amountCoupon !=null and amountCoupon !=''">
+                                      a.amountCoupon=#{amountCoupon},
+                                  </if>
+                                   <if test="amountBestPay !=null and amountBestPay !=''">
+                                      a.amountBestPay=#{amountBestPay},
+                                   </if>
+                                  <if test="pressureLow !=null and pressureLow !=''">
+                                      a.pressureLow=#{pressureLow},
+                                  </if>
+                                   <if test="pressureHigh !=null and pressureHigh !=''">
+                                       a.pressureHigh=#{pressureHigh},
+                                   </if>
+                                   <if test="sugarEmpty !=null and sugarEmpty !=''">
+                                       a.sugarEmpty=#{sugarEmpty},
+                                   </if>
+                                   <if test="sugarPlasma !=null and sugarPlasma !=''">
+                                       a.sugarPlasma=#{sugarPlasma},
+                                   </if>
+                                   <if test="datafrom !=null and datafrom !=''">
+                                       a.data_from=#{datafrom},
+                                   </if>
+                                   <if test="jiamengEstimate !=null and jiamengEstimate !=''">
+                                       a.jiamengestimate=#{jiamengEstimate},
+                                   </if>
+                                   <if test="shiTime !=null and shiTime !=''">
+                                       a.shitime=#{shiTime},
+                                   </if>
+                                   <if test="number !=null and number !=''">
+                                       a.number=#{number},
+                                   </if>
+                                   <if test="pgdtype !=null and pgdtype !=''">
+                                       a.pgdtype=#{pgdtype},
+                                   </if>
+                                   <if test="sysEndCood !=null and sysEndCood !=''">
+                                       a.sysEndCood=#{sysEndCood},
+                                   </if>
+                                   <if test="id !=null">
+                                       a.id=#{id}
+                                   </if>
+
+                                   WHERE   a.id=#{id}
+    </update>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_servicepgd (
+            id,
+            area,
+            askCloseName,
+            askCloseSeatNo,
+            askCloseTime,
+            callSeatName,
+            callSeatNo,
+            callTime,
+            closePerson,
+            closeReason,
+            closeSeatName,
+            closeSeatNo,
+            closeTime,
+            createSeatName,
+            createSeatNo,
+            createTime,
+            des,
+            desCare,
+            desFee,
+            desMaterial,
+            desServe,
+            distributeSeatName,
+            distributeSeatNo,
+            distributeTime,
+            doneSeatName,
+            doneSeatNo,
+            doneTime,
+            ensure,
+            failure,
+            fixPrice,
+            fpCompany,
+            fpType,
+            hfinfo,
+            materialPrice,
+            num,
+            ORDERNUM,
+            result,
+            serrequire,
+            sertime,
+            serveFee,
+            servePrice,
+            star,
+            states,
+            totalPrice,
+            type,
+            unitPrice,
+            customer,
+            servbusiness,
+            serveProduct,
+            servstation,
+            appStates,
+            timeGet,
+            timeStart,
+            timeEnd,
+            period,
+            estimate,
+            estimateLevel,
+            picFinished,
+            picRunning,
+            picStart,
+            serviceType,
+            estimateRecord,
+            visited,
+            isFree,
+            paid,
+            refund,
+            amountPayable,
+            chargeId,
+            amountAlipay,
+            amountWx,
+            amountUpmp,
+            cash,
+            fromApp,
+            amountCoupon,
+            amountBestPay,
+            pressureLow,
+            pressureHigh,
+            sugarEmpty,
+            sugarPlasma,
+            data_from,
+            jiamengestimate,
+            shitime,
+            number,
+            pgdtype,
+            sysEndCood
+        ) VALUES (
+                             #{id},
+                             #{area},
+                             #{askCloseName},
+                             #{askCloseSeatNo},
+                             #{askCloseTime},
+                             #{callSeatName},
+                             #{callSeatNo},
+                             #{callTime},
+                             #{closePerson},
+                             #{closeReason},
+                             #{closeSeatName},
+                             #{closeSeatNo},
+                             #{closeTime},
+                             #{createSeatName},
+                             #{createSeatNo},
+                             #{createTime},
+                             #{des},
+                             #{desCare},
+                             #{desFee},
+                             #{desMaterial},
+                             #{desServe},
+                             #{distributeSeatName},
+                             #{distributeSeatNo},
+                             #{distributeTime},
+                             #{doneSeatName},
+                             #{doneSeatNo},
+                             #{doneTime},
+                             #{ensure},
+                             #{failure},
+                             #{fixPrice},
+                             #{fpCompany},
+                             #{fpType},
+                             #{hfinfo},
+                             #{materialPrice},
+                             #{num},
+                             #{orderNum},
+                             #{result},
+                             #{serrequire},
+                             #{sertime},
+                             #{serveFee},
+                             #{servePrice},
+                             #{star},
+                             #{states},
+                             #{totalPrice},
+                             #{type},
+                             #{unitPrice},
+                             #{customer},
+                             #{servbusiness},
+                             #{serveProduct},
+                             #{serveStation},
+                             #{appStates},
+                             #{timeGet},
+                             #{timeStart},
+                             #{timeEnd},
+                             #{period},
+                             #{estimate},
+                             #{estimateLevel},
+                             #{picFinished},
+                             #{picRunning},
+                             #{picStart},
+                             #{serviceType},
+                             #{estimateRecord},
+                             #{visited},
+                             #{isFree},
+                             #{paid},
+                             #{refund},
+                             #{amountPayable},
+                             #{chargeId},
+                             #{amountAlipay},
+                             #{amountWx},
+                             #{amountUpmp},
+                             #{cash},
+                             #{fromApp},
+                             #{amountCoupon},
+                             #{amountBestPay},
+                             #{pressureLow},
+                             #{pressureHigh},
+                             #{sugarEmpty},
+                             #{sugarPlasma},
+                             #{datafrom},
+                             #{jiamengEstimate},
+                             #{shiTime},
+                             #{number},
+                             #{pgdtype},
+                             #{sysEndCood}
+                         )
+    </insert>
+
+    <update id="delete">
+        UPDATE wx_servicepgd SET
+            delFlag = #{DEL_FLAG_DELETE}
+        WHERE id = #{id}
+    </update>
+
+    <update id="batchDeleteServicepgd">
+        update wx_servicepgd set  del=#{del} where id in
+        <foreach collection="ids" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </update>
+
+    <update id="batchWithdraw">
+        update wx_servicepgd set  states=#{states} where id in
+        <foreach collection="ids" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </update>
+
+    <update id="batchHandle">
+        update wx_servicepgd set
+        <if test="doneSeatNo !=null">
+            doneSeatNo=#{doneSeatNo},
+        </if>
+        <if test="doneSeatName !=null">
+            doneSeatName=#{doneSeatName},
+        </if>
+        <if test="doneTime !=null">
+            doneTime=#{doneTime},
+        </if>
+        states=#{states} where id in
+        <foreach collection="ids" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </update>
+
+    <update id="batchReturnVisit">
+        update wx_servicepgd set
+        <if test="callSeatNo !=null">
+            callSeatNo=#{callSeatNo},
+        </if>
+        <if test="callSeatName !=null">
+            callSeatName=#{callSeatName},
+        </if>
+        <if test="callTime !=null">
+            callTime=#{callTime},
+        </if>
+        states=#{states} where id in
+        <foreach collection="ids" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </update>
+
+    <update id="batchToVoid">
+        update wx_servicepgd set
+        <if test="callSeatNo !=null">
+            closeSeatNo=#{closeSeatNo},
+        </if>
+        <if test="callSeatName !=null">
+            closeSeatName=#{closeSeatName},
+        </if>
+        <if test="callTime !=null">
+            closeTime=#{closeTime},
+        </if>
+        states=#{states} where id in
+        <foreach collection="ids" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </update>
+
+    <select id="findServicePgdStates" resultType="njhk.wisdom.web.bean.entity.server.ServiceStates">
+        select
+            states as states,
+            count(states) as orderNumbers
+
+        from wx_servicepgd where states is not null GROUP BY states;
+    </select>
+    <select id="getMaxOrderNum" resultType="njhk.wisdom.web.bean.entity.server.ServicePgd">
+        select  max(ORDERNUM)AS a.orderNum  from wx_servicepgd a
+    </select>
+
+    <insert id="saveList" useGeneratedKeys="true" keyProperty="id" parameterType="map">
+        INSERT INTO wx_servicepgd (
+        id,
+        area,
+        askCloseName,
+        askCloseSeatNo,
+        askCloseTime,
+        callSeatName,
+        callSeatNo,
+        callTime,
+        closePerson,
+        closeReason,
+        closeSeatName,
+        closeSeatNo,
+        closeTime,
+        createSeatName,
+        createSeatNo,
+        createTime,
+        des,
+        desCare,
+        desFee,
+        desMaterial,
+        desServe,
+        distributeSeatName,
+        distributeSeatNo,
+        distributeTime,
+        doneSeatName,
+        doneSeatNo,
+        doneTime,
+        ensure,
+        failure,
+        fixPrice,
+        fpCompany,
+        fpType,
+        hfinfo,
+        materialPrice,
+        num,
+        ORDERNUM,
+        result,
+        serrequire,
+        sertime,
+        serveFee,
+        servePrice,
+        star,
+        states,
+        totalPrice,
+        type,
+        unitPrice,
+        customer,
+        servbusiness,
+        serveProduct,
+        servstation,
+        appStates,
+        timeGet,
+        timeStart,
+        timeEnd,
+        period,
+        estimate,
+        estimateLevel,
+        picFinished,
+        picRunning,
+        picStart,
+        serviceType,
+        estimateRecord,
+        visited,
+        isFree,
+        paid,
+        refund,
+        amountPayable,
+        chargeId,
+        amountAlipay,
+        amountWx,
+        amountUpmp,
+        cash,
+        fromApp,
+        amountCoupon,
+        amountBestPay,
+        pressureLow,
+        pressureHigh,
+        sugarEmpty,
+        sugarPlasma,
+        data_from,
+        jiamengestimate,
+        shitime,
+        number,
+        pgdtype,
+        sysEndCood
+        ) VALUES
+        <foreach collection="list" item="c" index="index"
+                 separator=",">
+            (
+            #{c.id},
+            #{c.area},
+            #{c.askCloseName},
+            #{c.askCloseSeatNo},
+            #{c.askCloseTime},
+            #{c.callSeatName},
+            #{c.callSeatNo},
+            #{c.callTime},
+            #{c.closePerson},
+            #{c.closeReason},
+            #{c.closeSeatName},
+            #{c.closeSeatNo},
+            #{c.closeTime},
+            #{c.createSeatName},
+            #{c.createSeatNo},
+            #{c.createTime},
+            #{c.des},
+            #{c.desCare},
+            #{c.desFee},
+            #{c.desMaterial},
+            #{c.desServe},
+            #{c.distributeSeatName},
+            #{c.distributeSeatNo},
+            #{c.distributeTime},
+            #{c.doneSeatName},
+            #{c.doneSeatNo},
+            #{c.doneTime},
+            #{c.ensure},
+            #{c.failure},
+            #{c.fixPrice},
+            #{c.fpCompany},
+            #{c.fpType},
+            #{c.hfinfo},
+            #{c.materialPrice},
+            #{c.num},
+            #{c.orderNum},
+            #{c.result},
+            #{c.serrequire},
+            #{c.sertime},
+            #{c.serveFee},
+            #{c.servePrice},
+            #{c.star},
+            #{c.states},
+            #{c.totalPrice},
+            #{c.type},
+            #{c.unitPrice},
+            #{c.customer},
+            #{c.servbusiness},
+            #{c.serveProduct},
+            #{c.serveStation},
+            #{c.appStates},
+            #{c.timeGet},
+            #{c.timeStart},
+            #{c.timeEnd},
+            #{c.period},
+            #{c.estimate},
+            #{c.estimateLevel},
+            #{c.picFinished},
+            #{c.picRunning},
+            #{c.picStart},
+            #{c.serviceType},
+            #{c.estimateRecord},
+            #{c.visited},
+            #{c.isFree},
+            #{c.paid},
+            #{c.refund},
+            #{c.amountPayable},
+            #{c.chargeId},
+            #{c.amountAlipay},
+            #{c.amountWx},
+            #{c.amountUpmp},
+            #{c.cash},
+            #{c.fromApp},
+            #{c.amountCoupon},
+            #{c.amountBestPay},
+            #{c.pressureLow},
+            #{c.pressureHigh},
+            #{c.sugarEmpty},
+            #{c.sugarPlasma},
+            #{c.datafrom},
+            #{c.jiamengEstimate},
+            #{c.shiTime},
+            #{c.number},
+            #{c.pgdtype},
+            #{c.sysEndCood}
+            )
+        </foreach>
+    </insert>
+    <update id="updateList" parameterType="java.util.List">
+        <foreach collection="list" item="c" index="index"
+                 separator=",">
+            update wx_servicepgd a set
+
+            <if test="area !=null">
+                a.area=#{area},
+            </if>
+            <if test="askCloseName !=null">
+                a.askCloseName=#{askCloseName},
+            </if>
+            <if test="askCloseSeatNo !=null">
+                a.askCloseSeatNo=#{askCloseSeatNo},
+            </if>
+            <if test="askCloseTime !=null">
+                a.askCloseTime=#{askCloseTime},
+            </if>
+            <if test="callSeatName !=null">
+                a.callSeatName=#{callSeatName},
+            </if>
+            <if test="callSeatNo !=null">
+                a.callSeatNo=#{callSeatNo},
+            </if>
+            <if test="callTime !=null">
+                a.callTime=#{callTime},
+            </if>
+            <if test="closePerson !=null">
+                a.closePerson=#{closePerson},
+            </if>
+            <if test="closeReason !=null">
+                a.closeReason=#{closeReason},
+            </if>
+            <if test="closeSeatName !=null">
+                a.closeSeatName=#{closeSeatName},
+            </if>
+            <if test="closeSeatNo !=null">
+                a.closeSeatNo=#{closeSeatNo},
+            </if>
+            <if test="closeTime !=null">
+                a.closeTime=#{closeTime},
+            </if>
+            <if test="createSeatName !=null">
+                a.createSeatName=#{createSeatName},
+            </if>
+            <if test="createSeatNo !=null">
+                a.createSeatNo=#{createSeatNo},
+            </if>
+            <if test="createTime !=null">
+                a.createTime=#{createTime},
+            </if>
+            <if test="des !=null">
+                a.des=#{des},
+            </if>
+            <if test="desCare !=null">
+                a.desCare=#{desCare},
+            </if>
+            <if test="desFee !=null">
+                a.desFee=#{desFee},
+            </if>
+            <if test="desMaterial !=null">
+                a.desMaterial=#{desMaterial},
+            </if>
+            <if test="desServe !=null">
+                a.desServe=#{desServe},
+            </if>
+            <if test="distributeSeatName !=null">
+                a.distributeSeatName=#{distributeSeatName},
+            </if>
+            <if test="distributeSeatNo !=null">
+                a.distributeSeatNo=#{distributeSeatNo},
+            </if>
+            <if test="distributeTime !=null">
+                a.distributeTime=#{distributeTime},
+            </if>
+            <if test="doneSeatName !=null">
+                a.doneSeatName=#{doneSeatName},
+            </if>
+            <if test="doneSeatNo !=null">
+                a.doneSeatNo=#{doneSeatNo},
+            </if>
+            <if test="doneTime !=null">
+                a.doneTime=#{doneTime},
+            </if>
+            <if test="ensure !=null">
+                a.ensure=#{ensure},
+            </if>
+            <if test="failure !=null">
+                a.failure=#{failure},
+            </if>
+            <if test="fixPrice">
+                a.fixPrice=#{fixPrice},
+            </if>
+            <if test="fpCompany !=null">
+                a.fpCompany=#{fpCompany},
+            </if>
+            <if test="fpType !=null">
+                a.fpType=#{fpType},
+            </if>
+            <if test="hfinfo !=null">
+                a.hfinfo=#{hfinfo},
+            </if>
+            <if test="materialPrice !=null">
+                a.materialPrice=#{materialPrice},
+            </if>
+            <if test="num !=null">
+                a.num=#{num},
+            </if>
+            <if test="orderNum !=null">
+                a.ORDERNUM=#{orderNum},
+            </if>
+            <if test="result !=null">
+                a.result=#{result},
+            </if>
+            <if test="serrequire !=null">
+                a.serrequire=#{serrequire},
+            </if>
+            <if test="sertime !=null">
+                a.sertime=#{sertime},
+            </if>
+            <if test="serveFee !=null">
+                a.serveFee=#{serveFee},
+            </if>
+            <if test="servePrice !=null">
+                a.servePrice=#{servePrice},
+            </if>
+            <if test="star !=null">
+                a.star=#{star},
+            </if>
+            <if test="states !=null">
+                a.states=#{states},
+            </if>
+            <if test="totalPrice !=null">
+                a.totalPrice=#{totalPrice},
+            </if>
+            <if test="type !=null">
+                a.type=#{type},
+            </if>
+            <if test="unitPrice !=null">
+                a.unitPrice=#{unitPrice},
+            </if>
+            <if test="customer !=null">
+                a.customer=#{customer},
+            </if>
+            <if test="servbusiness !=null">
+                a.servbusiness=#{servbusiness},
+            </if>
+            <if test="serveProduct !=null">
+                a.serveProduct=#{serveProduct},
+            </if>
+            <if test="serveStation !=null">
+                a.servstation=#{serveStation},
+            </if>
+            <if test="appStates !=null">
+                a.appStates=#{appStates},
+            </if>
+            <if test="timeGet !=null">
+                a.timeGet=#{timeGet},
+            </if>
+            <if test="timeStart !=null">
+                a.timeStart=#{timeStart},
+            </if>
+            <if test="timeEnd !=null">
+                a.timeEnd=#{timeEnd},
+            </if>
+            <if test="period !=null">
+                a.period=#{period},
+            </if>
+            <if test="estimate !=null">
+                a.estimate=#{estimate},
+            </if>
+            <if test="estimateLevel !=null">
+                a.estimateLevel=#{estimateLevel},
+            </if>
+            <if test="picFinished !=null">
+                a.picFinished=#{picFinished},
+            </if>
+            <if test="picRunning !=null">
+                a.picRunning=#{picRunning},
+            </if>
+            <if test="picStart !=null">
+                a.picStart=#{picStart},
+            </if>
+            <if test="serviceType !=null">
+                a.serviceType=#{serviceType},
+            </if>
+            <if test="estimateRecord !=null">
+                a.estimateRecord=#{estimateRecord},
+            </if>
+            <if test="visited !=null">
+                a.visited=#{visited},
+            </if>
+            <if test="isFree !=null">
+                a.isFree=#{isFree},
+            </if>
+            <if test="paid !=null">
+                a.paid=#{paid},
+            </if>
+            <if test="refund !=null">
+                a.refund=#{refund},
+            </if>
+            <if test="amountPayable !=null">
+                a.amountPayable=#{amountPayable},
+            </if>
+            <if test="chargeId !=null">
+                a.chargeId=#{chargeId},
+            </if>
+            <if test="amountAlipay !=null">
+                a.amountAlipay=#{amountAlipay},
+            </if>
+            <if test="amountWx !=null">
+                a.amountWx=#{amountWx},
+            </if>
+            <if test="amountUpmp !=null">
+                a.amountUpmp=#{amountUpmp},
+            </if>
+            <if test="cash !=null">
+                a.cash=#{cash},
+            </if>
+            <if test="fromApp !=null">
+                a.fromApp=#{fromApp},
+            </if>
+            <if test="amountCoupon !=null">
+                a.amountCoupon=#{amountCoupon},
+            </if>
+            <if test="amountBestPay !=null">
+                a.amountBestPay=#{amountBestPay},
+            </if>
+            <if test="pressureLow !=null">
+                a.pressureLow=#{pressureLow},
+            </if>
+            <if test="pressureHigh !=null">
+                a.pressureHigh=#{pressureHigh},
+            </if>
+            <if test="sugarEmpty !=null">
+                a.sugarEmpty=#{sugarEmpty},
+            </if>
+            <if test="sugarPlasma !=null">
+                a.sugarPlasma=#{sugarPlasma},
+            </if>
+            <if test="datafrom !=null">
+                a.data_from=#{datafrom},
+            </if>
+            <if test="jiamengEstimate !=null">
+                a.jiamengestimate=#{jiamengEstimate},
+            </if>
+            <if test="shiTime !=null">
+                a.shitime=#{shiTime},
+            </if>
+            <if test="number !=null">
+                a.number=#{number},
+            </if>
+            <if test="pgdtype !=null">
+                a.pgdtype=#{pgdtype},
+            </if>
+            <if test="sysEndCood !=null">
+                a.sysEndCood=#{sysEndCood},
+            </if>
+            <if test="id !=null">
+                a.id=#{id}
+            </if>
+
+            WHERE   a.id=#{id}
+        </foreach>
+    </update>
+
+    <select id="findeOrderNumByOrderNum" resultType="String">
+        SELECT MAX(a.ORDERNUM) FROM wx_servicepgd a WHERE a.ORDERNUM LIKE CONCAT('%',#{orderNum},'%')
+    </select>
+    
+    <update id="Distribute">
+        update wx_servicepgd a set 
+            <if test="states !=null ">
+                a.states=#{states},
+            </if>
+            <if test="serveStation !=null and serveStation !=''">
+                a.servstation=#{serveStation},
+            </if>
+            <if test="appStates !=null">
+                a.appStates=#{appStates},
+            </if>
+            <if test="distributeTime !=null">
+                a.distributeTime=#{distributeTime},
+            </if>
+            <if test="distributeSeatName !=null and distributeSeatName !=''">
+                a.distributeSeatName=#{distributeSeatName},
+            </if>
+            <if test="distributeSeatNo !=null and distributeSeatNo !=''">
+                a.distributeSeatNo=#{distributeSeatNo},
+            </if>
+                a.id=#{id}
+            <where>
+                a.id=#{id}
+            </where>
+    </update>
+
+    <update id="Invalid">
+        update wx_servicepgd a set
+        <if test="states !=null ">
+            a.states=#{states},
+        </if>
+        <if test="appStates !=null">
+            a.appStates=#{appStates},
+        </if>
+        <if test="askCloseTime !=null">
+            a.askCloseTime=#{askCloseTime},
+        </if>
+        <if test="closeReason !=null and closeReason !=''">
+            a.closeReason=#{closeReason},
+        </if>
+        <if test="askCloseSeatNo !=null and askCloseSeatNo !=''">
+            a.askCloseSeatNo=#{askCloseSeatNo},
+        </if>
+        <if test="askCloseName !=null and askCloseName !=''">
+            a.askCloseName=#{askCloseName},
+        </if>
+          a.id=#{id}
+        <where>
+            a.id=#{id}
+        </where>
+    </update>
+    <update id="End">
+        update wx_servicepgd a set
+        <if test="states !=null ">
+            a.states=#{states},
+        </if>
+        <if test="appStates !=null">
+            a.appStates=#{appStates},
+        </if>
+        <if test="closeTime !=null">
+            a.closeTime=#{closeTime},
+        </if>
+        <if test="closeSeatNo !=null and closeSeatNo !=''">
+            a.closeSeatNo=#{closeSeatNo},
+        </if>
+        <if test="closeSeatName !=null and closeSeatName !=''">
+            a.closeSeatName=#{closeSeatName},
+        </if>
+        a.id=#{id}
+        <where>
+            a.id=#{id}
+        </where>
+    </update>
+
+    <update id="Handle">
+    update wx_servicepgd a set
+    <if test="states !=null ">
+        a.states=#{states},
+    </if>
+    <if test="appStates !=null">
+        a.appStates=#{appStates},
+    </if>
+    <if test="doneTime !=null">
+        a.doneTime=#{doneTime},
+    </if>
+    <if test="doneSeatNo !=null and doneSeatNo !=''">
+        a.doneSeatNo=#{doneSeatNo},
+    </if>
+    <if test="doneSeatName !=null and doneSeatName !=''">
+        a.doneSeatName=#{doneSeatName},
+    </if>
+    a.id=#{id}
+    <where>
+        a.id=#{id}
+    </where>
+</update>
+
+    <update id="withdraw">
+        update wx_servicepgd a set
+        <if test="states !=null">
+            a.states=#{states},
+        </if>
+        <if test="appStates !=null">
+            a.appStates=#{appStates},
+        </if>
+            a.id=#{id}
+        <where>
+            a.id=#{id}
+        </where>
+    </update>
+
+    <update id="Visit">
+        update wx_servicepgd a set
+        <if test="states !=null">
+            a.states=#{states},
+        </if>
+        <if test="appStates !=null">
+            a.appStates=#{appStates},
+        </if>
+        <if test="callTime !=null">
+            a.callTime=#{callTime},
+        </if>
+        <if test="callSeatNo !=null and callSeatNo !=''">
+            a.callSeatNo=#{callSeatNo},
+        </if>
+        <if test="callSeatName !=null and callSeatName !=''">
+            a.callSeatName=#{callSeatName},
+        </if>
+        <if test="hfinfo !=null and hfinfo !=''">
+            a.hfinfo=#{hfinfo},
+        </if>
+        <if test="star !=null and star !=''">
+            a.star=#{star},
+        </if>
+        a.id=#{id}
+        <where>
+            a.id=#{id}
+        </where>
+    </update>
+
+    <update id="start">
+        update wx_servicepgd a set
+        <if test="timeStart !=null">
+            a.timeStart=#{timeStart},
+        </if>
+        a.id=#{id}
+        <where>
+            a.id=#{id}
+        </where>
+    </update>
+
+    <update id="over">
+        update wx_servicepgd a set
+        <if test="timeEnd !=null">
+            a.timeEnd=#{timeEnd},
+        </if>
+        a.id=#{id}
+        <where>
+            a.id=#{id}
+        </where>
+    </update>
+
+</mapper>

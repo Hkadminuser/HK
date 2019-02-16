@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.unknown.AppVersionDao">
+
+    <sql id="appVersionColumns">
+        a.customerVersion AS "customerVersion",
+        a.servantVersion AS "servantVersion",
+        a.id AS "id",
+        a.uploadTime AS "uploadTime",
+        a.user AS "user",
+        a.customerUrl AS "customerUrl",
+        a.servantUrl AS "servantUrl",
+        a.customerVersionIphone AS "customerVersionIphone",
+        a.servantVersionIphone AS "servantVersionIphone",
+        a.servantversionIphoneurl AS "servantversionIphoneurl",
+        a.customerversionIphoneurl AS "customerversionIphoneurl",
+        a.customerUrlIphone AS "customerUrlIphone",
+        a.servantUrlIphone AS "servantUrlIphone"
+    </sql>
+    <sql id="appVersionJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.AppVersion">
+        SELECT
+        <include refid="appVersionColumns"/>
+        FROM wx_appversion a
+        <include refid="appVersionJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.AppVersion">
+        SELECT
+        <include refid="appVersionColumns"/>
+        FROM wx_appversion a
+        <include refid="appVersionJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.AppVersion">
+        SELECT
+        <include refid="appVersionColumns"/>
+        FROM wx_appversion a
+        <include refid="appVersionJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_appversion(
+               customerVersion,
+                servantVersion,
+                id,
+                uploadTime,
+                user,
+                customerUrl,
+                servantUrl,
+                customerVersionIphone,
+                servantVersionIphone,
+                servantversionIphoneurl,
+                customerversionIphoneurl,
+                customerUrlIphone,
+                servantUrlIphone
+
+        ) VALUES (
+                                 #{customerVersion},
+                                 #{servantVersion},
+                                 #{id},
+                                 #{uploadTime},
+                                 #{user},
+                                 #{customerUrl},
+                                 #{servantUrl},
+                                 #{customerVersionIphone},
+                                 #{servantVersionIphone},
+                                 #{servantversionIphoneurl},
+                                 #{customerversionIphoneurl},
+                                 #{customerUrlIphone}
+                                 #{servantUrlIphone}
+
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_appversion SET
+                                customerVersion=#{customerVersion},
+                                servantVersion=#{servantVersion},
+                                uploadTime=#{uploadTime},
+                                user=#{user},
+                                customerUrl=#{customerUrl},
+                                servantUrl=#{servantUrl},
+                                customerVersionIphone=#{customerVersionIphone},
+                                servantVersionIphone=#{servantVersionIphone},
+                                servantversionIphoneurl=#{servantversionIphoneurl},
+                                customerversionIphoneurl=#{customerversionIphoneurl},
+                                customerUrlIphone=#{customerUrlIphone},
+                                servantUrlIphone=#{servantUrlIphone}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_appversion SET
+            del = #{del}
+        WHERE id = #{id}
+    </update>
+
+</mapper>

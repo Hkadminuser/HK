@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.serve.EntityServePackageDao">
+
+    <sql id="entityServePackageColumns">
+        a.id AS "id",
+        a.degreeDif AS "degreeDif",
+        a.labourHours AS "labourHours",
+        a.packageName AS "packageName",
+        a.remarks AS "remarks"
+    </sql>
+    <sql id="entityServePackageJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.serve.EntityServePackage">
+        SELECT
+        <include refid="entityServePackageColumns"/>
+        FROM wx_entityservepackage a
+        <include refid="entityServePackageJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.serve.EntityServePackage">
+        SELECT
+        <include refid="entityServePackageColumns"/>
+        FROM wx_entityservepackage a
+        <include refid="entityServePackageJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.serve.EntityServePackage">
+        SELECT
+        <include refid="entityServePackageColumns"/>
+        FROM wx_entityservepackage a
+        <include refid="entityServePackageJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_entityservepackage(
+                id
+                degreeDif
+                labourHours
+                packageName
+                remarks
+
+        ) VALUES (
+                                 #{id}
+                                 #{degreeDif}
+                                 #{labourHours}
+                                 #{packageName}
+                                 #{remarks}
+
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_entityservepackage SET
+
+                                degreeDif=#{degreeDif},
+                                labourHours=#{labourHours},
+                                packageName=#{packageName},
+                                remarks=#{remarks}
+
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_entityservepackage SET
+            del = #{del}
+        WHERE id = #{id}
+    </update>
+
+
+</mapper>

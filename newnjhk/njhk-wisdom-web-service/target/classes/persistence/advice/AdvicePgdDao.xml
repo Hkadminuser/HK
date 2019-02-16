@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.advice.AdvicePgdDao">
+
+    <sql id="advicePgdColumns">
+        a.id AS "id",
+        a.adviceAnswer AS "adviceAnswer",
+        a.adviceContent AS "adviceContent",
+        a.callPhone AS "callPhone",
+        a.callTime AS "callTime",
+        a.ORDERNUM AS "ordernum",
+        a.remark AS "remark",
+        a.seatNo AS "seatNo",
+        a.seatPerson AS "seatPerson",
+        adtype.typeName AS "advicetype",
+        a.customer AS "customer",
+        cus.name AS "customerName"
+    </sql>
+    <sql id="advicePgdJoins">
+
+        LEFT join wx_customer cus ON a.customer=cus.id
+        LEFT JOIN  wx_address address ON address.id=cus.communityid
+        LEFT JOIN  wx_advicetype adtype ON adtype.id=a.advicetype
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.advice.AdvicePgd">
+        SELECT
+        <include refid="advicePgdColumns"/>
+        FROM wx_advicepgd a
+        <include refid="advicePgdJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.advice.AdvicePgd">
+        SELECT
+        <include refid="advicePgdColumns"/>
+        FROM wx_advicepgd a
+        <include refid="advicePgdJoins"/>
+        <where>
+            1=1
+            <if test="ordernum !=null">
+               AND a.ORDERNUM=#{ordernum}
+            </if>
+            <if test="adviceType !=null">
+               AND a.adviceType=#{adviceType}
+            </if>
+            <if test="customerName !=null">
+               AND cus.name=#{customerName}
+            </if>
+            <if test="callPhone !=null">
+                AND a.callPhone=#{callPhone}
+            </if>
+            <if test="seatNo !=null">
+                AND a.seatNo=#{seatNo}
+            </if>
+            <if test="seatPerson !=null">
+                AND a.seatPerson=#{seatPerson}
+            </if>
+            <if test="communityid !=null">
+                AND address.id=#{communityid}
+            </if>
+            <if test="DYcallTime !=null">
+                AND a.callTime &gt;=#{DYcallTime}
+            </if>
+            <if test="XYcallTime !=null">
+                AND a.callTime &lt;=#{XYcallTime}
+            </if>
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.advice.AdvicePgd">
+        SELECT
+        <include refid="advicePgdColumns"/>
+        FROM wx_advicepgd a
+        <include refid="advicePgdJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_advicepgd(
+                id,
+                adviceAnswer,
+                adviceContent,
+                callPhone,
+                callTime,
+                ORDERNUM,
+                remark,
+                seatNo,
+                seatPerson,
+                advicetype,
+                customer
+        ) VALUES (
+                                 #{id},
+                                 #{adviceAnswer},
+                                 #{adviceContent},
+                                 #{callPhone},
+                                 #{callTime},
+                                 #{ordernum},
+                                 #{remark},
+                                 #{seatNo},
+                                 #{seatPerson},
+                                 #{advicetype},
+                                 #{customer}
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_advicepgd SET
+                              adviceAnswer=#{adviceAnswer},
+                              adviceContent=#{adviceContent},
+                              callPhone=#{callPhone},
+                              callTime=#{callTime},
+                              ORDERNUM=#{ordernum},
+                              remark=#{remark},
+                              seatNo=#{seatNo},
+                              seatPerson=#{seatPerson},
+                              advicetype=#{adviceType},
+                              customer=#{customer}
+
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_advicepgd SET
+            del = #{del}
+        WHERE id = #{id}
+    </update>
+</mapper>

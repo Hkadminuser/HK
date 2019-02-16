@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.serve.EntityServepgdDao">
+
+    <sql id="entityServepgdColumns">
+        a.ID AS "ID",
+        a.HFPerson AS "HFPerson",
+        a.HFTime AS "HFTime",
+        a.LDPerson AS "LDPerson",
+        a.LDTime AS "LDTime",
+        a.PBPerson AS "PBPerson",
+        a.PBTime AS "PBTime",
+        a.PFPerson AS "PFPerson",
+        a.PFTime AS "PFTime",
+        a.SHPerson AS "SHPerson",
+        a.SHTime AS "SHTime",
+        a.TBPerson AS "TBPerson",
+        a.TBTime AS "TBTime",
+        a.TZPerson AS "TZPerson",
+        a.TZTime AS "TZTime",
+        a.YYPerson AS "YYPerson",
+        a.YYTime AS "YYTime",
+        a.ZFPerson AS "ZFPerson",
+        a.ZFTime AS "ZFTime",
+        a.actualTime AS "actualTime",
+        a.appAddressLat AS "appAddressLat",
+        a.appAddressLng AS "appAddressLng",
+        a.appBeginTime AS "appBeginTime",
+        a.appEndTime AS "appEndTime",
+        a.apptRemark AS "apptRemark",
+        a.apptState AS "apptState",
+        a.auditRemark AS "auditRemark",
+        a.auditState AS "auditState",
+        a.custAddress AS "custAddress",
+        a.custAssess AS "custAssess",
+        a.custMPhone AS "custMPhone",
+        a.custPhone AS "custPhone",
+        a.customer AS "customer",
+        a.customerId AS "customerId",
+        a.expectTime AS "expectTime",
+        a.flow AS "flow",
+        a.ORDERNUM AS "ORDERNUM",
+        a.orderType AS "orderType",
+        a.serveAdvice AS "serveAdvice",
+        a.serveAssess AS "serveAssess",
+        a.serveAttitude AS "serveAttitude",
+        a.serveBeginTime AS "serveBeginTime",
+        a.serveEndTime AS "serveEndTime",
+        a.serveInitiative AS "serveInitiative",
+        a.serveNotify AS "serveNotify",
+        a.serveOnTime AS "serveOnTime",
+        a.servePersonNum AS "servePersonNum",
+        a.serveQuality AS "serveQuality",
+        a.serveRequire AS "serveRequire",
+        a.tbReason AS "tbReason",
+        a.zfReason AS "zfReason",
+        a.CUST AS "CUST",
+        a.custJieDaoId "custJieDaoId",
+        a.custQuId AS "custQuId",
+        a.custSheQuId AS "custSheQuId",
+        a.servePackages AS "servePackages",
+        a.serveProduct AS "serveProduct",
+        a.serveStat AS "serveStat"
+    </sql>
+    <sql id="entityServepgdJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.serve.EntityServepgd">
+        SELECT
+        <include refid="entityServepgdColumns"/>
+        FROM wx_entityservepgd a
+        <include refid="entityServepgdJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.serve.EntityServepgd">
+        SELECT
+        <include refid="entityServepgdColumns"/>
+        FROM wx_entityservepgd a
+        <include refid="entityServepgdJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.serve.EntityServepgd">
+        SELECT
+        <include refid="entityServepgdColumns"/>
+        FROM wx_entityservepgd a
+        <include refid="entityServepgdJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_entityservepgd(
+                ID,
+                HFPerson,
+                HFTime,
+                LDPerson,
+                LDTime,
+                PBPerson,
+                PBTime,
+                PFPerson,
+                PFTime,
+                SHPerson,
+                SHTime,
+                TBPerson,
+                TBTime,
+                TZPerson,
+                TZTime,
+                YYPerson,
+                YYTime,
+                ZFPerson,
+                ZFTime,
+                actualTime,
+                appAddressLat,
+                appAddressLng,
+                appBeginTime,
+                appEndTime,
+                apptRemark,
+                apptState,
+                auditRemark,
+                auditState,
+                custAddress,
+                custAssess,
+                custMPhone,
+                custPhone,
+                customer,
+                customerId,
+                expectTime,
+                flow,
+                ORDERNUM,
+                orderType,
+                serveAdvice,
+                serveAssess,
+                serveAttitude,
+                serveBeginTime,
+                serveEndTime,
+                serveInitiative,
+                serveNotify,
+                serveOnTime,
+                servePersonNum,
+                serveQuality,
+                serveRequire,
+                tbReason,
+                zfReason,
+                CUST,
+                custJieDaoId,
+                custQuId,
+                custSheQuId,
+                servePackages,
+                serveProduct,
+                serveStat
+        ) VALUES (
+                                 #{ID},
+                                 #{HFPerson},
+                                 #{HFTime},
+                                 #{LDPerson},
+                                 #{LDTime},
+                                 #{PBPerson},
+                                 #{PBTime},
+                                 #{PFPerson},
+                                 #{PFTime},
+                                 #{SHPerson},
+                                 #{SHTime},
+                                 #{TBPerson},
+                                 #{TBTime},
+                                 #{TZPerson},
+                                 #{TZTime},
+                                 #{YYPerson},
+                                 #{YYTime},
+                                 #{ZFPerson},
+                                 #{ZFTime},
+                                 #{actualTime},
+                                 #{appAddressLat},
+                                 #{appAddressLng},
+                                 #{appBeginTime},
+                                 #{appEndTime},
+                                 #{apptRemark},
+                                 #{apptState},
+                                 #{auditRemark},
+                                 #{auditState},
+                                 #{custAddress},
+                                 #{custAssess},
+                                 #{custMPhone},
+                                 #{custPhone},
+                                 #{customer},
+                                 #{customerId},
+                                 #{expectTime},
+                                 #{flow},
+                                 #{ORDERNUM},
+                                 #{orderType},
+                                 #{serveAdvice},
+                                 #{serveAssess},
+                                 #{serveAttitude},
+                                 #{serveBeginTime},
+                                 #{serveEndTime},
+                                 #{serveInitiative},
+                                 #{serveNotify},
+                                 #{serveOnTime},
+                                 #{servePersonNum},
+                                 #{serveQuality},
+                                 #{serveRequire},
+                                 #{tbReason},
+                                 #{zfReason},
+                                 #{CUST},
+                                 #{custJieDaoId},
+                                 #{custQuId},
+                                 #{custSheQuId},
+                                 #{servePackages},
+                                 #{serveProduct},
+                                 #{serveStat}
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_entityservepgd SET
+                                HFPerson=#{HFPerson},
+                                HFTime=#{HFTime},
+                                LDPerson=#{LDPerson},
+                                LDTime=#{LDTime},
+                                PBPerson=#{PBPerson},
+                                PBTime=#{PBTime},
+                                PFPerson=#{PFPerson},
+                                PFTime=#{PFTime},
+                                SHPerson=#{SHPerson},
+                                SHTime=#{SHTime},
+                                TBPerson=#{TBPerson},
+                                TBTime=#{TBTime},
+                                TZPerson=#{TZPerson},
+                                TZTime=#{TZTime},
+                                YYPerson=#{YYPerson},
+                                YYTime=#{YYTime},
+                                ZFPerson=#{ZFPerson},
+                                ZFTime=#{ZFTime},
+                                actualTime=#{actualTime},
+                                appAddressLat=#{appAddressLat},
+                                appAddressLng=#{appAddressLng},
+                                appBeginTime=#{appBeginTime},
+                                appEndTime=#{appEndTime},
+                                apptRemark=#{apptRemark},
+                                apptState=#{apptState},
+                                auditRemark=#{auditRemark},
+                                auditState=#{auditState},
+                                custAddress=#{custAddress},
+                                custAssess=#{custAssess},
+                                custMPhone=#{custMPhone},
+                                custPhone=#{custPhone},
+                                customer=#{customer},
+                                customerId=#{customerId},
+                                expectTime=#{expectTime},
+                                flow=#{flow},
+                                ORDERNUM=#{ORDERNUM},
+                                orderType=#{orderType},
+                                serveAdvice=#{serveAdvice},
+                                serveAssess=#{serveAssess},
+                                serveAttitude=#{serveAttitude},
+                                serveBeginTime=#{serveBeginTime},
+                                serveEndTime=#{serveEndTime},
+                                serveInitiative=#{serveInitiative},
+                                serveNotify=#{serveNotify},
+                                serveOnTime=#{serveOnTime},
+                                servePersonNum=#{servePersonNum},
+                                serveQuality=#{serveQuality},
+                                serveRequire=#{serveRequire},
+                                tbReason=#{tbReason},
+                                zfReason=#{zfReason},
+                                CUST=#{CUST},
+                                custJieDaoId=#{custJieDaoId},
+                                custQuId=#{custQuId},
+                                custSheQuId=#{custSheQuId},
+                                servePackages=#{servePackages},
+                                serveProduct=#{serveProduct},
+                                serveStat=#{serveStat}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_entityservepgd SET
+            del = #{del}
+        WHERE id = #{id}
+    </update>
+
+
+</mapper>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.volunteer.VolunteerManagementDao">
+
+    <sql id="projectColumns">
+        a.ID AS "id",
+        a.company AS "company",
+        a.education AS "education",
+        a.idcard AS "idcard",
+        a.name AS "name",
+        a.nation AS "nation",
+        a.political AS "political",
+        a.sex AS "sex",
+        a.telephone AS "telephone"
+    </sql>
+
+    <sql id="projectJoins">
+    </sql>
+
+   <select id="get" resultType="njhk.wisdom.web.bean.entity.server.VolunteerManagement">
+        SELECT
+        <include refid="projectColumns"/>
+        FROM wx_volunteermanagement a
+        <include refid="projectJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.server.VolunteerManagement">
+        SELECT
+        <include refid="projectColumns"/>
+        FROM wx_volunteermanagement a
+        <include refid="projectJoins"/>
+        <where>
+              a.delFlag=#{DEL_FLAG_NORMAL}
+          <if test="name !=null and name !=''">
+              AND a.name=#{name}
+          </if>
+          <if test="idcard !=null and idcard !=''">
+              AND a.idcard=#{idcard}
+          </if>
+          <if test="telephone !=null and telephone !=''">
+              AND a.telephone=#{telephone}
+          </if>
+          <if test="sex !=null and sex !=''">
+              AND a.sex=#{sex}
+          </if>
+          <if test="education !=null and education !=''">
+              AND a.education=#{education}
+          </if>
+          <if test="political !=null and political !=''">
+              AND a.political=#{political}
+          </if>
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_volunteermanagement(
+            id,
+            company,
+            education,
+            idcard,
+            name,
+            nation,
+            political,
+            sex,
+            telephone
+        ) VALUES (
+                     #{id},
+                     #{company},
+                     #{education},
+                     #{idcard},
+                     #{name},
+                     #{nation},
+                     #{political},
+                     #{sex},
+                     #{telephone}
+                 )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_volunteermanagement SET
+                                          company = #{company},
+                                          education = #{education},
+                                          idcard = #{idcard},
+                                          `name` = #{name},
+                                          nation = #{nation},
+                                          political = #{political},
+                                          sex = #{sex},
+                                          telephone = #{telephone}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_volunteermanagement SET
+            delFlag = #{DEL_FLAG_DELETE}
+        WHERE ID = #{id}
+    </update>
+
+</mapper>

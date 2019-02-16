@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.relation.WxServepersonTrainingDao">
+
+    <sql id="projectColumns">
+        a.training_id AS "training_id",
+        a.servePerson_id AS "servePerson_id"
+    </sql>
+
+    <sql id="projectJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.relevance.WxServepersonTraining">
+        SELECT
+        <include refid="projectColumns"/>
+        FROM wxServepersonTraining a
+        <include refid="projectJoins"/>
+        <where>
+            1=1
+        </where>
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.relevance.WxServepersonTraining">
+        SELECT
+        <include refid="projectColumns"/>
+        FROM wxServepersonTraining a
+        <include refid="projectJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+        </choose>
+    </select>
+
+
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wxServepersonTraining(
+            training_id,
+            servePerson_id
+        ) VALUES (
+                     #{training_id},
+                     #{servePerson_id}
+                 )
+    </insert>
+
+    <update id="update">
+        UPDATE wxServepersonTraining SET
+                                         training_id=#{training_id},
+                                         servePerson_id=#{servePerson_id}
+        WHERE ID = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wxServepersonTraining SET
+            del_flag = #{DEL_FLAG_DELETE}
+        WHERE training_id=#{training_id}
+    </update>
+
+</mapper>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.customer.CustomerPromotionDao">
+
+    <sql id="customerPromotionColumns">
+        a.ID AS "ID",
+        a.activity AS "activity",
+        a.end AS "end",
+        a.start AS "start"
+    </sql>
+    <sql id="customerPromotionJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.customer.CustomerPromotion">
+        SELECT
+        <include refid="customerPromotionColumns"/>
+        FROM wx_customerpromotion a
+        <include refid="customerPromotionJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.customer.CustomerPromotion">
+        SELECT
+        <include refid="customerPromotionColumns"/>
+        FROM wx_customerpromotion a
+        <include refid="customerPromotionJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.customer.CustomerPromotion">
+        SELECT
+        <include refid="customerPromotionColumns"/>
+        FROM wx_customerpromotion a
+        <include refid="customerPromotionJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_customerpromotion(
+                ID
+                activity
+                end
+                start
+
+        ) VALUES (
+                                 #{ID},
+                                 #{activity},
+                                 #{end},
+                                 #{start}
+
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_customerpromotion SET
+
+                activity=#{activity},
+                end=#{end},
+                start=#{start}
+
+        WHERE ID = #{ID}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_customerpromotion SET
+            del = #{del}
+        WHERE ID = #{ID}
+    </update>
+
+
+</mapper>

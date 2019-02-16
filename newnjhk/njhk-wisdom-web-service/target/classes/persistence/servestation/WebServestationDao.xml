@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.servestation.WebServestationDao">
+
+    <sql id="ServeStationColumns">
+        a.id AS "id",
+        a.ADDRESS AS "address",
+        a.addressLat AS "addressLat",
+        a.addressLng AS "addressLng",
+        a.eqptNum AS "eqptNum",
+        a.grade AS "grade",
+        a.nonUse AS "nonUse",
+        a.phone AS "phone",
+        a.photo AS "photo",
+        a.photob AS "photob",
+        a.secondAgent AS "secondAgent",
+        a.statNum AS "statNum",
+        a.STATTYPE AS "statType",
+        a.STATNAME AS "statname",
+        a.statSheQuId AS "statSheQuId",
+        a.type AS "type",
+        a.jid AS "jid",
+        a.contact AS "contact",
+        a.contactPhone AS "contactPhone",
+        a.door AS "door",
+        a.serveProject AS "serveProject",
+        a.sysEndCood AS "sysEndCood",
+        a.firstAgent AS "firstAgent"
+
+
+    </sql>
+
+
+
+    <sql id="ServeStationJoins">
+        LEFT JOIN wx_address address ON a.statSheQuId=address.id
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.server.ServeStation">
+        SELECT
+        <include refid="ServeStationColumns"/>
+        FROM wx_servestation a
+        <include refid="ServeStationJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.server.ServeStation">
+        SELECT
+        <include refid="ServeStationColumns"/>
+        FROM wx_servestation a
+        <include refid="ServeStationJoins"/>
+        <where>
+             1=1
+            <if test="statname!=null and statname !=''">
+               and a.statname like  CONCAT('%',#{statname},'%')
+            </if>
+            <if test="statNum!=null and statNum !=''">
+               and a.statNum like CONCAT('%',#{statNum},'%')
+            </if>
+            <if test="nonUse!=null and nonUse !=''">
+               and  a.nonUse=#{nonUse}
+            </if>
+            <if test="statSheQuId!=null and statSheQuId !=''">
+               and address.id=#{statSheQuId}
+            </if>
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.server.ServeStation">
+        SELECT
+        <include refid="ServeStationColumns"/>
+        FROM wx_servestation a
+        <include refid="ServeStationJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_servestation(
+            ADDRESS,
+            addressLat,
+            addressLng,
+            eqptNum,
+            grade,
+            nonUse,
+            phone,
+            photo,
+            photob,
+            secondAgent,
+            statNum,
+            STATTYPE,
+            STATNAME,
+            statSheQuId,
+            type,
+            jid,
+            contact,
+            contactPhone,
+            door,
+            serveProject,
+            sysEndCood,
+            firstAgent
+
+
+        ) VALUES (
+                     #{address},
+                     #{addressLat},
+                     #{addressLng},
+                     #{eqptNum},
+                     #{grade},
+                     #{nonUse},
+                     #{phone},
+                     #{photo},
+                     #{photob},
+                     #{secondAgent},
+                     #{statNum},
+                     #{statType},
+                     #{statname},
+                     #{statSheQuId},
+                     #{type},
+                     #{jid},
+                     #{contact},
+                     #{contactPhone},
+                     #{door},
+                     #{serveProject},
+                     #{sysEndCood},
+                     #{firstAgent}
+
+                 )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_servestation SET
+                                   ADDRESS=#{address},
+                                   addressLat=#{addressLat},
+                                   addressLng=#{addressLng},
+                                   eqptNum=#{eqptNum},
+                                   grade=#{grade},
+                                   nonUse=#{nonUse},
+                                   phone=#{phone},
+                                   photo=#{photo},
+                                   photob=#{photob},
+                                   secondAgent=#{secondAgent},
+                                   statNum=#{statNum},
+                                   STATTYPE=#{statType},
+                                   STATNAME=#{statname},
+                                   statSheQuId=#{statSheQuId},
+                                   type=#{type},
+                                   jid=#{jid},
+                                   contact=#{contact},
+                                   contactPhone=#{contactPhone},
+                                   door=#{door},
+                                   serveProject=#{serveProject},
+                                   sysEndCood=#{sysEndCood},
+                                   firstAgent=#{firstAgent}
+
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_servestation SET
+            del_flag = #{DEL_FLAG_DELETE}
+        WHERE id = #{id}
+    </update>
+
+    <select id="selevtShequ" resultType="String" parameterType="String">
+        SELECT addressName FROM wx_address a WHERE a.id=#{id}
+    </select>
+    <select id="selevtStreet" resultType="String" parameterType="String">
+        SELECT addr.addressName FROM wx_address addr RIGHT JOIN
+        (SELECT addressName,a.parentId FROM wx_address a WHERE a.id=#{id}) shi
+        ON addr.id=shi.parentId
+    </select>
+    <select id="selevtZone" resultType="String" parameterType="String">
+        SELECT wxadd.addressName FROM wx_address wxadd
+        RIGHT JOIN(SELECT addr.addressName,addr.parentId FROM wx_address addr
+        RIGHT JOIN(SELECT addressName,a.parentId FROM wx_address a WHERE a.id=#{id}) shi
+        ON addr.id=shi.parentId)qq ON wxadd.id=qq.parentId
+    </select>
+
+    <update id="StopServestation" parameterType="String">
+        update wx_servestation  set grade=0  where id=#{id}
+    </update>
+
+    <select id="findServestationByStatname" resultType="njhk.wisdom.web.bean.entity.server.ServeStation">
+        SELECT
+        <include refid="ServeStationColumns"/>
+        FROM wx_servestation a
+        <include refid="ServeStationJoins"/>
+        <where>
+            <if test="statname !=null and statname !=''">
+                a.statname like CONCAT('%',#{statname},'%')
+            </if>
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+</mapper>

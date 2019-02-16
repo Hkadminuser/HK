@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.tool.DataSyscoodTableDao">
+
+    <sql id="dataSyscoodTableColumns">
+        a.id AS "id",
+        a.sysEndCode AS "sysEndCode",
+        a.tableFlag AS "tableFlag",
+        a.tableName AS "tableName"
+    </sql>
+    <sql id="dataSyscoodTableJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.tool.DataSyscoodTable">
+        SELECT
+        <include refid="dataSyscoodTableColumns"/>
+        FROM wx_datasyscoodtable a
+        <include refid="dataSyscoodTableJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.tool.DataSyscoodTable">
+        SELECT
+        <include refid="dataSyscoodTableColumns"/>
+        FROM wx_datasyscoodtable a
+        <include refid="dataSyscoodTableJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.tool.DataSyscoodTable">
+        SELECT
+        <include refid="dataSyscoodTableColumns"/>
+        FROM wx_datasyscoodtable a
+        <include refid="dataSyscoodTableJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_datasyscoodtable(
+                id
+                sysEndCode
+                tableFlag
+                tableName
+
+        ) VALUES (
+                                 #{id},
+                                 #{sysEndCode},
+                                 #{tableFlag},
+                                 #{tableName}
+
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_datasyscoodtable SET
+
+                                sysEndCode=#{sysEndCode},
+                                tableFlag=#{tableFlag},
+                                tableName=#{tableName}
+
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_datasyscoodtable SET
+            del = #{del}
+        WHERE id = #{id}
+    </update>
+
+
+</mapper>

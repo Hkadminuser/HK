@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.customer.EntityCustomerDao">
+
+    <sql id="entityCustomerColumns">
+        a.ID AS "ID",
+        a.balance AS "balance",
+        a.batch AS "batch",
+        a.guidangtime AS "guidangtime",
+        a.isdisability AS "isdisability",
+        a.isguidang AS "isguidang",
+        a.islow AS "islow",
+        a.isspecial AS "isspecial",
+        a.jtcy_address1 AS "jtcyaddress1",
+        a.jtcy_address2 AS "jtcyaddress2",
+        a.jtcy_name1 AS "jtcyname1",
+        a.jtcy_name2 AS "jtcyname2",
+        a.jtcy_phone1 AS "jtcyphone1",
+        a.jtcy_phone2 AS "jtcyphone2",
+        a.jtcy_relation1 AS "jtcyrelation1",
+        a.jtcy_relation2 AS "jtcyrelation2",
+        a.jtlx AS "jtlx",
+        a.newphone AS "newphone",
+        a.remark AS "remark",
+        a.subamount AS "subamount",
+        a.subtype AS "subtype",
+        a.customer AS "customer",
+        a.ischegnshisanwu AS "ischegnshisanwu",
+        a.isnongcunwubao AS "isnongcunwubao",
+        a.desiredService AS "desiredService",
+        a.government AS "government",
+        a.governmentTarget AS "governmentTarget",
+        a.jtcy_address3 AS "jtcy_address3",
+        a.jtcy_age3 AS "jtcy_age3",
+        a.jtcy_byphone1 AS "jtcybyphone1",
+        a.jtcy_byphone2 AS "jtcybyphone2",
+        a.jtcy_idNumber3 AS "jtcyidNumber3",
+        a.jtcy_location3 AS "jtcylocation3",
+        a.jtcy_name3 AS "jtcyname3",
+        a.jtcy_nation3 AS "jtcynation3",
+        a.jtcy_phone3 AS "jtcyphone3",
+        a.jtcy_relation3 AS "jtcyrelation3",
+        a.jtcy_sex1 AS "jtcysex1",
+        a.jtcy_sex2 AS "jtcysex2",
+        a.jtcy_sex3 AS "jtcysex3",
+        a.otherPattern AS "otherPattern",
+        a.pattern AS "pattern",
+        a.target AS "target"
+    </sql>
+    <sql id="entityCustomerJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.customer.EntityCustomer">
+        SELECT
+        <include refid="entityCustomerColumns"/>
+        FROM wx_entitycustomer a
+        <include refid="entityCustomerJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.customer.EntityCustomer">
+        SELECT
+        <include refid="entityCustomerColumns"/>
+        FROM wx_entitycustomer a
+        <include refid="entityCustomerJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.customer.EntityCustomer">
+        SELECT
+        <include refid="entityCustomerColumns"/>
+        FROM wx_entitycustomer a
+        <include refid="entityCustomerJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_advicepgd(
+                ID,
+                balance,
+                batch,
+                guidangtime,
+                isdisability,
+                isguidang,
+                islow,
+                isspecial,
+                jtcy_address1,
+                jtcy_address2,
+                jtcy_name1,
+                jtcy_name2,
+                jtcy_phone1,
+                jtcy_phone2,
+                jtcy_relation1,
+                jtcy_relation2,
+                jtlx,
+                newphone,
+                remark,
+                subamount,
+                subtype,
+                customer,
+                ischegnshisanwu,
+                isnongcunwubao,
+                desiredService,
+                government,
+                governmentTarget,
+                jtcy_address3,
+                jtcy_age3,
+                jtcy_byphone1,
+                jtcy_byphone2,
+                jtcy_idNumber3,
+                jtcy_location3,
+                jtcy_name3,
+                jtcy_nation3,
+                jtcy_phone3,
+                jtcy_relation3,
+                jtcy_sex1,
+                jtcy_sex2,
+                jtcy_sex3,
+                otherPattern,
+                pattern,
+                target
+        ) VALUES (
+                                 #{ID},
+                                 #{balance},
+                                 #{batch},
+                                 #{guidangtime},
+                                 #{isdisability},
+                                 #{isguidang},
+                                 #{islow},
+                                 #{isspecial},
+                                 #{jtcyaddress1},
+                                 #{jtcyaddress2},
+                                 #{jtcyname1},
+                                 #{jtcyname2},
+                                 #{jtcyphone1},
+                                 #{jtcyphone2},
+                                 #{jtcyrelation1},
+                                 #{jtcyrelation2},
+                                 #{jtlx},
+                                 #{newphone},
+                                 #{remark},
+                                 #{subamount},
+                                 #{subtype},
+                                 #{customer},
+                                 #{ischegnshisanwu},
+                                 #{isnongcunwubao},
+                                 #{desiredService},
+                                 #{government},
+                                 #{governmentTarget},
+                                 #{jtcyaddress3},
+                                 #{jtcyage3},
+                                 #{jtcybyphone1},
+                                 #{jtcybyphone2},
+                                 #{jtcyidNumber3},
+                                 #{jtcylocation3},
+                                 #{jtcyname3},
+                                 #{jtcynation3},
+                                 #{jtcyphone3},
+                                 #{jtcyrelation3},
+                                 #{jtcysex1},
+                                 #{jtcysex2},
+                                 #{jtcysex3},
+                                 #{otherPattern},
+                                 #{pattern},
+                                 target=#{target}
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_advicepgd SET
+                                balance=#{balance},
+                                batch=#{batch},
+                                guidangtime=#{guidangtime},
+                                isdisability=#{isdisability},
+                                isguidang=#{isguidang},
+                                islow=#{islow},
+                                isspecial=#{isspecial},
+                                jtcy_address1=#{jtcyaddress1},
+                                jtcy_address2=#{jtcyaddress2},
+                                jtcy_name1=#{jtcyname1},
+                                jtcy_name2=#{jtcyname2},
+                                jtcy_phone1=#{jtcyphone1},
+                                jtcy_phone2=#{jtcyphone2},
+                                jtcy_relation1=#{jtcyrelation1},
+                                jtcy_relation2=#{jtcyrelation2},
+                                jtlx=#{jtlx},
+                                newphone=#{newphone},
+                                remark=#{remark},
+                                subamount=#{subamount},
+                                subtype=#{subtype},
+                                customer=#{customer},
+                                ischegnshisanwu=#{ischegnshisanwu},
+                                isnongcunwubao=#{isnongcunwubao},
+                                desiredService=#{desiredService},
+                                government=#{government},
+                                governmentTarget=#{governmentTarget},
+                                jtcy_address3=#{jtcyaddress3},
+                                jtcy_age3=#{jtcyage3},
+                                jtcy_byphone1=#{jtcybyphone1},
+                                jtcy_byphone2=#{jtcybyphone2},
+                                jtcy_idNumber3=#{jtcyidNumber3},
+                                jtcy_location3=#{jtcylocation3},
+                                jtcy_name3=#{jtcyname3},
+                                jtcy_nation3=#{jtcynation3},
+                                jtcy_phone3=#{jtcyphone3},
+                                jtcy_relation3=#{jtcyrelation3},
+                                jtcy_sex1=#{jtcysex1},
+                                jtcy_sex2=#{jtcysex2},
+                                jtcy_sex3=#{jtcysex3},
+                                otherPattern=#{otherPattern},
+                                pattern=#{pattern},
+                                target=#{target}
+
+        WHERE ID = #{ID}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_advicepgd SET
+            del = #{del}
+        WHERE ID = #{ID}
+    </update>
+
+
+</mapper>

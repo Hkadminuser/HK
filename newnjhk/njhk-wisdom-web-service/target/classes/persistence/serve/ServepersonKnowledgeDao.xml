@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.serve.ServepersonKnowledgeDao">
+
+    <sql id="projectColumns">
+        a.id  AS "id",
+        a.person AS "person",
+        a.title AS "title",
+        a.content AS "content",
+        a.time AS "time"
+
+    </sql>
+
+    <sql id="projectJoins">
+    </sql>
+
+    <!--  <select id="get" resultType="njhk.wisdom.web.bean.entity.server.VolunteerManagement">
+          SELECT
+          <include refid="projectColumns"/>
+          FROM wx_volunteermanagement a
+          <include refid="projectJoins"/>
+          <where>
+              1=1 AND a.del_flag = #{DEL_FLAG_NORMAL}
+              <if test="projectCode!=null and projectCode!=''">
+                  AND a.project_code = #{projectCode}
+              </if>
+              <if test="id!=null and id!=''">
+                  AND a.id = #{id}
+              </if>
+          </where>
+      </select>-->
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.other.ServepersonKnowledge">
+        SELECT
+        <include refid="projectColumns"/>
+        FROM wx_servepersonknowledge a
+        <include refid="projectJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_servepersonknowledge(
+                person,
+                title,
+                content,
+                time
+
+
+
+
+        ) VALUES (
+                     #{person},
+                     #{title},
+                     #{content},
+                     #{time}
+                 )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_servepersonknowledge SET
+                                           person=#{person},
+                                           title=#{title},
+                                           content=#{content},
+                                           time=#{time}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_servepersonknowledge SET
+            del_flag = #{DEL_FLAG_DELETE}
+        WHERE id = #{id}
+    </update>
+
+</mapper>

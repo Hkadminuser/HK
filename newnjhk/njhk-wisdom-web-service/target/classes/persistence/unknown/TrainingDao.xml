@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.unknown.TrainingDao">
+
+    <sql id="projectColumns">
+        a.id AS "id",
+        a.name AS "name",
+        a.map AS "map",
+        a.des AS "des",
+        a.points AS "points",
+        a.createTime AS "createTime"
+
+    </sql>
+
+    <sql id="projectJoins">
+    </sql>
+
+    <!--  <select id="get" resultType="njhk.wisdom.web.bean.entity.server.VolunteerManagement">
+          SELECT
+          <include refid="projectColumns"/>
+          FROM wx_volunteermanagement a
+          <include refid="projectJoins"/>
+          <where>
+              1=1 AND a.del_flag = #{DEL_FLAG_NORMAL}
+              <if test="projectCode!=null and projectCode!=''">
+                  AND a.project_code = #{projectCode}
+              </if>
+              <if test="id!=null and id!=''">
+                  AND a.id = #{id}
+              </if>
+          </where>
+      </select>-->
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.other.Training">
+        SELECT
+        <include refid="projectColumns"/>
+        FROM wx_training a
+        <include refid="projectJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_training(
+                name,
+                map,
+                des,
+                points,
+                createTime
+        ) VALUES (
+                     #{name},
+                     #{map},
+                     #{des},
+                     #{points},
+                     #{createTime}
+                 )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_training  SET
+                                name=#{name},
+                                map=#{map},
+                                des=#{des},
+                                points=#{points},
+                                createTime=#{createTime}
+
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_training SET
+            del_flag = #{DEL_FLAG_DELETE}
+        WHERE id = #{id}
+    </update>
+
+</mapper>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.customer.CustomerVisitTypeDao">
+
+    <sql id="customerVisitTypeColumns">
+        a.id AS "id",
+        a.createTime AS "createTime",
+        a.deleteTime AS "deleteTime",
+        a.validFlag AS "validFlag",
+        a.visitName AS "visitName"
+    </sql>
+    <sql id="customerVisitTypeJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.customer.CustomerVisitType">
+        SELECT
+        <include refid="customerVisitTypeColumns"/>
+        FROM wx_customervisittype a
+        <include refid="customerVisitTypeJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.customer.CustomerVisitType">
+        SELECT
+        <include refid="customerVisitTypeColumns"/>
+        FROM wx_customervisittype a
+        <include refid="customerVisitTypeJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.customer.CustomerVisitType">
+        SELECT
+        <include refid="customerVisitTypeColumns"/>
+        FROM wx_customervisittype a
+        <include refid="customerVisitTypeJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_customervisittype(
+                id,
+                createTime,
+                deleteTime,
+                validFlag,
+                visitName
+
+        ) VALUES (
+                                 #{id},
+                                 #{createTime},
+                                 #{deleteTime},
+                                 #{validFlag},
+                                 #{visitName}
+
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_customervisittype SET
+
+                                createTime=#{createTime},
+                                deleteTime=#{deleteTime},
+                                validFlag=#{validFlag},
+                                visitName=#{visitName},
+
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_customervisittype SET
+            del = #{del}
+        WHERE id = #{id}
+    </update>
+
+
+</mapper>

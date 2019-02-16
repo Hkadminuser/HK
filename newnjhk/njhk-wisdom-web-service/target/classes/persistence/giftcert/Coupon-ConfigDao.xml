@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.giftcert.Coupon_configDao">
+
+    <sql id="Coupon_ConfigColumns">
+        a.id AS "id",
+        a.firstReg AS "firstReg",
+        a.limitPerOrder AS "limitPerOrder",
+        a.minAmount AS "minAmount",
+        a.points AS "points",
+        a.points2Coupon AS "points2Coupon",
+        a.money AS "money",
+        a.money2Coupon AS "money2Coupon",
+        a.time AS "time",
+        a.time2Coupon AS "time2Coupon"
+    </sql>
+    <sql id="Coupon_ConfigJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.giftcert.CouponConfig">
+        SELECT
+        <include refid="Coupon_ConfigColumns"/>
+        FROM wx_coupon_config a
+        <include refid="Coupon_ConfigJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.giftcert.CouponConfig">
+        SELECT
+        <include refid="Coupon_ConfigColumns"/>
+        FROM wx_coupon_config a
+        <include refid="Coupon_ConfigJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.giftcert.CouponConfig">
+        SELECT
+        <include refid="Coupon_ConfigColumns"/>
+        FROM wx_coupon_config a
+        <include refid="Coupon_ConfigJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_coupon_config(
+                id,
+                firstReg,
+                limitPerOrder,
+                minAmount,
+                points,
+                points2Coupon,
+                money,
+                money2Coupon,
+                time,
+                time2Coupon
+        ) VALUES (
+                                 #{id},
+                                 #{firstReg},
+                                 #{limitPerOrder},
+                                 #{minAmount},
+                                 #{points},
+                                 #{points2Coupon},
+                                 #{money},
+                                 #{money2Coupon},
+                                 #{time},
+                                 #{time2Coupon}
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_coupon_config SET
+                                    id=#{id},
+                                    firstReg=#{firstReg},
+                                    limitPerOrder=#{limitPerOrder},
+                                    minAmount=#{minAmount},
+                                    points=#{points},
+                                    points2Coupon=#{points2Coupon},
+                                    money=#{money},
+                                    money2Coupon=#{money2Coupon},
+                                    time=#{time},
+                                    time2Coupon=#{time2Coupon}
+
+        WHERE ID = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_coupon_config SET
+            del = #{del}
+        WHERE ID = #{id}
+    </update>
+
+
+</mapper>

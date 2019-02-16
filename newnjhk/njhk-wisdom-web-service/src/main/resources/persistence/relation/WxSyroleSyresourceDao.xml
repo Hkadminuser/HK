@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.relation.WxSyroleSyresourceDao">
+
+    <sql id="projectColumns">
+        a.syrole_id AS "syrole_id",
+        a.syresource_id AS "syresource_id"
+    </sql>
+
+    <sql id="projectJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.relevance.WxSyroleSyresource">
+        SELECT
+        <include refid="projectColumns"/>
+        FROM wxSyroleSyresource a
+        <include refid="projectJoins"/>
+        <where>
+            1=1
+        </where>
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.relevance.WxSyroleSyresource">
+        SELECT
+        <include refid="projectColumns"/>
+        FROM wxSyroleSyresource a
+        <include refid="projectJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+        </choose>
+    </select>
+
+
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wxSyroleSyresource(
+            syrole_id,
+            syresource_id
+        ) VALUES (
+                     #{syrole_id},
+                     #{syresource_id}
+                 )
+    </insert>
+
+    <update id="update">
+        UPDATE wxSyroleSyresource SET
+                                      syrole_id=#{syrole_id},
+                                      syresource_id=#{syresource_id}
+        WHERE syrole_id = #{syrole_id}
+    </update>
+
+    <update id="delete">
+        UPDATE wxSyroleSyresource SET
+            del_flag = #{DEL_FLAG_DELETE}
+        WHERE syrole_id=#{syrole_id}
+    </update>
+
+</mapper>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.unknown.CodeReferenceDao">
+
+    <sql id="coderEferenceColumns">
+        a.id AS "id",
+        a.customerId AS "customerId",
+        a.servePersonId AS "servePersonId",
+        a.serveStationId AS "serveStationId",
+        a.addressid AS "addressid"
+    </sql>
+    <sql id="coderEferenceJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.vo.CodeReference">
+        SELECT
+        <include refid="coderEferenceColumns"/>
+        FROM wx_codereference a
+        <include refid="coderEferenceJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.vo.CodeReference">
+        SELECT
+        <include refid="coderEferenceColumns"/>
+        FROM wx_codereference a
+        <include refid="coderEferenceJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.vo.CodeReference">
+        SELECT
+        <include refid="coderEferenceColumns"/>
+        FROM wx_codereference a
+        <include refid="coderEferenceJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_codereference(
+                id,
+                customerId,
+                servePersonId,
+                serveStationId,
+                addressid
+
+        ) VALUES (
+                                 #{id},
+                                 #{customerId},
+                                 #{servePersonId},
+                                 #{serveStationId},
+                                 #{addressid}
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_codereference SET
+
+                                customerId={customerId},
+                                servePersonId={servePersonId},
+                                serveStationId={serveStationId},
+                                addressid={addressid}
+
+
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_codereference SET
+            del = #{del}
+        WHERE id = #{id}
+    </update>
+
+
+
+</mapper>

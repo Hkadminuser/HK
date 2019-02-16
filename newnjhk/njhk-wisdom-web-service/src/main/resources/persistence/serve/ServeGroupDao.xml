@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.serve.ServeGroupDao">
+    <sql id="serveGroupColumns">
+        a.id AS "id",
+        a.groupNo AS "groupNo",
+        a.otherServePersonsId AS "otherServePersonsId",
+        a.servePersonsId AS "servePersonsId",
+        a.r AS "r",
+        u.NAME  AS "followName",
+        wsp.mobilephone AS "mainPhone",
+        sst.STATNAME AS "mainstation",
+        syu.NAME AS "mainName",
+        qw.mobilephone AS "followPhone",
+        ssta.STATNAME AS "followstation"
+    </sql>
+    <sql id="serveGroupJoins">
+      LEFT JOIN wx_serveperson wsp ON a.otherServePersonsId=wsp.ID
+      LEFT JOIN wx_serveperson qw ON a.servePersonsId=qw.ID
+      LEFT JOIN wx_syuser u ON wsp.ID=u.ID
+      LEFT JOIN wx_syuser syu ON qw.ID=syu.ID
+      LEFT JOIN wx_servestation sst ON wsp.serviceStation=sst.id
+      LEFT JOIN wx_servestation ssta ON qw.serviceStation=ssta.id
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.server.ServeGroup">
+        SELECT
+        <include refid="serveGroupColumns"/>
+        FROM wx_servegroup a
+        <include refid="serveGroupJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.server.ServeGroup">
+        SELECT
+        <include refid="serveGroupColumns"/>
+        FROM wx_servegroup a
+        <include refid="serveGroupJoins"/>
+        <where>
+                a.delFlag=#{DEL_FLAG_NORMAL}
+            <if test="groupNo !=null and groupNo !=''">
+                AND a.groupNo like  CONCAT('%', #{groupNo}, '%')
+            </if>
+            <if test="mainName !=null and mainName !=''">
+                AND u.NAME like  CONCAT('%', #{mainName}, '%')
+            </if>
+            <if test="mainPhone !=null and mainPhone !=''">
+                AND wsp.mobilephone like  CONCAT('%', #{mainPhone}, '%')
+            </if>
+            <if test="followName !=null and followName !=''">
+                AND  syu.NAME like  CONCAT('%', #{followName}, '%')
+            </if>
+            <if test="followPhone !=null and followPhone !=''">
+                AND  qw.mobilephone like  CONCAT('%', #{followPhone}, '%')
+            </if>
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.server.ServeGroup">
+        SELECT
+        <include refid="serveGroupColumns"/>
+        FROM wx_servegroup a
+        <include refid="serveGroupJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+    
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_servegroup(
+                                id,
+                                groupNo,
+                                otherServePersonsId,
+                                servePersonsId,
+                                r
+            ) VALUES (
+                                 #{id},
+                                 #{groupNo},
+                                 #{otherServePersonsId},
+                                 #{servePersonsId},
+                                 #{r}
+                             )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_servegroup a SET
+                                 <if test="groupNo !=null and groupNo !=''">
+                                     a.groupNo=#{groupNo},
+                                 </if>
+                                 <if test="otherServePersonsId !=null and otherServePersonsId !=''">
+                                     a.otherServePersonsId=#{otherServePersonsId},
+                                 </if>
+                                 <if test="servePersonsId !=null and servePersonsId !=''">
+                                     a.servePersonsId=#{servePersonsId},
+                                 </if>
+
+                                 r=#{r}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_servegroup SET
+            delFlag = #{DEL_FLAG_DELETE}
+        WHERE id = #{id}
+    </update>
+</mapper>

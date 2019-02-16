@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.serve.ServeStationDao">
+
+    <sql id="ServeStationColumns">
+        a.id AS "id",
+        a.ADDRESS AS "address",
+        a.addressLat AS "addressLat",
+        a.addressLng AS "addressLng",
+        a.eqptNum AS "eqptNum",
+        a.grade AS "grade",
+        a.nonUse AS "nonUse",
+        a.phone AS "phone",
+        a.photo AS "photo",
+        a.photob AS "photob",
+        a.secondAgent AS "secondAgent",
+        a.statNum AS "statNum",
+        a.STATTYPE AS "statType",
+        a.STATNAME AS "statname",
+        a.statSheQuId AS "statSheQuId",
+        a.type AS "type",
+        a.jid AS "jid",
+        a.contact AS "contact",
+        a.contactPhone AS "contactPhone",
+        a.door AS "door",
+        a.serveProject AS "serveProject",
+        a.sysEndCood AS "sysEndCood",
+         a.firstAgent AS "firstAgent"
+
+
+    </sql>
+
+
+
+    <sql id="ServeStationJoins">
+        LEFT JOIN (
+        SELECT
+        sp.serviceStation,
+        sy.`NAME`
+        FROM
+        wx_serveperson sp
+        LEFT JOIN wx_syuser sy ON sp.ID = sy.ID
+        WHERE
+        sp.POSITION = 2
+        ) sta ON sta.serviceStation = a.id
+      </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.server.ServeStation">
+        SELECT
+        <include refid="ServeStationColumns"/>
+        FROM wx_servestation a
+        <include refid="ServeStationJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.server.ServeStation">
+        SELECT
+        <include refid="ServeStationColumns"/>
+        FROM wx_servestation a
+        <include refid="ServeStationJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.server.ServeStation">
+        SELECT
+        <include refid="ServeStationColumns"/>
+        FROM wx_servestation a
+        <include refid="ServeStationJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_servestation(
+                ADDRESS,
+                addressLat,
+                addressLng,
+                eqptNum,
+                grade,
+                nonUse,
+                phone,
+                photo,
+                photob,
+                secondAgent,
+                statNum,
+                STATTYPE,
+                STATNAME,
+                statSheQuId,
+                type,
+                jid,
+                contact,
+                contactPhone,
+                door,
+                serveProject,
+                sysEndCood,
+                firstAgent
+
+
+        ) VALUES (
+            #{address},
+            #{addressLat},
+            #{addressLng},
+            #{eqptNum},
+            #{grade},
+            #{nonUse},
+            #{phone},
+            #{photo},
+            #{photob},
+            #{secondAgent},
+            #{statNum},
+            #{statType},
+            #{statname},
+            #{statSheQuId},
+            #{type},
+            #{jid},
+            #{contact},
+            #{contactPhone},
+            #{door},
+            #{serveProject},
+            #{sysEndCood},
+            #{firstAgent}
+
+                 )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_servestation SET
+                                   ADDRESS=#{address},
+                                   addressLat=#{addressLat},
+                                   addressLng=#{addressLng},
+                                   eqptNum=#{eqptNum},
+                                   grade=#{grade},
+                                   nonUse=#{nonUse},
+                                   phone=#{phone},
+                                   photo=#{photo},
+                                   photob=#{photob},
+                                   secondAgent=#{secondAgent},
+                                   statNum=#{statNum},
+                                   STATTYPE=#{statType},
+                                   STATNAME=#{statname},
+                                   statSheQuId=#{statSheQuId},
+                                   type=#{type},
+                                   jid=#{jid},
+                                   contact=#{contact},
+                                   contactPhone=#{contactPhone},
+                                   door=#{door},
+                                   serveProject=#{serveProject},
+                                   sysEndCood=#{sysEndCood},
+                                   firstAgent=#{firstAgent}
+
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_servestation SET
+            del_flag = #{DEL_FLAG_DELETE}
+        WHERE id = #{id}
+    </update>
+
+
+
+</mapper>

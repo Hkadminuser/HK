@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.cusbackcall.CusbackCallDao">
+
+    <sql id="cusbackCallColumns">
+        a.id AS "id",
+        a.aphftime AS "aphftime",
+        a.hftime AS "hftime",
+        a.record AS "record",
+        a.sfback AS "sfback",
+        a.sfjt AS "sfjt",,
+        a.customer AS "customer"
+        a.hfr AS "hfr",
+        a.planId AS "planId"
+    </sql>
+    <sql id="cusbackCallJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.cusbackcall.CusbackCall">
+        SELECT
+        <include refid="cusbackCallColumns"/>
+        FROM wx_cusbackcall a
+        <include refid="cusbackCallJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.cusbackcall.CusbackCall">
+        SELECT
+        <include refid="cusbackCallColumns"/>
+        FROM wx_cusbackcall a
+        <include refid="cusbackCallJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.cusbackcall.CusbackCall">
+        SELECT
+        <include refid="cusbackCallColumns"/>
+        FROM wx_cusbackcall a
+        <include refid="cusbackCallJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_cusbackcall(
+                id,
+                aphftime,
+                hftime,
+                record,
+                sfback,
+                sfjt,
+                customer,
+                hfr,
+                planId
+        ) VALUES (
+                                 #{id},
+                                 #{aphftime},
+                                 #{hftime},
+                                 #{record}
+                                 #{sfback},
+                                 #{sfjt},
+                                 #{customer},
+                                 #{hfr},
+                                 #{planId}
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_cusbackcall SET
+                                aphftime={aphftime},
+                                hftime={hftime},
+                                record={record},
+                                sfback={sfback},
+                                sfjt={sfjt},
+                                customer={customer},
+                                hfr={hfr},
+                                planId={planId}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_cusbackcall SET
+            del = #{del}
+        WHERE id = #{id}
+    </update>
+
+
+
+
+</mapper>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.serve.ServeTypeDao">
+
+    <sql id="ServeTypeColumns">
+        a.id AS "id",
+        a.beizhu AS "beizhu",
+        a.childTypesNum AS "childTypesNum",
+        a.pid AS "pid",
+        a.typeLevel AS "typeLevel",
+        a.typeName AS "typeName",
+        a.serveType AS "serveType"
+    </sql>
+
+
+   <sql id="ServeTypeJoins">
+       LEFT JOIN
+       wx_servetype_servestation s
+       ON s.SERVETYPE_ID=a.id
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.server.ServeType">
+        SELECT
+        <include refid="ServeTypeColumns"/>
+        FROM wx_servetype a
+        <include refid="ServeTypeJoins"/>
+        WHERE s.SERVESTATION_ID = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.server.ServeType">
+        SELECT
+        <include refid="ServeTypeColumns"/>
+        FROM wx_servetype a
+        <where>
+             1=1
+             <if test="typeLevel !=null">
+                AND a.typeLevel = #{typeLevel}
+             </if>
+
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.server.ServeType">
+        SELECT
+        <include refid="ServeTypeColumns"/>
+        FROM wx_servetype a
+        <include refid="ServeTypeJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_servetype(
+
+                beizhu,
+                childTypesNum,
+                pid,
+                typeLevel,
+                typeName,
+                serveType
+
+
+        ) VALUES (
+
+                     #{beizhu},
+                     #{childTypesNum},
+                     #{pid},
+                     #{typeLevel},
+                     #{typeName},
+                     #{serveType}
+                 )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_servetype SET
+                                id=#{id},
+                                beizhu=#{beizhu},
+                                childTypesNum#{childTypesNum},
+                                pid=#{pid},
+                                typeLevel=#{typeLevel},
+                                typeName=#{typeName},
+                                serveType=#{serveType}
+
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_servetype SET
+            del_flag = #{DEL_FLAG_DELETE}
+        WHERE id = #{id}
+    </update>
+
+
+    <select id="ByserveStationId" resultType="njhk.wisdom.web.bean.entity.server.ServeType">
+        SELECT
+        <include refid="ServeTypeColumns"/>
+        FROM wx_servetype a
+        <include refid="ServeTypeJoins"/>
+        WHERE s.SERVESTATION_ID = #{id}
+    </select>
+
+</mapper>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.serve.ServepersonSigninfoDao">
+
+    <sql id="projectColumns">
+        a.ID AS "id",
+        a.countsign  AS "countsign",
+        a.lastSignTime  AS "lastSignTime",
+        a.mobilephone  AS "mobilephone",
+        a.nameinfo  AS "nameinfo",
+        a.sign  AS "sign"
+
+    </sql>
+
+    <sql id="projectJoins">
+    </sql>
+
+    <!--  <select id="get" resultType="njhk.wisdom.web.bean.entity.server.VolunteerManagement">
+          SELECT
+          <include refid="projectColumns"/>
+          FROM wx_volunteermanagement a
+          <include refid="projectJoins"/>
+          <where>
+              1=1 AND a.del_flag = #{DEL_FLAG_NORMAL}
+              <if test="projectCode!=null and projectCode!=''">
+                  AND a.project_code = #{projectCode}
+              </if>
+              <if test="id!=null and id!=''">
+                  AND a.id = #{id}
+              </if>
+          </where>
+      </select>-->
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.other.ServepersonSigninfo">
+        SELECT
+        <include refid="projectColumns"/>
+        FROM wx_servepersonsigninfo a
+        <include refid="projectJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+
+
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_servepersonsigninfo(
+                countsign,
+                lastSignTime,
+                mobilephone,
+                nameinfo,
+                sign
+
+
+
+        ) VALUES (
+                     #{countsign},
+                     #{lastSignTime},
+                     #{mobilephone},
+                     #{nameinfo},
+                     #{sign}
+                 )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_servepersonsigninfo SET
+                                countsign=#{countsign},
+                                lastSignTime=#{lastSignTime},
+                                mobilephone=#{mobilephone},
+                                nameinfo=#{nameinfo},
+                                sign=#{sign}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_servepersonsigninfo SET
+            del_flag = #{DEL_FLAG_DELETE}
+        WHERE id = #{id}
+    </update>
+
+</mapper>

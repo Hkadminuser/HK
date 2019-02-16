@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.unknown.TbblackDao">
+
+    <sql id="tbblackColumns">
+        a.id AS "id",
+        a.flag AS "flag",
+        a.name AS "name",
+        a.remark AS "remark",
+        a.teleCode AS "teleCode"
+    </sql>
+    <sql id="tbblackJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.Tbblack">
+        SELECT
+        <include refid="tbblackColumns"/>
+        FROM wx_tbblack a
+        <include refid="tbblackJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.Tbblack">
+        SELECT
+        <include refid="tbblackColumns"/>
+        FROM wx_tbblack a
+        <include refid="tbblackJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.Tbblack">
+        SELECT
+        <include refid="tbblackColumns"/>
+        FROM wx_tbblack a
+        <include refid="tbblackJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_advicepgd(
+            id,
+            adviceAnswer,
+            adviceContent,
+            callPhone,
+            callTime,
+            ORDERNUM,
+            remark,
+            seatNo,
+            seatPerson,
+            advicetype,
+            customer
+        ) VALUES (
+                     #{id},
+                     #{adviceAnswer},
+                     #{adviceContent},
+                     #{callPhone},
+                     #{callTime},
+                     #{oRDERNUM},
+                     #{remark},
+                     #{seatNo},
+                     #{seatPerson},
+                     #{advicetype},
+                     #{customer}
+                 )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_advicepgd SET
+                                adviceAnswer=#{adviceAnswer},
+                                adviceContent=#{adviceContent},
+                                callPhone=#{callPhone},
+                                callTime=#{callTime},
+                                ORDERNUM=#{oRDERNUM},
+                                remark=#{remark},
+                                seatNo=#{seatNo},
+                                seatPerson=#{seatPerson},
+                                advicetype=#{advicetype},
+                                customer=#{customer}
+
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_advicepgd SET
+            del = #{del}
+        WHERE id = #{id}
+    </update>
+
+
+</mapper>

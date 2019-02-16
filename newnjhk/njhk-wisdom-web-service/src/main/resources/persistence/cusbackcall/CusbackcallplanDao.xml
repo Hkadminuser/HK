@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.cusbackcall.CusbackcallplanDao">
+
+    <sql id="cusbackcallplanColumns">
+        a.id AS "id",
+        a.beizhu "beizhu",
+        a.community AS "community",,
+        a.content AS "content",
+        a.etime AS "etime",
+        a.jtlx AS "jtlx",
+        a.states AS "states",
+        a.stime AS "stime",
+        a.type AS "type",
+        a.yhlx AS "yhlx"
+    </sql>
+    <sql id="cusbackcallplanJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.cusbackcall.Cusbackcallplan">
+        SELECT
+        <include refid="cusbackcallplanColumns"/>
+        FROM wx_cusbackcallplan a
+        <include refid="cusbackcallplanJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.cusbackcall.Cusbackcallplan">
+        SELECT
+        <include refid="cusbackcallplanColumns"/>
+        FROM wx_cusbackcallplan a
+        <include refid="cusbackcallplanJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.cusbackcall.Cusbackcallplan">
+        SELECT
+        <include refid="cusbackcallplanColumns"/>
+        FROM wx_cusbackcallplan a
+        <include refid="cusbackcallplanJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_cusbackcallplan(
+                id,
+                beizhu,
+                community,
+                content,
+                etime,
+                jtlx,
+                states,
+                stime,
+                type,
+                yhlx
+        ) VALUES (
+                                 #{id},
+                                 #{beizhu},
+                                 #{community},
+                                 #{content},
+                                 #{etime},
+                                 #{jtlx},
+                                 #{states},
+                                 #{stime},
+                                 #{type},
+                                 #{yhlx}
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_cusbackcallplan SET
+                                beizhu={beizhu},
+                                community={community},
+                                content={content},
+                                etime={etime},
+                                jtlx={jtlx},
+                                states={states},
+                                stime={stime},
+                                type={type},
+                                yhlx={yhlx}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_cusbackcallplan SET
+            del = #{del}
+        WHERE id = #{id}
+    </update>
+</mapper>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.Address.AddressDao">
+
+    <sql id="addressColumns">
+        a.id AS "id",
+        a.addressName AS "addressName",
+        a.addressType AS "addressType",
+        a.ano AS "ano",
+        a.del AS "del",
+        a.organizationCode AS "organizationCode",
+        a.parentId AS "parentId",
+        a.sysEndCood AS "sysEndCood"
+    </sql>
+    <sql id="addressAoColumns">
+        a.id AS "id",
+        a.addressName AS "addressName"
+    </sql>
+    <sql id="addressJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.address.Address">
+        SELECT
+        <include refid="addressColumns"/>
+        FROM wx_address a
+        <include refid="addressJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.address.Address">
+        SELECT
+        <include refid="addressColumns"/>
+        FROM wx_address a
+        <include refid="addressJoins"/>
+        <where>
+            <if test="id ==null">
+                a.parentId IS NULL
+            </if>
+            <if test="id !=null">
+                a.parentId=#{id}
+            </if>
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.address.Address">
+        SELECT
+        <include refid="addressColumns"/>
+        FROM wx_address a
+        <include refid="addressJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_address(
+                addressName,
+                addressType,
+                ano,
+                del,
+                organizationCode,
+                parentId,
+                sysEndCood
+        ) VALUES (
+                                #{addressName},
+                                #{addressType},
+                                #{ano},
+                                #{del},
+                                #{organizationCode},
+                                #{parentId},
+                                #{sysEndCood}
+
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_address SET
+                                  addressName=#{addressName},
+                                  addressType=#{addressType},
+                                  ano=#{ano},
+                                  del=#{del},
+                                  organizationCode=#{del},
+                                  parentId=#{del},
+                                  sysEndCood=#{del}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_address SET
+            del = #{del}
+        WHERE id = #{id}
+    </update>
+
+    <select id="findAddressById" resultType="njhk.wisdom.web.bean.vo.AddressAo">
+        SELECT
+        <include refid="addressAoColumns"/>
+        FROM wx_address a
+        <include refid="addressJoins"/>
+        <where>
+            <if test="id ==null">
+                a.parentId IS NULL
+            </if>
+            <if test="id !=null">
+                a.parentId=#{id}
+            </if>
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+</mapper>

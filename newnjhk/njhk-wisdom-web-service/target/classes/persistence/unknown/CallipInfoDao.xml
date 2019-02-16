@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.unknown.CallipInfoDao">
+
+    <sql id="callipInfoColumns">
+        a.ID AS "id",
+        a.clientExtNo AS "clientExtNo",
+        a.clientIp AS "clientIp",
+        a.clientNo AS "clientNo",
+        a.clientPassNo AS "clientPassNo",
+        a.groupNo AS "groupNo",
+        a.serverIP AS "serverIP",
+        a.serverPort AS "serverPort"
+    </sql>
+    <sql id="callipInfoJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.CallipInfo">
+        SELECT
+        <include refid="callipInfoColumns"/>
+        FROM wx_callipinfo a
+        <include refid="callipInfoJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.CallipInfo">
+        SELECT
+        <include refid="callipInfoColumns"/>
+        FROM wx_callipinfo a
+        <include refid="callipInfoJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.unknown.CallipInfo">
+        SELECT
+        <include refid="callipInfoColumns"/>
+        FROM wx_callipinfo a
+        <include refid="callipInfoJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_callipinfo(
+                ID,
+                clientExtNo,
+                clientIp,
+                clientNo,
+                clientPassNo,
+                groupNo,
+                serverIP,
+                serverPort
+
+        ) VALUES (
+                                 #{ID},
+                                 #{clientExtNo},
+                                 #{clientIp},
+                                 #{clientNo}
+                                 #{clientPassNo},
+                                 #{groupNo},
+                                 #{serverIP},
+                                 #{serverPort}
+
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_callipinfo SET
+                                clientExtNo=#{clientExtNo},
+                                clientIp=#{clientIp},
+                                clientNo=#{clientNo},
+                                clientPassNo=#{clientPassNo},
+                                groupNo=#{groupNo},
+                                serverIP=#{serverIP},
+                                serverPort=#{serverPort}
+        WHERE ID = #{iD}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_callipinfo SET
+            del = #{del}
+        WHERE ID = #{iD}
+    </update>
+</mapper>

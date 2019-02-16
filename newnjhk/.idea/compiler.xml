@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="njhk-wisdom-web-api" />
+        <module name="njhk-wisdom-web-bean" />
+        <module name="njhk-wisdom-web-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="njhk-wisdom-web" target="1.8" />
+      <module name="njhk-wisdom-web (2)" target="1.8" />
+      <module name="njhk-wisdom-web-api" target="1.8" />
+      <module name="njhk-wisdom-web-api (1)" target="1.7" />
+      <module name="njhk-wisdom-web-bean" target="1.8" />
+      <module name="njhk-wisdom-web-bean (1)" target="1.8" />
+      <module name="njhk-wisdom-web-service" target="1.8" />
+      <module name="njhk-wisdom-web-service (1)" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="njhk-wisdom-web-api" options="-parameters" />
+      <module name="njhk-wisdom-web-api (1)" options="-parameters" />
+      <module name="njhk-wisdom-web-service" options="-parameters" />
+      <module name="njhk-wisdom-web-service (1)" options="-parameters" />
+    </option>
+  </component>
+</project>

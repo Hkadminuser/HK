@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="better-wisdom-water-bean" />
+        <module name="better-wisdom-water-ops" />
+        <module name="better-wisdom-water-web-api" />
+        <module name="better-wisdom-water-web-service" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="better-wisdom-water-bean" target="1.8" />
+      <module name="better-wisdom-water-ops" target="1.8" />
+      <module name="better-wisdom-water-web-api" target="1.7" />
+      <module name="better-wisdom-water-web-service" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

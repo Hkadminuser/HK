@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.serve.ServeProductDao">
+    <sql id="ServeProductColumns">
+        a.id AS "id",
+        a.degreeDif AS "degreeDif",
+        a.price AS "price",
+        a.produce AS "produce",
+        a.productname AS "productname",
+        a.referTime AS "referTime",
+        a.firstType AS "firstType",
+        a.secondType AS "secondType",
+        a.thirdType AS "thirdType",
+        a.sysEndCood AS "sysEndCood",
+        ty.typeName AS  "firstName",
+        typ.typeName AS "secondName"
+    </sql>
+    <sql id="ServeProductJoins">
+        LEFT JOIN wx_servetype ty ON a.firstType = ty.id
+        LEFT JOIN wx_servetype typ ON a.secondType = typ.id
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.server.ServeProduct">
+        SELECT
+        <include refid="ServeProductColumns"/>
+        FROM wx_serveproduct a
+        <include refid="ServeProductJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.server.ServeProduct">
+        SELECT
+        <include refid="ServeProductColumns"/>
+        FROM wx_serveproduct a
+        <include refid="ServeProductJoins"/>
+        <where>
+             1=1
+            <if test="firstType != null and firstType !=''">
+                AND  a.firstType = #{firstType}
+            </if>
+            <if test="productname !=null and productname !=''">
+                 AND a.productname LIKE CONCAT('%',#{productname},'%')
+            </if>
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.server.ServeProduct">
+        SELECT
+        <include refid="ServeProductColumns"/>
+        FROM wx_serveproduct a
+        <include refid="ServeProductJoins"/>
+        <where>
+            <if test="secondType != null">
+                a.secondType = #{secondType}
+            </if>
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_serveproduct(
+              degreeDif,
+              price ,
+              produce,
+              productname,
+              referTime,
+              firstType ,
+              secondType,
+              thirdType,
+              sysEndCood
+
+        ) VALUES (
+                    #{degreeDif},
+                    #{price},
+                    #{produce},
+                    #{productname},
+                    #{referTime},
+                    #{firstType},
+                    #{secondType},
+                    #{thirdType},
+                    #{sysEndCood}
+                 )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_serveproduct SET
+                                   degreeDif=#{degreeDif},
+                                   price=#{price},
+                                   produce=#{produce},
+                                   productname=#{productname},
+                                   referTime=#{referTime},
+                                   firstType=#{firstType},
+                                   secondType=#{secondType},
+                                   thirdType=#{thirdType},
+                                   sysEndCood=#{sysEndCood}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        DELETE  FROM wx_serveproduct
+        WHERE id = #{id}
+    </update>
+</mapper>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.serve.ServePersonDao">
+    <sql id="serveGroupColumns">
+        a.ID AS "id",
+        a.address AS "address",
+        a.entrytime AS "entryTime",
+        a.familyphone AS "familyPhone",
+        a.grade AS "grade",
+        a.idcard AS "idcard",
+        a.mobilephone AS "mobilePhone",
+        a.nation AS "nation",
+        a.nonUse AS "nonUse",
+        a.photob AS "photob",
+        a.POSITION AS "position",
+        a.workno AS "workNo",
+        a.servetype AS "serveType",
+        a.advantage AS "advantage",
+        a.availableTime AS "availableTime",
+        a.birthday AS "birthday",
+        a.educationalBackground AS "educationalBackground",
+        a.fee AS "fee",
+        a.level AS "level",
+        a.nativePlace AS "nativePlace",
+        a.points AS "points",
+        a.workExperience AS "workExperience",
+        a.totalEstimate AS "totalEstimate",
+        a.avgEstimate AS "avgEstimate",
+        a.longitude AS "longitude",
+        a.latitude AS "latitude",
+        a.lastSignTime AS "lastSignTime",
+        a.lastPostionTime AS "lastPostionTime",
+        a.sysEndCood AS "sysEndCood",
+        a.serviceGroup AS "serviceGroup",
+        address.addressName AS "statSheQuName",
+        sta.STATNAME AS "serviceStationName",
+        u.NAME  AS "name",
+        u.SEX AS "sex",
+        u.AGE AS "age",
+        u.LOGINNAME AS "loginName",
+        sq.addressName AS "shequName",
+        jd.addressName AS "jiedaoName",
+        qu.addressName AS "quName",
+        shi.addressName AS "shiName"
+    </sql>
+    <sql id="serveGroupJoins">
+        LEFT JOIN wx_syuser u ON a.ID=u.ID
+        LEFT JOIN wx_servestation sta ON a.serviceStation=sta.id
+        LEFT JOIN wx_address  address ON a.statSheQuId=address.id
+        LEFT JOIN wx_address sq ON a.statSheQuId = sq.id
+        LEFT JOIN wx_address jd ON sq.parentId =jd.id
+        LEFT JOIN wx_address qu ON jd.parentId =qu.id
+        LEFT JOIN wx_address shi ON qu.parentId =shi.id
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.server.ServePerson">
+        SELECT
+        <include refid="serveGroupColumns"/>
+        FROM wx_serveperson a
+        <include refid="serveGroupJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.server.ServePerson">
+        SELECT
+        <include refid="serveGroupColumns"/>
+        FROM wx_serveperson a
+        <include refid="serveGroupJoins"/>
+        <where>
+                a.delFlag=#{DEL_FLAG_NORMAL}
+            <if test="name !=null and name !=''">
+                and  u.NAME like  CONCAT('%', #{name}, '%')
+            </if>
+            <if test="mobilePhone !=null and mobilePhone !=''">
+                and a.mobilephone like  CONCAT('%', #{mobilePhone}, '%')
+            </if>
+            <if test="position !=null and position !=''">
+                and a.position=#{position}
+            </if>
+            <if test="workNo !=null and workNo !=''">
+                and a.workNo  like  CONCAT('%', #{workNo}, '%')
+            </if>
+             <if test=" shiID!=null and shiID !=''">
+                 and shi.id=#{shiID}
+             </if>
+            <if test=" quID!=null and quID !=''">
+                and qu.id=#{quID}
+            </if>
+            <if test=" jiedaoID!=null and jiedaoID !=''">
+                and jd.id=#{jiedaoID}
+            </if>
+            <if test=" shequID!=null and shequID !=''">
+                and sq.id=#{shequID}
+            </if>
+            <if test="nonUse !=null and nonUse !=null">
+                and a.nonUse=#{nonUse}
+            </if>
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.server.ServePerson">
+        SELECT
+        <include refid="serveGroupColumns"/>
+        FROM wx_serveperson a
+        <include refid="serveGroupJoins"/>
+        <where>
+            1=1
+
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_serveperson(
+                id,
+                address,
+                entrytime,
+                familyphone,
+                grade,
+                idcard,
+                mobilephone,
+                nation,
+                nonUse,
+                photob,
+                POSITION,
+                workno,
+                servetype,
+                serviceStation,
+                statSheQuId,
+                advantage,
+                availableTime,
+                birthday,
+                educationalBackground,
+                fee,
+                level,
+                nativePlace,
+                points,
+                workExperience,
+                totalEstimate,
+                avgEstimate,
+                longitude,
+                latitude,
+                lastSignTime,
+                lastPostionTime,
+                sysEndCood,
+                serviceGroup
+        ) VALUES (
+                             #{id},
+                             #{address},
+                             #{entryTime},
+                             #{familyPhone},
+                             #{grade},
+                             #{idCard},
+                             #{mobilePhone},
+                             #{nation},
+                             #{nonUse},
+                             #{photob},
+                             #{position},
+                             #{workNo},
+                             #{serveType},
+                             #{serviceStation},
+                             #{statSheQuId},
+                             #{advantage},
+                             #{availableTime},
+                             #{birthday},
+                             #{educationalBackground},
+                             #{fee},
+                             #{level},
+                             #{nativePlace},
+                             #{points},
+                             #{workExperience},
+                             #{totalEstimate},
+                             #{avgEstimate},
+                             #{longitude},
+                             #{latitude},
+                             #{lastSignTime},
+                             #{lastPostionTime},
+                             #{sysEndCood},
+                             #{serviceGroup}
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_serveperson SET
+                                  <if test="address !=null and address !=''">
+                                      address=#{address},
+                                  </if>
+                                  <if test="entryTime !=null">
+                                      entrytime=#{entryTime},
+                                  </if>
+                                  <if test="familyPhone !=null and familyPhone !=''">
+                                      familyphone=#{familyPhone},
+                                  </if>
+                                  <if test="grade !=null and grade !=''">
+                                      grade=#{grade},
+                                  </if>
+                                  <if test="idCard !=null and idCard !=''">
+                                      idcard=#{idCard},
+                                  </if>
+                                  <if test="mobilePhone !=null and mobilePhone !=''">
+                                      mobilephone=#{mobilePhone},
+                                  </if>
+                                  <if test="nation !=null and nation !=''">
+                                      nation=#{nation},
+                                  </if>
+                                  <if test="nonUse !=null and nonUse !=''">
+                                      nonUse=#{nonUse},
+                                  </if>
+                                  <if test="photob !=null and photob !=''">
+                                      photob=#{photob},
+                                  </if>
+                                  <if test="position !=null and position !=''">
+                                      POSITION=#{position},
+                                  </if>
+                                  <if test="workNo !=null and workNo !=''">
+                                      workno=#{workNo},
+                                  </if>
+                                  <if test="serveType !=null and serveType !=''">
+                                      servetype=#{serveType},
+                                  </if>
+                                  <if test="serviceStation !=null and serviceStation!=''">
+                                  serviceStation=#{serviceStation},
+                                  </if>
+                                 <if test="statSheQuId !=null and statSheQuId!=''">
+                                  statSheQuId=#{statSheQuId},
+                                 </if>
+                                  <if test="advantage !=null and advantage !=''">
+                                  advantage=#{advantage},
+                                  </if>
+                                  <if test="availableTime !=null">
+                                  availableTime=#{availableTime},
+                                  </if>
+                                  <if test="birthday !=null">
+                                  birthday=#{birthday},
+                                  </if>
+                                  <if test="educationalBackground !=null and educationalBackground !=''">
+                                  educationalBackground=#{educationalBackground},
+                                  </if>
+                                  <if test="fee !=null and fee !=''">
+                                  fee=#{fee},
+                                  </if>
+                                  <if test="level !=null and level !=''">
+                                  level=#{level},
+                                  </if>
+                                  <if test="nativePlace !=null and nativePlace !=''">
+                                  nativePlace=#{nativePlace},
+                                  </if>
+                                 <if test="points !=null and points !=''">
+                                  points=#{points},
+                                 </if>
+                                  <if test="workExperience !=null and workExperience !=''">
+                                  workExperience=#{workExperience},
+                                  </if>
+                                  <if test="totalEstimate !=null and totalEstimate !=''">
+                                  totalEstimate=#{totalEstimate},
+                                  </if>
+                                  <if test="avgEstimate !=null and avgEstimate !=''">
+                                  avgEstimate=#{avgEstimate},
+                                  </if>
+                                  <if test="longitude !=null and longitude !=''">
+                                  longitude=#{longitude},
+                                  </if>
+                                  <if test="latitude !=null and latitude !=''">
+                                  latitude=#{latitude},
+                                  </if>
+                                  <if test="lastSignTime !=null and lastSignTime !=''">
+                                  lastSignTime=#{lastSignTime},
+                                  </if>
+                                  <if test="lastPostionTime !=null and lastPostionTime !=''">
+                                  lastPostionTime=#{lastPostionTime},
+                                  </if>
+                                  <if test="sysEndCood !=null and sysEndCood !=''">
+                                  sysEndCood=#{sysEndCood},
+                                  </if>
+                                  <if test="serviceGroup !=null and serviceGroup !=''">
+                                      serviceGroup=#{serviceGroup},
+                                  </if>
+                                  <if test="id !=null and id !=''">
+                                      id = #{id}
+                                  </if>
+
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_serveperson SET
+            delFlag = #{DEL_FLAG_DELETE}
+        WHERE id = #{id}
+    </update>
+
+    <select id="findServePersonByServestationId" resultType="njhk.wisdom.web.bean.entity.server.ServePerson">
+        SELECT
+        <include refid="serveGroupColumns"/>
+        FROM wx_serveperson a
+        <include refid="serveGroupJoins"/>
+        <where>
+            a.serviceStation=#{id}
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+    
+    <update id="stopServeperson" parameterType="njhk.wisdom.web.bean.entity.server.ServePerson">
+         UPDATE wx_serveperson   SET  grade=56  WHERE  ID=#{id}
+    </update>
+
+    <insert id="saveServetypeServeperson">
+        insert into wx_servetype_serveperson(servetype_id,serveperson_id) values
+        <foreach item="m" collection="list" separator=",">
+        (#{m.servetype_id},#{m.serveperson_id})
+        </foreach>
+    </insert>
+
+    <delete id="deleteServetypeServeperson">
+        delete from wx_servetype_serveperson where serveperson_id=#{serveperson_id}
+    </delete>
+
+
+</mapper>

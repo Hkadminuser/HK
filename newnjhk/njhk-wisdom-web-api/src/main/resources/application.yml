@@ -1,0 +1,63 @@
+server:
+  port: 8088
+  tomcat:
+    max-threads: 800
+    uri-encoding: utf-8
+  servlet:
+    context-path: /njhk-wisdom-web-api
+mybatis:
+  config-location: classpath:/mybatis-config.xml
+  mapper-locations: classpath:/persistence/**/*Dao.xml
+  type-aliases-package: njhk-wisdom.*
+spring:
+  profiles:
+    active: dev
+logging:
+  config: classpath:logback-spring.xml
+
+
+---
+# 开发环境
+spring:
+  profiles: dev
+  datasource:
+    name: tjy_investment
+    url: jdbc:mysql://localhost:3306/domestichk?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+---
+# 测试环境
+spring:
+  profiles: test
+  datasource:
+    name: tjy_investment
+    url: jdbc:mysql://www.hk952183.com:1331/domestichk?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: hehao
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+---
+# online
+spring:
+  profiles: online
+  datasource:
+    name: tjy_investment
+    url: jdbc:mysql://rm-2ze6o0td8byile6is.mysql.rds.aliyuncs.com:3306/financing?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=Asia/Shanghai
+    username: financing
+    password: Financing852
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+---
+
+  redis:
+    host: 127.0.0.1
+    prot: 6379
+    password: 123456
+    pool:
+      max-idle: 20
+      min-idle: 1
+      max-active: 20
+      max-wait: 60000
+    database: 0

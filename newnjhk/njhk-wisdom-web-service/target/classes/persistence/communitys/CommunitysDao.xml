@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.communitys.CommunitysDao">
+
+    <sql id="communitysColumns">
+        a.id AS "id",
+        a.actualOccupancy AS "actualOccupancy",
+        a.bedNumber AS "bedNumber",
+        a.buildingArea AS "buildingArea",
+        a.communitysAddress AS "communitysAddress",
+        a.communitysHead AS "communitysHead",
+        a.communitysName AS "communitysName",
+        a.communitysPhone AS "communitysPhone",
+        a.communitysPhoto AS "communitysPhoto",
+        a.communitysType AS "communitysType",
+        a.constructionYears AS "constructionYears",
+        a.housingProperty AS "housingProperty",
+        a.landProperty AS "landProperty",
+        a.managers AS "managers",
+        a.nature AS "nature",
+        a.nursings AS "nursings",
+        a.ownership AS "ownership",
+        a.remarks AS "remarks"
+    </sql>
+    <sql id="communitysJoins">
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.pojo.communitys.Communitys">
+        SELECT
+        <include refid="communitysColumns"/>
+        FROM wx_communitys a
+        <include refid="communitysJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.pojo.communitys.Communitys">
+        SELECT
+        <include refid="communitysColumns"/>
+        FROM wx_communitys a
+        <include refid="communitysJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.pojo.communitys.Communitys">
+        SELECT
+        <include refid="communitysColumns"/>
+        FROM wx_communitys a
+        <include refid="communitysJoins"/>
+        <where>
+            1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_communitys(
+                id,
+                actualOccupancy,
+                bedNumber,
+                buildingArea,
+                communitysAddress,
+                communitysHead,
+                communitysName,
+                communitysPhone,
+                communitysPhoto,
+                communitysType,
+                constructionYears,
+                housingProperty,
+                landProperty,
+                managers,
+                nature,
+                nursings,
+                ownership,
+                remarks
+        ) VALUES (
+                                 #{id},
+                                 #{actualOccupancy},
+                                 #{bedNumber},
+                                 #{buildingArea},
+                                 #{communitysAddress},
+                                 #{communitysHead},
+                                 #{communitysName},
+                                 #{communitysPhone},
+                                 #{communitysPhoto},
+                                 #{communitysType},
+                                 #{constructionYears},
+                                 #{housingProperty},
+                                 #{landProperty},
+                                 #{managers},
+                                 #{nature},
+                                 #{nursings},
+                                 #{ownership},
+                                 #{remarks}
+
+                         )
+    </insert>
+
+    <update id="update">
+        UPDATE wx_communitys SET
+                                actualOccupancy={actualOccupancy},
+                                bedNumber={bedNumber},
+                                buildingArea={buildingArea},
+                                communitysAddress={communitysAddress},
+                                communitysHead={communitysHead},
+                                communitysName={communitysName},
+                                communitysPhone={communitysPhone},
+                                communitysPhoto={communitysPhoto},
+                                communitysType={communitysType},
+                                constructionYears={constructionYears},
+                                housingProperty={housingProperty},
+                                landProperty={landProperty},
+                                managers={managers},
+                                nature={nature},
+                                nursings={nursings},
+                                ownership={ownership},
+                                remarks={remarks}
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_communitys SET
+            del = #{del}
+        WHERE id = #{id}
+    </update>
+
+
+
+</mapper>

@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="njhk.wisdom.web.service.mapper.customer.WebCustomerDao">
+
+    <sql id="customerColumns">
+        a.id AS "id",
+        a.address AS "address",
+        a.addressLat AS "addressLat",
+        a.addressLng AS "addressLng",
+        a.birthday AS "birthday",
+        a.community AS "community",
+        a.familyphone AS "familyPhone",
+        a.idNumber AS "idNumber",
+        a.idNumberaddress AS "idNumberAddress",
+        a.moreinfo AS "moreinfo",
+        a.name AS "name",
+        a.phone AS "phone",
+        a.photo AS "photo",
+        a.photob AS "photoB",
+        a.sex AS "sex",
+        a.states AS "states",
+        a.type AS "type",
+        a.uid AS "uid",
+        a.communityid AS "communityId",
+        a.points AS "points",
+        a.coupon AS "coupon",
+        a.memberType AS "memberType",
+        a.lastSignTime AS "lastSignTime",
+        a.pwd AS "pwd",
+        a.isDead AS "isDead",
+        a.fromApp AS "fromApp",
+        a.timeToCouponCount AS "timeToCouponCount",
+        a.isRegisteredAtShb AS "isRegisteredAtShb",
+        a.updatePortal AS "updatePortal",
+        a.statesChgRsn AS "statesChgRsn",
+        a.mobilemenuid AS "mobilemenuId",
+        a.phonemodelid AS "phonemodelId",
+        a.addperson AS "addPerson",
+        a.entrytime AS "entrytime",
+        a.qianyueperson AS "qianYuePerson",
+        a.qianyuetime AS "qianYueTime",
+        a.customertypeid AS "customertypeId",
+        a.zhuxiaoperson AS "zhuXiaoPerson",
+        a.zhuxiaotime AS "zhuXiaoTime",
+        a.visitLevel AS "visitLevel",
+        a.currentAddress AS "currentAddress",
+        a.disease AS "disease",
+        a.diseaseOther AS "diseaseOther",
+        a.lifeAreas AS "lifeAreas",
+        a.marriageStatus AS "marriageStatus",
+        a.specialCommunity AS "specialCommunity",
+        a.status AS "status",
+        a.canjiindex AS "canJiIndex",
+        a.canjitype AS "canJiType",
+        a.canliannumber AS "canLianNumber",
+        a.guomin AS "guomin",
+        a.juzhuCommunity AS "juzhuCommunity",
+        a.oldremark AS "oldremark",
+        a.tingCommunity AS "tingCommunity",
+        a.yaowu AS "yaowu",
+        a.imei AS "iMei",
+        a.statesjujue AS "statesJuJue",
+        a.volunteerida AS "volunteerida",
+        a.volunteeridb AS "volunteeridb",
+        a.volunteeridc AS "volunteeridc",
+        a.age AS "age",
+        a.isDeaddate AS "isDeadDate",
+        a.isFreedate AS "isFreeDate",
+        a.addpersonid AS "addPersonId",
+        a.pics AS "pics",
+        a.applyimg AS "applyImg",
+        a.hkbimgb AS "hkbImgB",
+        a.hkbimgz AS "hkbImgZ",
+        a.idcardimgf AS "idcardimgf",
+        a.idcardimgz AS "idCardImgZ",
+        a.allergicType AS "allergicType",
+        a.allergy AS "allergy",
+        a.bloodType AS "bloodType",
+        a.certificateNumber AS "certificateNumber",
+        a.certificateType AS "certificateType",
+        a.economicSource AS "economicSource",
+        a.minzhengIndex AS "minzhengIndex",
+        a.nation AS "nation",
+        a.otherAllergicType AS "otherAllergicType",
+        a.otherCertificateType AS "otherCertificateType",
+        a.otherEconomicSource AS "otherEconomicSource",
+        a.otherJuzhuCommunity AS "otherJuzhuCommunity",
+        a.otherMinzhengIndex AS "otherMinzhengIndex",
+        a.otherPersonalHobby AS "otherPersonalHobby",
+        a.personalHobby AS "personalHobby",
+        a.postTitle AS "postTitle",
+        a.zhuting AS "zhuting",
+        a.sysEndCood AS "sysEndCood",
+        cc.governmentTarget AS "ec.governmentTarget",
+        cc.government AS "ec.government",
+        cc.pattern AS "ec.pattern",
+        cc.otherPattern AS "ec.otherPattern",
+        cc.desiredService AS "ec.desiredService",
+        cc.jtcy_address1 AS "ec.jtcyaddress1",
+        cc.jtcy_address2 AS "ec.jtcyaddress2",
+        cc.jtcy_name1 AS "ec.jtcyname1",
+        cc.jtcy_name2 AS "ec.jtcyname2",
+        cc.jtcy_phone1 AS "ec.jtcyphone1",
+        cc.jtcy_phone2 AS "ec.jtcyphone2",
+        cc.jtcy_relation1 AS "ec.jtcyrelation1",
+        cc.jtcy_relation2 AS "ec.jtcyrelation2",
+        cc.jtcy_address3 AS "ec.jtcyaddress3",
+        cc.jtcy_age3 AS "ec.jtcyage3",
+        cc.jtcy_byphone1 AS "ec.jtcybyphone1",
+        cc.jtcy_byphone2 AS "ec.jtcybyphone2",
+        cc.jtcy_idNumber3 AS "ec.jtcyidNumber3",
+        cc.jtcy_location3 AS "ec.jtcylocation3",
+        cc.jtcy_name3 AS "ec.jtcyname3",
+        cc.jtcy_nation3 AS "ec.jtcynation3",
+        cc.jtcy_phone3 AS "ec.jtcyphone3",
+        cc.jtcy_relation3 AS "ec.jtcyrelation3",
+        cc.jtcy_sex1 AS "ec.jtcysex1",
+        cc.jtcy_sex2 AS "ec.jtcysex2",
+        cc.jtcy_sex3 AS "ec.jtcysex3"
+    </sql>
+    <sql id="customerJoins">
+        LEFT JOIN wx_entitycustomer cc ON a.id=cc.customer
+    </sql>
+
+    <select id="get" resultType="njhk.wisdom.web.bean.entity.customer.Customer">
+        SELECT
+        <include refid="customerColumns"/>
+        FROM wx_customer a
+        <include refid="customerJoins"/>
+        WHERE a.id = #{id}
+    </select>
+
+    <select id="findList" resultType="njhk.wisdom.web.bean.entity.customer.Customer">
+        SELECT
+        <include refid="customerColumns"/>
+        FROM wx_customer a
+        <include refid="customerJoins"/>
+        <where>
+             1=1
+             <if test="type !=null and type !=''">
+                 and a.type =#{type}
+             </if>
+            <if test="phone != null and phone !=''">
+                and a.phone  like  CONCAT('%', #{phone}, '%')
+            </if>
+            <if test="name != null and name !=''">
+                and  a.name  like  CONCAT('%', #{name}, '%')
+            </if>
+            <if test="idNumber != null and idNumber !=''">
+                and  a.idNumber like CONCAT('%',#{idNumber},'%')
+            </if>
+            <if test="states != null and states !=''">
+                and  a.states=#{states}
+            </if>
+            <if test="lifeAreas != null and lifeAreas !=''">
+                and  a.lifeAreas=#{lifeAreas}
+            </if>
+            <if test="marriageStatus != null and marriageStatus !=''">
+                and  a.marriageStatus=#{marriageStatus}
+            </if>
+            <if test="disease != null and disease !=''">
+                and  a.disease=#{disease}
+            </if>
+            <if test="minzhengIndex != null and minzhengIndex !=''">
+                and  a.minzhengIndex=#{minzhengIndex}
+            </if>
+            <if test="specialCommunity != null and specialCommunity !=''">
+                and  a.specialCommunity=#{specialCommunity}
+            </if>
+            <if test="sex != null and sex !=''">
+                and  a.sex=#{sex}
+            </if>
+            <if test="age != null and age !=''">
+                and  a.age>#{age}
+            </if>
+            <if test="address !=null and address !=''">
+                and  a.address like CONCAT('%',#{address},'%')
+            </if>
+            <if test="zone !=null and zone !=''">
+                and  a.zone like  CONCAT('%',#{zone},'%')
+            </if>
+            <if test="street !=null and street !=''">
+                and  a.street like CONCAT('%',#{street},'%')
+            </if>
+            <if test="shequ !=null and shequ !=''">
+                and  a.shequ like CONCAT('%',#{shequ},'%')
+            </if>
+            <if test="community !=null and community !=''">
+                and  a.community like CONCAT('%',community,'%')
+            </if>
+            <if test="DYentrytime !=null and DYentrytime !=''">
+                and  a.entrytime &gt;=#{DYentrytime}
+            </if>
+            <if test="XYentrytime !=null and XYentrytime !=''">
+                and  a.entrytime &lt;=#{XYentrytime}
+            </if>
+            <if test="DYzhuXiaoTime !=null and DYzhuXiaoTime !=''">
+                and  a.zhuxiaotime &gt;=#{DYzhuXiaoTime}
+            </if>
+            <if test="XYzhuXiaoTime !=null and XYzhuXiaoTime !=''">
+                and  a.zhuxiaotime &lt;=#{XYzhuXiaoTime}
+            </if>
+            <if test="DYisFreeDate !=null and DYisFreeDate !=''">
+                and  a.isFreedate &gt;=#{DYisFreeDate}
+            </if>
+            <if test="XYisFreeDate !=null and XYisFreeDate !=''">
+                and  a.isFreedate &lt;=#{XYisFreeDate}
+            </if>
+            <if test="DYisDeadDate !=null and DYisDeadDate !=''">
+                and  a.isDeaddate &gt;=#{DYisDeadDate}
+            </if>
+            <if test="XYisDeadDate !=null and XYisDeadDate !=''">
+                and  a.isDeaddate &lt;=#{XYisDeadDate}
+            </if>
+            <if test="visitLevel !=null and visitLevel !=''">
+                and  a.visitLevel=#{visitLevel}
+            </if>
+            <if test="status !=null and status !=''">
+                and  a.status=#{status}
+            </if>
+            <if test="fromApp !=null and fromApp !=''">
+                and  a.fromApp=#{fromApp}
+            </if>
+
+        </where>
+        <choose>
+           <when test="suiji !=null">
+               ORDER BY RAND()
+           </when>
+           <otherwise>
+               <choose>
+                 <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                     ORDER BY ${page.orderBy}
+                 </when>
+                  <otherwise>
+                   ORDER BY a.id DESC
+                  </otherwise>
+               </choose>
+           </otherwise>
+        </choose>
+
+    </select>
+
+    <select id="findAllList" resultType="njhk.wisdom.web.bean.entity.customer.Customer">
+        SELECT
+        <include refid="customerColumns"/>
+        FROM wx_customer a
+        <include refid="customerJoins"/>
+        <where>
+           1=1
+        </where>
+        <choose>
+            <when test="page !=null and page.orderBy != null and page.orderBy != ''">
+                ORDER BY ${page.orderBy}
+            </when>
+            <otherwise>
+                ORDER BY a.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO wx_customer(
+                id,
+                address,
+                addressLat,
+                addressLng,
+                birthday,
+                community,
+                familyphone,
+                idNumber,
+                idNumberaddress,
+                moreinfo,
+                name,
+                phone,
+                photo,
+                photob,
+                sex,
+                states,
+                type,
+                uid,
+                communityid,
+                points,
+                coupon,
+                memberType,
+                lastSignTime,
+                pwd,
+                freeCount,
+                isFree,
+                isDead,
+                fromApp,
+                timeToCouponCount,
+                isRegisteredAtShb,
+                updatePortal,
+                statesChgRsn,
+                customertypeid,
+                mobilemenuid,
+                phonemodelid,
+                addperson,
+                entrytime,
+                qianyueperson,
+                qianyuetime,
+                zhuxiaoperson,
+                zhuxiaotime,
+                visitLevel,
+                currentAddress,
+                disease,
+                diseaseOther,
+                lifeAreas,
+                marriageStatus,
+                specialCommunity,
+                status,
+                canjiindex,
+                canjitype,
+                canliannumber,
+                guomin,
+                juzhuCommunity,
+                oldremark,
+                tingCommunity,
+                yaowu,
+                imei,
+                volunteerida,
+                volunteeridb,
+                volunteeridc,
+                statesjujue,
+                age,
+                isDeaddate,
+                isFreedate,
+                addpersonid,
+                pics,
+                applyimg,
+                hkbimgb,
+                hkbimgz,
+                idcardimgf,
+                idcardimgz,
+                allergicType,
+                allergy,
+                bloodType,
+                certificateNumber,
+                certificateType,
+                economicSource,
+                minzhengIndex,
+                nation,
+                otherAllergicType,
+                otherCertificateType,
+                otherEconomicSource,
+                otherJuzhuCommunity,
+                otherMinzhengIndex,
+                otherPersonalHobby,
+                personalHobby,
+                postTitle,
+                zhuting,
+                sysEndCood
+
+        ) VALUES (
+                     #{id},
+                     #{address},
+                     #{addressLat},
+                     #{addressLng},
+                     #{birthday},
+                     #{community},
+                     #{familyPhone},
+                     #{idNumber},
+                     #{idNumberAddress},
+                     #{moreinfo},
+                     #{name},
+                     #{phone},
+                     #{photo},
+                     #{photoB},
+                     #{sex},
+                     #{states},
+                     #{type},
+                     #{uid},
+                     #{communityId},
+                     #{points},
+                     #{coupon},
+                     #{memberType},
+                     #{lastSignTime},
+                     #{pwd},
+                     #{freeCount},
+                     #{isFree},
+                     #{isDead},
+                     #{fromApp},
+                     #{timeToCouponCount},
+                     #{isRegisteredAtShb},
+                     #{updatePortal},
+                     #{statesChgRsn},
+                     #{customertypeId},
+                     #{mobilemenuId},
+                     #{phonemodelId},
+                     #{addPerson},
+                     #{entrytime},
+                     #{qianYuePerson},
+                     #{qianYueTime},
+                     #{zhuXiaoPerson},
+                     #{zhuXiaoTime},
+                     #{visitLevel},
+                     #{currentAddress},
+                     #{disease},
+                     #{diseaseOther},
+                     #{lifeAreas},
+                     #{marriageStatus},
+                     #{specialCommunity},
+                     #{status},
+                     #{canJiIndex},
+                     #{canJiType},
+                     #{canLianNumber},
+                     #{guomin},
+                     #{juzhuCommunity},
+                     #{oldremark},
+                     #{tingCommunity},
+                     #{yaowu},
+                     #{iMei},
+                     #{volunteerida},
+                     #{volunteeridb},
+                     #{volunteeridc},
+                     #{statesJuJue},
+                     #{age},
+                     #{isDeadDate},
+                     #{isFreeDate},
+                     #{addPersonId},
+                     #{pics},
+                     #{applyImg},
+                     #{hkbImgB},
+                     #{hkbImgZ},
+                     #{idcardimgf},
+                     #{idCardImgZ},
+                     #{allergicType},
+                     #{allergy},
+                     #{bloodType},
+                     #{certificateNumber},
+                     #{certificateType},
+                     #{economicSource},
+                     #{minzhengIndex},
+                     #{nation},
+                     #{otherAllergicType},
+                     #{otherCertificateType},
+                     #{otherEconomicSource},
+                     #{otherJuzhuCommunity},
+                     #{otherMinzhengIndex},
+                     #{otherPersonalHobby},
+                     #{personalHobby},
+                     #{postTitle},
+                     #{zhuting},
+                     #{sysEndCood}
+                         )
+    </insert>
+    <update id="update">
+        UPDATE wx_customer SET
+                               <if test="address !=null">
+                                   address=#{address},
+                               </if>
+                               <if test="addressLat !=null">
+                                   addressLat=#{addressLat},
+                               </if>
+                               <if test="addressLng !=null">
+                                   addressLng=#{addressLng},
+                               </if>
+                               <if test="birthday !=null">
+                                   birthday=#{birthday},
+                               </if>
+                               <if test="community !=null">
+                                   community=#{community},
+                               </if>
+                               <if test="familyPhone !=null">
+                                   familyphone=#{familyPhone},
+                               </if>
+                               <if test="idNumber !=null">
+                                   idNumber=#{idNumber},
+                               </if>
+                               <if test="idNumberAddress !=null">
+                                   idNumberaddress=#{idNumberAddress},
+                               </if>
+                               <if test="moreinfo !=null">
+                                   moreinfo=#{moreinfo},
+                               </if>
+                               <if test="name !=null">
+                                   name=#{name},
+                               </if>
+                               <if test="phone !=null">
+                                   phone=#{phone},
+                               </if>
+                               <if test="photo !=null">
+                                   photo=#{photo},
+                               </if>
+                               <if test="photoB !=null">
+                                   photob=#{photoB},
+                               </if>
+                               <if test="sex !=null">
+                                   sex=#{sex},
+                               </if>
+                               <if test="states !=null">
+                                   states=#{states},
+                               </if>
+                               <if test="type !=null">
+                                   type=#{type},
+                               </if>
+                               <if test="uid !=null">
+                                   uid=#{uid},
+                               </if>
+                               <if test="communityId !=null">
+                                   communityid=#{communityId},
+                               </if>
+                               <if test="points !=null">
+                                   points=#{points},
+                               </if>
+                               <if test="coupon !=null">
+                                   coupon=#{coupon},
+                               </if>
+                               <if test="memberType !=null">
+                                   memberType=#{memberType},
+                               </if>
+                               <if test="lastSignTime !=null">
+                                   lastSignTime=#{lastSignTime},
+                               </if>
+                               <if test="pwd !=null">
+                                   pwd=#{pwd},
+                               </if>
+                               <if test="freeCount !=null">
+                                   freeCount=#{freeCount},
+                               </if>
+                               <if test="isFree !=null">
+                                   isFree=#{isFree},
+                               </if>
+                               <if test="isDead !=null">
+                                   isDead=#{isDead},
+                               </if>
+                               <if test="fromApp !=null">
+                                   fromApp=#{fromApp},
+                               </if>
+                               <if test="timeToCouponCount !=null">
+                                   timeToCouponCount=#{timeToCouponCount},
+                               </if>
+                               <if test="isRegisteredAtShb !=null">
+                                   isRegisteredAtShb=#{isRegisteredAtShb},
+                               </if>
+                               <if test="updatePortal !=null">
+                                   updatePortal=#{updatePortal},
+                               </if>
+                               <if test="statesChgRsn !=null">
+                                   statesChgRsn=#{statesChgRsn},
+                               </if>
+                               <if test="customertypeId !=null">
+                                   customertypeid=#{customertypeId},
+                               </if>
+                               <if test="mobilemenuId !=null">
+                                   mobilemenuid=#{mobilemenuId},
+                               </if>
+                               <if test="phonemodelId !=null">
+                                   phonemodelid=#{phonemodelId},
+                               </if>
+                               <if test="addPerson !=null">
+                                   addperson=#{addPerson},
+                               </if>
+                               <if test="entrytime !=null">
+                                   entrytime=#{entrytime},
+                               </if>
+                               <if test="qianYuePerson !=null">
+                                   qianyueperson=#{qianYuePerson},
+                               </if>
+                               <if test="qianYueTime !=null">
+                                   qianyuetime=#{qianYueTime},
+                               </if>
+                               <if test="zhuXiaoPerson !=null">
+                                   zhuxiaoperson=#{zhuXiaoPerson},
+                               </if>
+                               <if test="zhuXiaoTime !=null">
+                                   zhuxiaotime=#{zhuXiaoTime},
+                               </if>
+                               <if test="visitLevel !=null">
+                                   visitLevel=#{visitLevel},
+                               </if>
+                               <if test="currentAddress !=null">
+                                   currentAddress=#{currentAddress},
+                               </if>
+                               <if test="disease !=null">
+                                   disease=#{disease},
+                               </if>
+                               <if test="diseaseOther !=null">
+                                   diseaseOther=#{diseaseOther},
+                               </if>
+                               <if test="lifeAreas !=null">
+                                   lifeAreas=#{lifeAreas},
+                               </if>
+                               <if test="marriageStatus !=null">
+                                   marriageStatus=#{marriageStatus},
+                               </if>
+                               <if test="specialCommunity !=null">
+                                   specialCommunity=#{specialCommunity},
+                               </if>
+                               <if test="status !=null">
+                                   status=#{status},
+                               </if>
+                               <if test="canJiIndex !=null">
+                                   canjiindex=#{canJiIndex},
+                               </if>
+                               <if test="canJiType !=null">
+                                   canjitype=#{canJiType},
+                               </if>
+                               <if test="canLianNumber !=null">
+                                   canliannumber=#{canLianNumber},
+                               </if>
+                               <if test="guomin !=null">
+                                   guomin=#{guomin},
+                               </if>
+                               <if test="juzhuCommunity !=null">
+                                   juzhuCommunity=#{juzhuCommunity},
+                               </if>
+                               <if test="oldremark !=null">
+                                   oldremark=#{oldremark},
+                               </if>
+                               <if test="tingCommunity !=null">
+                                   tingCommunity=#{tingCommunity},
+                               </if>
+                               <if test="yaowu !=null">
+                                   yaowu=#{yaowu},
+                               </if>
+                               <if test="iMei !=null">
+                                   imei=#{iMei},
+                               </if>
+                               <if test="volunteerida !=null">
+                                   volunteerida=#{volunteerida},
+                               </if>
+                               <if test="volunteeridb !=null">
+                                   volunteeridb=#{volunteeridb},
+                               </if>
+                               <if test="volunteeridc !=null">
+                                   volunteeridc=#{volunteeridc},
+                               </if>
+                               <if test="statesJuJue !=null">
+                                   statesjujue=#{statesJuJue},
+                               </if>
+                               <if test="age !=null">
+                                   age=#{age},
+                               </if>
+                               <if test="isDeadDate !=null">
+                                   isDeaddate=#{isDeadDate},
+                               </if>
+                               <if test="isFreeDate !=null">
+                                   isFreedate=#{isFreeDate},
+                               </if>
+                               <if test="addPersonId !=null">
+                                   addpersonid=#{addPersonId},
+                               </if>
+                               <if test="pics !=null">
+                                   pics=#{pics},
+                               </if>
+                               <if test="applyImg !=null">
+                                   applyimg=#{applyImg},
+                               </if>
+                               <if test="hkbImgB !=null">
+                                   hkbimgb=#{hkbImgB},
+                               </if>
+                               <if test="hkbImgZ !=null">
+                                   hkbimgz=#{hkbImgZ},
+                               </if>
+                               <if test="idcardimgf !=null">
+                                   idcardimgf=#{idcardimgf},
+                               </if>
+                               <if test="idCardImgZ !=null">
+                                   idcardimgz=#{idCardImgZ},
+                               </if>
+                               <if test="allergicType !=null">
+                                   allergicType=#{allergicType},
+                               </if>
+                               <if test="allergy !=null">
+                                   allergy=#{allergy},
+                               </if>
+                               <if test="bloodType !=null">
+                                   bloodType=#{bloodType},
+                               </if>
+                               <if test="certificateNumber !=null">
+                                   certificateNumber=#{certificateNumber},
+                               </if>
+                               <if test="certificateType !=null">
+                                   certificateType=#{certificateType},
+                               </if>
+                               <if test="economicSource !=null">
+                                   economicSource=#{economicSource},
+                               </if>
+                               <if test="minzhengIndex !=null">
+                                   minzhengIndex=#{minzhengIndex},
+                               </if>
+                               <if test="nation !=null">
+                                   nation=#{nation},
+                               </if>
+                               <if test="otherAllergicType !=null">
+                                   otherAllergicType=#{otherAllergicType},
+                               </if>
+                               <if test="otherCertificateType !=null">
+                                   otherCertificateType=#{otherCertificateType},
+                               </if>
+                               <if test="otherEconomicSource !=null">
+                                   otherEconomicSource=#{otherEconomicSource},
+                               </if>
+                               <if test="otherJuzhuCommunity !=null">
+                                   otherJuzhuCommunity=#{otherJuzhuCommunity},
+                               </if>
+                               <if test="otherMinzhengIndex !=null">
+                                   otherMinzhengIndex=#{otherMinzhengIndex},
+                               </if>
+                               <if test="otherPersonalHobby !=null">
+                                   otherPersonalHobby=#{otherPersonalHobby},
+                               </if>
+                               <if test="personalHobby !=null">
+                                   personalHobby=#{personalHobby},
+                               </if>
+                               <if test="postTitle !=null">
+                                   postTitle=#{postTitle},
+                               </if>
+                               <if test="zhuting !=null">
+                                   zhuting=#{zhuting},
+                               </if>
+                               <if test="sysEndCood !=null">
+                                   sysEndCood=#{sysEndCood},
+                               </if>
+                               <if test="id !=null">
+                                   id=#{id}
+                               </if>
+        WHERE id = #{id}
+    </update>
+
+    <update id="delete">
+        UPDATE wx_customer SET
+            del = #{del}
+        WHERE id = #{id}
+    </update>
+
+
+    <update id="batchUpdateZhuxiao" parameterType="njhk.wisdom.web.bean.entity.customer.Customer">
+        UPDATE  wx_customer SET states=4，zhuxiaotime=#{zhuXiaoTime},zhuxiaoperson=#{zhuXiaoPerson} where id in
+        <foreach collection="ids" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </update>
+
+    <update id="batchUpdateQianyue" parameterType="njhk.wisdom.web.bean.entity.customer.Customer">
+          UPDATE  wx_customer SET states=2,qianyuetime=#{qianYueTime},qianyueperson=#{qianYuePerson} where id in
+           <foreach collection="ids" index="index" item="item" open="(" separator="," close=")">
+               #{item}
+           </foreach>
+    </update>
+
+    <update id="batchDelete" parameterType="njhk.wisdom.web.bean.entity.customer.Customer">
+        UPDATE  wx_customer SET del = #{del} where id in
+        <foreach collection="ids" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </update>
+    
+    <update id="batchUpdateShenhe">
+        update wx_customer set  status=99 where id in
+        <foreach collection="ids" index="index" item="item" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </update>
+
+    <select id="findCustomerType" resultType="njhk.wisdom.web.bean.entity.customer.CustomerTypes">
+        SELECT
+            type as types,
+            count(*) as customerTypes
+        FROM
+            wx_customer s
+        GROUP BY
+            s.type
+
+    </select>
+
+    <select id="findCustomerStates" resultType="njhk.wisdom.web.bean.entity.customer.CustomerStates">
+        SELECT
+            states as states ,
+            count(*) as customerNumbers
+        FROM
+            wx_customer s
+        WHERE
+            s.states IS NOT NULL
+        GROUP BY
+            s.states
+    </select>
+    <select id="findCustomerIdNumber" resultType="njhk.wisdom.web.bean.entity.customer.Customer">
+        select
+            *
+        from wx_customer a
+        where a.idNumber like  CONCAT('%',#{idNumber},'%')
+    </select>
+
+    <update id="updateList" parameterType="java.util.List">
+
+        <foreach collection="list" item="c" index="index"
+                 separator=",">
+            UPDATE wx_customer SET
+            <if test="c.address !=null">
+                address=#{c.address},
+            </if>
+            <if test="c.addressLat !=null">
+                addressLat=#{c.addressLat},
+            </if>
+            <if test="c.addressLng !=null">
+                addressLng=#{c.addressLng},
+            </if>
+            <if test="c.birthday !=null">
+                birthday=#{c.birthday},
+            </if>
+            <if test="c.community !=null">
+                community=#{c.community},
+            </if>
+            <if test="c.familyPhone !=null">
+                familyphone=#{c.familyPhone},
+            </if>
+            <if test="c.idNumber !=null">
+                idNumber=#{c.idNumber},
+            </if>
+            <if test="c.idNumberAddress !=null">
+                idNumberaddress=#{c.idNumberAddress},
+            </if>
+            <if test="c.moreinfo !=null">
+                moreinfo=#{c.moreinfo},
+            </if>
+            <if test="c.name !=null">
+                name=#{c.name},
+            </if>
+            <if test="c.phone !=null">
+                phone=#{c.phone},
+            </if>
+            <if test="c.photo !=null">
+                photo=#{c.photo},
+            </if>
+            <if test="c.photoB !=null">
+                photob=#{c.photoB},
+            </if>
+            <if test="c.sex !=null">
+                sex=#{c.sex},
+            </if>
+            <if test="c.states !=null">
+                states=#{c.states},
+            </if>
+            <if test="c.type !=null">
+                type=#{c.type},
+            </if>
+            <if test="c.uid !=null">
+                uid=#{c.uid},
+            </if>
+            <if test="c.communityId !=null">
+                communityid=#{c.communityId},
+            </if>
+            <if test="c.points !=null">
+                points=#{c.points},
+            </if>
+            <if test="c.coupon !=null">
+                coupon=#{c.coupon},
+            </if>
+            <if test="c.memberType !=null">
+                memberType=#{c.memberType},
+            </if>
+            <if test="c.lastSignTime !=null">
+                lastSignTime=#{c.lastSignTime},
+            </if>
+            <if test="c.pwd !=null">
+                pwd=#{c.pwd},
+            </if>
+            <if test="c.freeCount !=null">
+                freeCount=#{c.freeCount},
+            </if>
+            <if test="c.isFree !=null">
+                isFree=#{c.isFree},
+            </if>
+            <if test="c.isDead !=null">
+                isDead=#{c.isDead},
+            </if>
+            <if test="c.fromApp !=null">
+                fromApp=#{c.fromApp},
+            </if>
+            <if test="c.timeToCouponCount !=null">
+                timeToCouponCount=#{c.timeToCouponCount},
+            </if>
+            <if test="c.isRegisteredAtShb !=null">
+                isRegisteredAtShb=#{c.isRegisteredAtShb},
+            </if>
+            <if test="c.updatePortal !=null">
+                updatePortal=#{c.updatePortal},
+            </if>
+            <if test="c.statesChgRsn !=null">
+                statesChgRsn=#{c.statesChgRsn},
+            </if>
+            <if test="c.customertypeId !=null">
+                customertypeid=#{c.customertypeId},
+            </if>
+            <if test="c.mobilemenuId !=null">
+                mobilemenuid=#{c.mobilemenuId},
+            </if>
+            <if test="c.phonemodelId !=null">
+                phonemodelid=#{c.phonemodelId},
+            </if>
+            <if test="c.addPerson !=null">
+                addperson=#{c.addPerson},
+            </if>
+            <if test="c.entrytime !=null">
+                entrytime=#{c.entrytime},
+            </if>
+            <if test="c.qianYuePerson !=null">
+                qianyueperson=#{c.qianYuePerson},
+            </if>
+            <if test="c.qianYueTime !=null">
+                qianyuetime=#{c.qianYueTime},
+            </if>
+            <if test="c.zhuXiaoPerson !=null">
+                zhuxiaoperson=#{c.zhuXiaoPerson},
+            </if>
+            <if test="c.zhuXiaoTime !=null">
+                zhuxiaotime=#{c.zhuXiaoTime},
+            </if>
+            <if test="c.visitLevel !=null">
+                visitLevel=#{c.visitLevel},
+            </if>
+            <if test="c.currentAddress !=null">
+                currentAddress=#{c.currentAddress},
+            </if>
+            <if test="c.disease !=null">
+                disease=#{c.disease},
+            </if>
+            <if test="c.diseaseOther !=null">
+                diseaseOther=#{c.diseaseOther},
+            </if>
+            <if test="c.lifeAreas !=null">
+                lifeAreas=#{c.lifeAreas},
+            </if>
+            <if test="c.marriageStatus !=null">
+                marriageStatus=#{c.marriageStatus},
+            </if>
+            <if test="c.specialCommunity !=null">
+                specialCommunity=#{c.specialCommunity},
+            </if>
+            <if test="c.status !=null">
+                status=#{c.status},
+            </if>
+            <if test="c.canJiIndex !=null">
+                canjiindex=#{c.canJiIndex},
+            </if>
+            <if test="c.canJiType !=null">
+                canjitype=#{c.canJiType},
+            </if>
+            <if test="c.canLianNumber !=null">
+                canliannumber=#{c.canLianNumber},
+            </if>
+            <if test="c.guomin !=null">
+                guomin=#{c.guomin},
+            </if>
+            <if test="c.juzhuCommunity !=null">
+                juzhuCommunity=#{c.juzhuCommunity},
+            </if>
+            <if test="c.oldremark !=null">
+                oldremark=#{c.oldremark},
+            </if>
+            <if test="c.tingCommunity !=null">
+                tingCommunity=#{c.tingCommunity},
+            </if>
+            <if test="c.yaowu !=null">
+                yaowu=#{c.yaowu},
+            </if>
+            <if test="c.iMei !=null">
+                imei=#{c.iMei},
+            </if>
+            <if test="c.volunteerida !=null">
+                volunteerida=#{c.volunteerida},
+            </if>
+            <if test="c.volunteeridb !=null">
+                volunteeridb=#{c.volunteeridb},
+            </if>
+            <if test="c.volunteeridc !=null">
+                volunteeridc=#{c.volunteeridc},
+            </if>
+            <if test="c.statesJuJue !=null">
+                statesjujue=#{c.statesJuJue},
+            </if>
+            <if test="c.age !=null">
+                age=#{c.age},
+            </if>
+            <if test="c.isDeadDate !=null">
+                isDeaddate=#{c.isDeadDate},
+            </if>
+            <if test="c.isFreeDate !=null">
+                isFreedate=#{c.isFreeDate},
+            </if>
+            <if test="c.addPersonId !=null">
+                addpersonid=#{c.addPersonId},
+            </if>
+            <if test="c.pics !=null">
+                pics=#{c.pics},
+            </if>
+            <if test="c.applyImg !=null">
+                applyimg=#{c.applyImg},
+            </if>
+            <if test="c.hkbImgB !=null">
+                hkbimgb=#{c.hkbImgB},
+            </if>
+            <if test="c.hkbImgZ !=null">
+                hkbimgz=#{c.hkbImgZ},
+            </if>
+            <if test="c.idcardimgf !=null">
+                idcardimgf=#{c.idcardimgf},
+            </if>
+            <if test="c.idCardImgZ !=null">
+                idcardimgz=#{c.idCardImgZ},
+            </if>
+            <if test="c.allergicType !=null">
+                allergicType=#{c.allergicType},
+            </if>
+            <if test="c.allergy !=null">
+                allergy=#{c.allergy},
+            </if>
+            <if test="c.bloodType !=null">
+                bloodType=#{c.bloodType},
+            </if>
+            <if test="c.certificateNumber !=null">
+                certificateNumber=#{c.certificateNumber},
+            </if>
+            <if test="c.certificateType !=null">
+                certificateType=#{c.certificateType},
+            </if>
+            <if test="c.economicSource !=null">
+                economicSource=#{c.economicSource},
+            </if>
+            <if test="c.minzhengIndex !=null">
+                minzhengIndex=#{c.minzhengIndex},
+            </if>
+            <if test="c.nation !=null">
+                nation=#{c.nation},
+            </if>
+            <if test="c.otherAllergicType !=null">
+                otherAllergicType=#{c.otherAllergicType},
+            </if>
+            <if test="c.otherCertificateType !=null">
+                otherCertificateType=#{c.otherCertificateType},
+            </if>
+            <if test="c.otherEconomicSource !=null">
+                otherEconomicSource=#{c.otherEconomicSource},
+            </if>
+            <if test="c.otherJuzhuCommunity !=null">
+                otherJuzhuCommunity=#{c.otherJuzhuCommunity},
+            </if>
+            <if test="c.otherMinzhengIndex !=null">
+                otherMinzhengIndex=#{c.otherMinzhengIndex},
+            </if>
+            <if test="c.otherPersonalHobby !=null">
+                otherPersonalHobby=#{c.otherPersonalHobby},
+            </if>
+            <if test="c.personalHobby !=null">
+                personalHobby=#{c.personalHobby},
+            </if>
+            <if test="c.postTitle !=null">
+                postTitle=#{c.postTitle},
+            </if>
+            <if test="c.zhuting !=null">
+                zhuting=#{c.zhuting},
+            </if>
+            <if test="c.sysEndCood !=null">
+                sysEndCood=#{c.sysEndCood},
+            </if>
+            <if test="c.id !=null">
+                id=#{c.id}
+            </if>
+            WHERE id = #{c.id}
+        </foreach>
+
+    </update>
+    <insert id="saveList" useGeneratedKeys="true" keyProperty="id" parameterType="map">
+        INSERT INTO wx_customer(
+        id,
+        address,
+        addressLat,
+        addressLng,
+        birthday,
+        community,
+        familyphone,
+        idNumber,
+        idNumberaddress,
+        moreinfo,
+        name,
+        phone,
+        photo,
+        photob,
+        sex,
+        states,
+        type,
+        uid,
+        communityid,
+        points,
+        coupon,
+        memberType,
+        lastSignTime,
+        pwd,
+        freeCount,
+        isFree,
+        isDead,
+        fromApp,
+        timeToCouponCount,
+        isRegisteredAtShb,
+        updatePortal,
+        statesChgRsn,
+        addperson,
+        entrytime,
+        qianyueperson,
+        qianyuetime,
+        zhuxiaoperson,
+        zhuxiaotime,
+        visitLevel,
+        currentAddress,
+        disease,
+        diseaseOther,
+        lifeAreas,
+        marriageStatus,
+        specialCommunity,
+        status,
+        canjiindex,
+        canjitype,
+        canliannumber,
+        guomin,
+        juzhuCommunity,
+        oldremark,
+        tingCommunity,
+        yaowu,
+        imei,
+        volunteerida,
+        volunteeridb,
+        volunteeridc,
+        statesjujue,
+        age,
+        isDeaddate,
+        isFreedate,
+        addpersonid,
+        pics,
+        applyimg,
+        hkbimgb,
+        hkbimgz,
+        idcardimgf,
+        idcardimgz,
+        allergicType,
+        allergy,
+        bloodType,
+        certificateNumber,
+        certificateType,
+        economicSource,
+        minzhengIndex,
+        nation,
+        otherAllergicType,
+        otherCertificateType,
+        otherEconomicSource,
+        otherJuzhuCommunity,
+        otherMinzhengIndex,
+        otherPersonalHobby,
+        personalHobby,
+        postTitle,
+        zhuting,
+        sysEndCood
+
+        ) VALUES
+        <foreach collection="list" item="c" index="index"
+                 separator=",">
+            (
+            #{c.id},
+            #{c.address},
+            #{c.addressLat},
+            #{c.addressLng},
+            #{c.birthday},
+            #{c.community},
+            #{c.familyPhone},
+            #{c.idNumber},
+            #{c.idNumberAddress},
+            #{c.moreinfo},
+            #{c.name},
+            #{c.phone},
+            #{c.photo},
+            #{c.photoB},
+            #{c.sex},
+            #{c.states},
+            #{c.type},
+            #{c.uid},
+            #{c.communityId},
+            #{c.points},
+            #{c.coupon},
+            #{c.memberType},
+            #{c.lastSignTime},
+            #{c.pwd},
+            #{c.freeCount},
+            #{c.isFree},
+            #{c.isDead},
+            #{c.fromApp},
+            #{c.timeToCouponCount},
+            #{c.isRegisteredAtShb},
+            #{c.updatePortal},
+            #{c.statesChgRsn},
+            #{c.addPerson},
+            #{c.entrytime},
+            #{c.qianYuePerson},
+            #{c.qianYueTime},
+            #{c.zhuXiaoPerson},
+            #{c.zhuXiaoTime},
+            #{c.visitLevel},
+            #{c.currentAddress},
+            #{c.disease},
+            #{c.diseaseOther},
+            #{c.lifeAreas},
+            #{c.marriageStatus},
+            #{c.specialCommunity},
+            #{c.status},
+            #{c.canJiIndex},
+            #{c.canJiType},
+            #{c.canLianNumber},
+            #{c.guomin},
+            #{c.juzhuCommunity},
+            #{c.oldremark},
+            #{c.tingCommunity},
+            #{c.yaowu},
+            #{c.iMei},
+            #{c.volunteerida},
+            #{c.volunteeridb},
+            #{c.volunteeridc},
+            #{c.statesJuJue},
+            #{c.age},
+            #{c.isDeadDate},
+            #{c.isFreeDate},
+            #{c.addPersonId},
+            #{c.pics},
+            #{c.applyImg},
+            #{c.hkbImgB},
+            #{c.hkbImgZ},
+            #{c.idcardimgf},
+            #{c.idCardImgZ},
+            #{c.allergicType},
+            #{c.allergy},
+            #{c.bloodType},
+            #{c.certificateNumber},
+            #{c.certificateType},
+            #{c.economicSource},
+            #{c.minzhengIndex},
+            #{c.nation},
+            #{c.otherAllergicType},
+            #{c.otherCertificateType},
+            #{c.otherEconomicSource},
+            #{c.otherJuzhuCommunity},
+            #{c.otherMinzhengIndex},
+            #{c.otherPersonalHobby},
+            #{c.personalHobby},
+            #{c.postTitle},
+            #{c.zhuting},
+            #{c.sysEndCood}
+            )
+        </foreach>
+
+    </insert>
+</mapper>

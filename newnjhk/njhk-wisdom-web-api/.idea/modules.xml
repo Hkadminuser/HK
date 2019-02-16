@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../better-wisdom-water-bean/better-wisdom-water-bean.iml" filepath="$PROJECT_DIR$/../better-wisdom-water-bean/better-wisdom-water-bean.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../better-wisdom-water-ops/better-wisdom-water-ops.iml" filepath="$PROJECT_DIR$/../better-wisdom-water-ops/better-wisdom-water-ops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/better-wisdom-water-web-api.iml" filepath="$PROJECT_DIR$/better-wisdom-water-web-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../better-wisdom-water-web-service/better-wisdom-water-web-service.iml" filepath="$PROJECT_DIR$/../better-wisdom-water-web-service/better-wisdom-water-web-service.iml" />
+    </modules>
+  </component>
+</project>
